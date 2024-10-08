@@ -1,0 +1,25 @@
+C:\Users\tec\source\repos\Ykire System\Ykire System\bin\Debug\net8.0-windows\Ykire System.exe
+C:\Users\tec\source\repos\Ykire System\Ykire System\bin\Debug\net8.0-windows\Ykire System.deps.json
+C:\Users\tec\source\repos\Ykire System\Ykire System\bin\Debug\net8.0-windows\Ykire System.runtimeconfig.json
+C:\Users\tec\source\repos\Ykire System\Ykire System\bin\Debug\net8.0-windows\Ykire System.dll
+C:\Users\tec\source\repos\Ykire System\Ykire System\bin\Debug\net8.0-windows\Ykire System.pdb
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire_System.Form1.resources
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire System.csproj.GenerateResource.cache
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire System.AssemblyInfoInputs.cache
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire System.AssemblyInfo.cs
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire System.csproj.CoreCompileInputs.cache
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire System.dll
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\refint\Ykire System.dll
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire System.pdb
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire System.genruntimeconfig.cache
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\ref\Ykire System.dll
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire_System.Properties.Resources.resources
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire_System.Form2.resources
+C:\Users\tec\source\repos\Ykire System\Ykire System\bin\Debug\net8.0-windows\Dapper.dll
+C:\Users\tec\source\repos\Ykire System\Ykire System\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\tec\source\repos\Ykire System\Ykire System\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\tec\source\repos\Ykire System\Ykire System\bin\Debug\net8.0-windows\Npgsql.dll
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire System.csproj.AssemblyReference.cache
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire Sy.950B4DEE.Up2Date
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire_System.Form3.resources
