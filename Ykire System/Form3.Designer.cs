@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             panel3 = new Panel();
             label6 = new Label();
             lv_est = new ListView();
@@ -54,7 +55,7 @@
             panel3.Controls.Add(lv_est);
             panel3.Location = new Point(597, 25);
             panel3.Name = "panel3";
-            panel3.Size = new Size(623, 412);
+            panel3.Size = new Size(847, 412);
             panel3.TabIndex = 25;
             // 
             // label6
@@ -64,9 +65,9 @@
             label6.ForeColor = SystemColors.ActiveCaptionText;
             label6.Location = new Point(45, 15);
             label6.Name = "label6";
-            label6.Size = new Size(265, 32);
+            label6.Size = new Size(230, 32);
             label6.TabIndex = 1;
-            label6.Text = "Movimentação Estoque";
+            label6.Text = "Entrada de Produtos";
             label6.Click += label6_Click;
             // 
             // lv_est
@@ -74,7 +75,7 @@
             lv_est.Columns.AddRange(new ColumnHeader[] { codigo, nome, qt, obs });
             lv_est.Location = new Point(54, 60);
             lv_est.Name = "lv_est";
-            lv_est.Size = new Size(501, 333);
+            lv_est.Size = new Size(773, 333);
             lv_est.TabIndex = 0;
             lv_est.UseCompatibleStateImageBehavior = false;
             lv_est.View = View.Details;
@@ -87,7 +88,7 @@
             // nome
             // 
             nome.Text = "Descrição";
-            nome.Width = 250;
+            nome.Width = 300;
             // 
             // qt
             // 
@@ -105,6 +106,7 @@
             txt_data_est.Name = "txt_data_est";
             txt_data_est.Size = new Size(161, 23);
             txt_data_est.TabIndex = 23;
+            txt_data_est.TextChanged += txt_data_est_TextChanged;
             // 
             // txt_qt_est
             // 
@@ -155,7 +157,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.Teal;
+            panel2.BackColor = Color.FromArgb(31, 44, 50);
             panel2.Controls.Add(btn_salva_est);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
@@ -165,9 +167,9 @@
             // 
             // btn_salva_est
             // 
-            btn_salva_est.BackColor = Color.Teal;
+            btn_salva_est.BackColor = Color.FromArgb(31, 44, 50);
             btn_salva_est.FlatStyle = FlatStyle.Flat;
-            btn_salva_est.ForeColor = SystemColors.ControlLightLight;
+            btn_salva_est.ForeColor = Color.FromArgb(186, 200, 208);
             btn_salva_est.Location = new Point(12, 29);
             btn_salva_est.Name = "btn_salva_est";
             btn_salva_est.Size = new Size(94, 34);
@@ -188,6 +190,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(233, 240, 245);
             ClientSize = new Size(1485, 450);
             Controls.Add(date_est);
             Controls.Add(panel3);
@@ -198,6 +201,7 @@
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(panel2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form3";
             Text = "Estoque";
             Load += Form3_Load;

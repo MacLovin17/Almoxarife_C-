@@ -83,5 +83,10 @@ namespace Ykire_System
         {
 
         }
+
+        private void txt_data_est_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

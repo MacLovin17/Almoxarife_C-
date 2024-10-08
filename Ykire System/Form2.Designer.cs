@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             panel2 = new Panel();
             btn_salva_cad = new Button();
             label1 = new Label();
@@ -52,7 +53,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.Teal;
+            panel2.BackColor = Color.FromArgb(31, 44, 50);
             panel2.Controls.Add(btn_salva_cad);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
@@ -62,9 +63,9 @@
             // 
             // btn_salva_cad
             // 
-            btn_salva_cad.BackColor = Color.Teal;
+            btn_salva_cad.BackColor = Color.FromArgb(31, 44, 50);
             btn_salva_cad.FlatStyle = FlatStyle.Flat;
-            btn_salva_cad.ForeColor = SystemColors.ControlLightLight;
+            btn_salva_cad.ForeColor = Color.FromArgb(186, 200, 208);
             btn_salva_cad.Location = new Point(12, 29);
             btn_salva_cad.Name = "btn_salva_cad";
             btn_salva_cad.Size = new Size(94, 34);
@@ -150,7 +151,7 @@
             lv_cad.Columns.AddRange(new ColumnHeader[] { codigo, produto, fornecedor, cnpj, obs });
             lv_cad.Location = new Point(26, 50);
             lv_cad.Name = "lv_cad";
-            lv_cad.Size = new Size(571, 333);
+            lv_cad.Size = new Size(707, 333);
             lv_cad.TabIndex = 0;
             lv_cad.UseCompatibleStateImageBehavior = false;
             lv_cad.View = View.Details;
@@ -168,12 +169,12 @@
             // fornecedor
             // 
             fornecedor.Text = "Fornecedor";
-            fornecedor.Width = 100;
+            fornecedor.Width = 150;
             // 
             // cnpj
             // 
             cnpj.Text = "CNPJ";
-            cnpj.Width = 80;
+            cnpj.Width = 180;
             // 
             // obs
             // 
@@ -186,7 +187,7 @@
             panel3.Controls.Add(lv_cad);
             panel3.Location = new Point(586, 26);
             panel3.Name = "panel3";
-            panel3.Size = new Size(623, 412);
+            panel3.Size = new Size(748, 412);
             panel3.TabIndex = 15;
             // 
             // label6
@@ -204,6 +205,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(233, 240, 245);
             ClientSize = new Size(1346, 450);
             Controls.Add(panel3);
             Controls.Add(txt_obs);
@@ -215,6 +217,7 @@
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(panel2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form2";
             Text = "Cadastro";
             Load += Form2_Load;

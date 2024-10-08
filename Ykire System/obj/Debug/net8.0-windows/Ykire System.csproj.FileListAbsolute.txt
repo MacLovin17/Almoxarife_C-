@@ -23,3 +23,5 @@ C:\Users\tec\source\repos\Ykire System\Ykire System\bin\Debug\net8.0-windows\Npg
 C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire System.csproj.AssemblyReference.cache
 C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire Sy.950B4DEE.Up2Date
 C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire_System.Form3.resources
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire System.sourcelink.json
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire_System.Form4.resources
