@@ -68,6 +68,7 @@ namespace Ykire_System
             txt_obs.Text = "";
             txt_prod.Text = "";
 
+            MessageBox.Show("Produto cadastrado");
         }
 
         private void Form2_Load(object sender, EventArgs e)

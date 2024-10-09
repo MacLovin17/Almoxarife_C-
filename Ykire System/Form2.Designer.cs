@@ -174,11 +174,13 @@
             // cnpj
             // 
             cnpj.Text = "CNPJ";
+            cnpj.TextAlign = HorizontalAlignment.Center;
             cnpj.Width = 180;
             // 
             // obs
             // 
             obs.Text = "OBS";
+            obs.TextAlign = HorizontalAlignment.Center;
             obs.Width = 150;
             // 
             // panel3

@@ -31,5 +31,11 @@ namespace Ykire_System.Infra
             return estoques.ToList();
 
         }
+        public string ObterNomeProdutoPorCodigo_entrada(int codigo)
+        {
+            using var conn = new DbConnection();
+            string query = @"SELECT nome FROM cad_prod WHERE codigo = @codigo;";
+            return conn.Connection.QuerySingleOrDefault<string>(query, new { codigo });
+        }
     }
 }

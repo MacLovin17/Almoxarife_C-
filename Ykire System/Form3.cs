@@ -14,9 +14,11 @@ namespace Ykire_System
     public partial class Form3 : Form
     {
         public List<Estoque> estoques { get; private set; } = new List<Estoque>();
+        private EstoqueRepository _estoqueRepository;
         public Form3()
         {
             InitializeComponent();
+            _estoqueRepository = new EstoqueRepository();
             obterProdutos_est();
             date_est.Format = DateTimePickerFormat.Custom;
             date_est.CustomFormat = "dd/MM/yyyy";
@@ -25,6 +27,7 @@ namespace Ykire_System
 
         private void obterProdutos_est()
         {
+            estoques = _estoqueRepository.Get();
             var repository = new EstoqueRepository();
             estoques = repository.Get();
             lv_est.Items.Clear();
@@ -64,7 +67,7 @@ namespace Ykire_System
             txt_qt_est.Text = "";
             txt_data_est.Text = date_est.Text;
 
-
+            MessageBox.Show("Entrada cadastrada");
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -87,6 +90,26 @@ namespace Ykire_System
         private void txt_data_est_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_cod_est_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txt_cod_est.Text, out int codigo))
+            {
+                // Busca o nome do produto pelo código
+                string nomeProduto = _estoqueRepository.ObterNomeProdutoPorCodigo_entrada(codigo);
+
+                // Exibe o nome do produto no campo de texto
+                txt_cod_entr.Text = nomeProduto ?? "Produto não encontrado";
+
+                // Habilita ou desabilita o botão baseado na existência do produto
+                btn_salva_est.Enabled = nomeProduto != null;
+            }
+            else
+            {
+                txt_cod_entr.Text = string.Empty;
+                btn_salva_est.Enabled = false; // Desabilita o botão se o código não for válido
+            }
         }
     }
 }

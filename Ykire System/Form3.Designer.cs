@@ -45,6 +45,7 @@
             panel2 = new Panel();
             btn_salva_est = new Button();
             date_est = new DateTimePicker();
+            txt_cod_entr = new TextBox();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -93,11 +94,13 @@
             // qt
             // 
             qt.Text = "Quantidade";
+            qt.TextAlign = HorizontalAlignment.Center;
             qt.Width = 100;
             // 
             // obs
             // 
             obs.Text = "Data";
+            obs.TextAlign = HorizontalAlignment.Center;
             obs.Width = 80;
             // 
             // txt_data_est
@@ -119,8 +122,9 @@
             // 
             txt_cod_est.Location = new Point(151, 59);
             txt_cod_est.Name = "txt_cod_est";
-            txt_cod_est.Size = new Size(403, 23);
+            txt_cod_est.Size = new Size(115, 23);
             txt_cod_est.TabIndex = 21;
+            txt_cod_est.TextChanged += txt_cod_est_TextChanged;
             // 
             // label4
             // 
@@ -186,12 +190,21 @@
             date_est.TabIndex = 2;
             date_est.ValueChanged += date_est_ValueChanged;
             // 
+            // txt_cod_entr
+            // 
+            txt_cod_entr.Enabled = false;
+            txt_cod_entr.Location = new Point(278, 59);
+            txt_cod_entr.Name = "txt_cod_entr";
+            txt_cod_entr.Size = new Size(276, 23);
+            txt_cod_entr.TabIndex = 39;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(233, 240, 245);
             ClientSize = new Size(1485, 450);
+            Controls.Add(txt_cod_entr);
             Controls.Add(date_est);
             Controls.Add(panel3);
             Controls.Add(txt_data_est);
@@ -230,5 +243,6 @@
         private Panel panel2;
         private Button btn_salva_est;
         private DateTimePicker date_est;
+        private TextBox txt_cod_entr;
     }
 }

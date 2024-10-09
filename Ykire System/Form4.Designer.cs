@@ -47,6 +47,8 @@
             btn_salva_est_said = new Button();
             Cbox_said = new ComboBox();
             label2 = new Label();
+            txt_cgo_desc = new TextBox();
+            txt_cod_prod = new TextBox();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -64,7 +66,7 @@
             panel3.Controls.Add(lv_est_said);
             panel3.Location = new Point(602, 25);
             panel3.Name = "panel3";
-            panel3.Size = new Size(499, 412);
+            panel3.Size = new Size(556, 412);
             panel3.TabIndex = 34;
             // 
             // label6
@@ -83,7 +85,7 @@
             lv_est_said.Columns.AddRange(new ColumnHeader[] { codigo, qt, cgo, obs });
             lv_est_said.Location = new Point(67, 60);
             lv_est_said.Name = "lv_est_said";
-            lv_est_said.Size = new Size(386, 333);
+            lv_est_said.Size = new Size(473, 333);
             lv_est_said.TabIndex = 0;
             lv_est_said.UseCompatibleStateImageBehavior = false;
             lv_est_said.View = View.Details;
@@ -96,17 +98,20 @@
             // qt
             // 
             qt.Text = "Quantidade";
+            qt.TextAlign = HorizontalAlignment.Center;
             qt.Width = 100;
             // 
             // cgo
             // 
             cgo.Text = "CGO";
+            cgo.TextAlign = HorizontalAlignment.Center;
             cgo.Width = 120;
             // 
             // obs
             // 
             obs.Text = "Data";
-            obs.Width = 80;
+            obs.TextAlign = HorizontalAlignment.Center;
+            obs.Width = 120;
             // 
             // txt_data_est_said
             // 
@@ -114,7 +119,6 @@
             txt_data_est_said.Name = "txt_data_est_said";
             txt_data_est_said.Size = new Size(161, 23);
             txt_data_est_said.TabIndex = 33;
-            txt_data_est_said.TextChanged += txt_data_est_said_TextChanged;
             // 
             // txt_qt_est_said
             // 
@@ -127,8 +131,9 @@
             // 
             txt_cod_est_said.Location = new Point(156, 59);
             txt_cod_est_said.Name = "txt_cod_est_said";
-            txt_cod_est_said.Size = new Size(403, 23);
+            txt_cod_est_said.Size = new Size(121, 23);
             txt_cod_est_said.TabIndex = 31;
+            txt_cod_est_said.TextChanged += txt_cod_est_said_TextChanged;
             // 
             // label4
             // 
@@ -189,10 +194,12 @@
             // Cbox_said
             // 
             Cbox_said.FormattingEnabled = true;
+            Cbox_said.Items.AddRange(new object[] { "777", "778", "779", "780", "781", "782", "888", "892", "893" });
             Cbox_said.Location = new Point(156, 173);
             Cbox_said.Name = "Cbox_said";
             Cbox_said.Size = new Size(121, 23);
             Cbox_said.TabIndex = 35;
+            Cbox_said.SelectedIndexChanged += Cbox_said_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -205,12 +212,31 @@
             label2.TabIndex = 36;
             label2.Text = "CGO";
             // 
+            // txt_cgo_desc
+            // 
+            txt_cgo_desc.Enabled = false;
+            txt_cgo_desc.Location = new Point(283, 173);
+            txt_cgo_desc.Name = "txt_cgo_desc";
+            txt_cgo_desc.Size = new Size(276, 23);
+            txt_cgo_desc.TabIndex = 37;
+            // 
+            // txt_cod_prod
+            // 
+            txt_cod_prod.Enabled = false;
+            txt_cod_prod.Location = new Point(283, 59);
+            txt_cod_prod.Name = "txt_cod_prod";
+            txt_cod_prod.Size = new Size(276, 23);
+            txt_cod_prod.TabIndex = 38;
+            txt_cod_prod.TextChanged += txt_cod_prod_TextChanged;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(233, 240, 245);
             ClientSize = new Size(1454, 450);
+            Controls.Add(txt_cod_prod);
+            Controls.Add(txt_cgo_desc);
             Controls.Add(label2);
             Controls.Add(Cbox_said);
             Controls.Add(date_est_said);
@@ -253,5 +279,7 @@
         private ComboBox Cbox_said;
         private Label label2;
         private ColumnHeader cgo;
+        private TextBox txt_cgo_desc;
+        private TextBox txt_cod_prod;
     }
 }

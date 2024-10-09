@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ykire System")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a41b192d2268622d6d71723911165b4a38d1501a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7440faa06688e45b7ec880dcd5eee5026bb406a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ykire System")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ykire System")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

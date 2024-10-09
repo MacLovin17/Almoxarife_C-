@@ -38,6 +38,8 @@
             panel3 = new Panel();
             panel1 = new Panel();
             panel4 = new Panel();
+            txt_pesquisa = new TextBox();
+            btn_pesquisa = new Button();
             button2 = new Button();
             label6 = new Label();
             lv_est_tot = new ListView();
@@ -141,6 +143,8 @@
             // 
             // panel4
             // 
+            panel4.Controls.Add(txt_pesquisa);
+            panel4.Controls.Add(btn_pesquisa);
             panel4.Controls.Add(button2);
             panel4.Controls.Add(label6);
             panel4.Controls.Add(lv_est_tot);
@@ -149,12 +153,32 @@
             panel4.Size = new Size(1002, 872);
             panel4.TabIndex = 26;
             // 
+            // txt_pesquisa
+            // 
+            txt_pesquisa.Location = new Point(539, 21);
+            txt_pesquisa.Name = "txt_pesquisa";
+            txt_pesquisa.Size = new Size(196, 23);
+            txt_pesquisa.TabIndex = 28;
+            // 
+            // btn_pesquisa
+            // 
+            btn_pesquisa.BackColor = Color.FromArgb(233, 240, 245);
+            btn_pesquisa.FlatStyle = FlatStyle.Flat;
+            btn_pesquisa.ForeColor = Color.FromArgb(31, 44, 50);
+            btn_pesquisa.Location = new Point(758, 10);
+            btn_pesquisa.Name = "btn_pesquisa";
+            btn_pesquisa.Size = new Size(104, 34);
+            btn_pesquisa.TabIndex = 27;
+            btn_pesquisa.Text = "Pesquisar";
+            btn_pesquisa.UseVisualStyleBackColor = false;
+            btn_pesquisa.Click += btn_pesquisa_Click_1;
+            // 
             // button2
             // 
             button2.BackColor = Color.FromArgb(233, 240, 245);
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.FromArgb(31, 44, 50);
-            button2.Location = new Point(869, 6);
+            button2.Location = new Point(868, 10);
             button2.Name = "button2";
             button2.Size = new Size(104, 34);
             button2.TabIndex = 3;
@@ -191,16 +215,19 @@
             // total_entradas
             // 
             total_entradas.Text = "Entradas";
+            total_entradas.TextAlign = HorizontalAlignment.Center;
             total_entradas.Width = 100;
             // 
             // total_saidas
             // 
             total_saidas.Text = "Saídas";
+            total_saidas.TextAlign = HorizontalAlignment.Center;
             total_saidas.Width = 80;
             // 
             // estoque_atual
             // 
             estoque_atual.Text = "Estoque";
+            estoque_atual.TextAlign = HorizontalAlignment.Center;
             // 
             // Form1
             // 
@@ -214,7 +241,6 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Dit Corp";
-            Load += Form1_Load;
             panel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel4.ResumeLayout(false);
@@ -238,5 +264,7 @@
         private ColumnHeader total_saidas;
         private ColumnHeader estoque_atual;
         private Button button2;
+        private TextBox txt_pesquisa;
+        private Button btn_pesquisa;
     }
 }

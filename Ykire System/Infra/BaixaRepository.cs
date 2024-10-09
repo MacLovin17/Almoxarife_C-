@@ -1,9 +1,6 @@
 ﻿using Dapper;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ykire_System.Infra
 {
@@ -23,13 +20,16 @@ namespace Ykire_System.Infra
         public List<Baixa> Get()
         {
             using var conn = new DbConnection();
-
             string query = @"SELECT * FROM prod_saida;";
-
             var baixas = conn.Connection.Query<Baixa>(sql: query);
-
             return baixas.ToList();
+        }
 
+        public string ObterNomeProdutoPorCodigo(int codigo)
+        {
+            using var conn = new DbConnection();
+            string query = @"SELECT nome FROM cad_prod WHERE codigo = @codigo;";
+            return conn.Connection.QuerySingleOrDefault<string>(query, new { codigo });
         }
     }
 }
