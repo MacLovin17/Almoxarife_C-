@@ -37,26 +37,24 @@
             btn_cad = new Button();
             panel3 = new Panel();
             panel1 = new Panel();
-            panel4 = new Panel();
+            groupBox1 = new GroupBox();
             txt_pesquisa = new TextBox();
-            btn_pesquisa = new Button();
-            button2 = new Button();
             label6 = new Label();
             lv_est_tot = new ListView();
             codigo = new ColumnHeader();
-            total_entradas = new ColumnHeader();
-            total_saidas = new ColumnHeader();
             estoque_atual = new ColumnHeader();
+            button2 = new Button();
+            btn_pesquisa = new Button();
             produto = new ColumnHeader();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
-            panel4.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // produto
             // 
             produto.Text = "Descrição";
-            produto.Width = 300;
+            produto.Width = 350;
             // 
             // panel2
             // 
@@ -68,7 +66,7 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 82);
             panel2.Name = "panel2";
-            panel2.Size = new Size(123, 483);
+            panel2.Size = new Size(123, 961);
             panel2.TabIndex = 1;
             // 
             // button1
@@ -141,44 +139,70 @@
             panel1.Size = new Size(1367, 82);
             panel1.TabIndex = 0;
             // 
-            // panel4
+            // groupBox1
             // 
-            panel4.Controls.Add(txt_pesquisa);
-            panel4.Controls.Add(btn_pesquisa);
-            panel4.Controls.Add(button2);
-            panel4.Controls.Add(label6);
-            panel4.Controls.Add(lv_est_tot);
-            panel4.Location = new Point(261, 111);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(1002, 872);
-            panel4.TabIndex = 26;
+            groupBox1.Controls.Add(txt_pesquisa);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(lv_est_tot);
+            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(btn_pesquisa);
+            groupBox1.Font = new Font("Segoe UI", 15F);
+            groupBox1.Location = new Point(158, 111);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(670, 875);
+            groupBox1.TabIndex = 27;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Estoque Total";
             // 
             // txt_pesquisa
             // 
-            txt_pesquisa.Location = new Point(539, 21);
+            txt_pesquisa.Font = new Font("Segoe UI", 9F);
+            txt_pesquisa.Location = new Point(91, 43);
             txt_pesquisa.Name = "txt_pesquisa";
             txt_pesquisa.Size = new Size(196, 23);
-            txt_pesquisa.TabIndex = 28;
+            txt_pesquisa.TabIndex = 29;
             // 
-            // btn_pesquisa
+            // label6
             // 
-            btn_pesquisa.BackColor = Color.FromArgb(233, 240, 245);
-            btn_pesquisa.FlatStyle = FlatStyle.Flat;
-            btn_pesquisa.ForeColor = Color.FromArgb(31, 44, 50);
-            btn_pesquisa.Location = new Point(758, 10);
-            btn_pesquisa.Name = "btn_pesquisa";
-            btn_pesquisa.Size = new Size(104, 34);
-            btn_pesquisa.TabIndex = 27;
-            btn_pesquisa.Text = "Pesquisar";
-            btn_pesquisa.UseVisualStyleBackColor = false;
-            btn_pesquisa.Click += btn_pesquisa_Click_1;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 10F);
+            label6.ForeColor = SystemColors.ActiveCaptionText;
+            label6.Location = new Point(26, 47);
+            label6.Name = "label6";
+            label6.Size = new Size(66, 19);
+            label6.TabIndex = 1;
+            label6.Text = "Produto :";
+            // 
+            // lv_est_tot
+            // 
+            lv_est_tot.Columns.AddRange(new ColumnHeader[] { codigo, produto, estoque_atual });
+            lv_est_tot.Font = new Font("Segoe UI", 9F);
+            lv_est_tot.Location = new Point(26, 72);
+            lv_est_tot.Name = "lv_est_tot";
+            lv_est_tot.Size = new Size(551, 803);
+            lv_est_tot.TabIndex = 0;
+            lv_est_tot.UseCompatibleStateImageBehavior = false;
+            lv_est_tot.View = View.Details;
+            lv_est_tot.SelectedIndexChanged += lv_est_tot_SelectedIndexChanged;
+            // 
+            // codigo
+            // 
+            codigo.Text = "Código";
+            codigo.Width = 80;
+            // 
+            // estoque_atual
+            // 
+            estoque_atual.Text = "Estoque ";
+            estoque_atual.TextAlign = HorizontalAlignment.Center;
+            estoque_atual.Width = 80;
             // 
             // button2
             // 
             button2.BackColor = Color.FromArgb(233, 240, 245);
             button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 12F);
             button2.ForeColor = Color.FromArgb(31, 44, 50);
-            button2.Location = new Point(868, 10);
+            button2.Location = new Point(477, 32);
             button2.Name = "button2";
             button2.Size = new Size(104, 34);
             button2.TabIndex = 3;
@@ -186,65 +210,36 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
-            // label6
+            // btn_pesquisa
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 18F);
-            label6.ForeColor = SystemColors.ActiveCaptionText;
-            label6.Location = new Point(45, 2);
-            label6.Name = "label6";
-            label6.Size = new Size(157, 32);
-            label6.TabIndex = 1;
-            label6.Text = "Estoque Total";
-            // 
-            // lv_est_tot
-            // 
-            lv_est_tot.Columns.AddRange(new ColumnHeader[] { codigo, produto, total_entradas, total_saidas, estoque_atual });
-            lv_est_tot.Location = new Point(45, 50);
-            lv_est_tot.Name = "lv_est_tot";
-            lv_est_tot.Size = new Size(928, 803);
-            lv_est_tot.TabIndex = 0;
-            lv_est_tot.UseCompatibleStateImageBehavior = false;
-            lv_est_tot.View = View.Details;
-            // 
-            // codigo
-            // 
-            codigo.Text = "Código";
-            codigo.Width = 80;
-            // 
-            // total_entradas
-            // 
-            total_entradas.Text = "Entradas";
-            total_entradas.TextAlign = HorizontalAlignment.Center;
-            total_entradas.Width = 100;
-            // 
-            // total_saidas
-            // 
-            total_saidas.Text = "Saídas";
-            total_saidas.TextAlign = HorizontalAlignment.Center;
-            total_saidas.Width = 80;
-            // 
-            // estoque_atual
-            // 
-            estoque_atual.Text = "Estoque";
-            estoque_atual.TextAlign = HorizontalAlignment.Center;
+            btn_pesquisa.BackColor = Color.FromArgb(233, 240, 245);
+            btn_pesquisa.FlatStyle = FlatStyle.Flat;
+            btn_pesquisa.Font = new Font("Segoe UI", 12F);
+            btn_pesquisa.ForeColor = Color.FromArgb(31, 44, 50);
+            btn_pesquisa.Location = new Point(293, 32);
+            btn_pesquisa.Name = "btn_pesquisa";
+            btn_pesquisa.Size = new Size(104, 34);
+            btn_pesquisa.TabIndex = 27;
+            btn_pesquisa.Text = "Pesquisar";
+            btn_pesquisa.UseVisualStyleBackColor = false;
+            btn_pesquisa.Click += btn_pesquisa_Click_1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(233, 240, 245);
-            ClientSize = new Size(1367, 565);
-            Controls.Add(panel4);
+            ClientSize = new Size(1367, 1043);
+            Controls.Add(groupBox1);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
-            Text = "Dit Corp";
+            Text = "Menu";
             panel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -256,15 +251,13 @@
         private Panel panel3;
         private Panel panel1;
         private Button button1;
-        private Panel panel4;
+        private GroupBox groupBox1;
         private Label label6;
         private ListView lv_est_tot;
         private ColumnHeader codigo;
-        private ColumnHeader total_entradas;
-        private ColumnHeader total_saidas;
         private ColumnHeader estoque_atual;
+        private Button btn_pesquisa;
         private Button button2;
         private TextBox txt_pesquisa;
-        private Button btn_pesquisa;
     }
 }

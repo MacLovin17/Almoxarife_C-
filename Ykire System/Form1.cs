@@ -34,8 +34,6 @@ namespace Ykire_System
                 {
                     item.codigo.ToString(),
                     item.produto,
-                    item.total_entradas.ToString(),
-                    item.total_saidas.ToString(),
                     item.total_estoque.ToString()
                 }));
             }
@@ -57,7 +55,7 @@ namespace Ykire_System
             }
         }
 
-        
+
 
         private void btn_cad_Click(object sender, EventArgs e)
         {
@@ -86,6 +84,16 @@ namespace Ykire_System
         {
             string textoPesquisa = txt_pesquisa.Text.Trim();
             obterProdutos_tot(textoPesquisa);
+        }
+
+        private void lv_est_tot_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printDocument2_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
         }
     }
 }

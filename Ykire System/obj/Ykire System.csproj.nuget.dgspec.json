@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Ykire System.csproj": {}
+    "\\\\TEC\\Ykire System2\\Ykire System\\Ykire System.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Ykire System.csproj": {
+    "\\\\TEC\\Ykire System2\\Ykire System\\Ykire System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Ykire System.csproj",
+        "projectUniqueName": "\\\\TEC\\Ykire System2\\Ykire System\\Ykire System.csproj",
         "projectName": "Ykire System",
-        "projectPath": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Ykire System.csproj",
-        "packagesPath": "C:\\Users\\tec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\obj\\",
+        "projectPath": "\\\\TEC\\Ykire System2\\Ykire System\\Ykire System.csproj",
+        "packagesPath": "C:\\Users\\frota\\.nuget\\packages\\",
+        "outputPath": "\\\\TEC\\Ykire System2\\Ykire System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\tec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\frota\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -52,3 +52,5 @@ C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Yki
 \\TEC\Ykire System2\Ykire System\obj\Debug\net8.0-windows\Ykire System.pdb
 \\TEC\Ykire System2\Ykire System\obj\Debug\net8.0-windows\Ykire System.genruntimeconfig.cache
 \\TEC\Ykire System2\Ykire System\obj\Debug\net8.0-windows\ref\Ykire System.dll
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire_System.LoginForm.resources
+\\TEC\Ykire System2\Ykire System\obj\Debug\net8.0-windows\Ykire_System.LoginForm.resources

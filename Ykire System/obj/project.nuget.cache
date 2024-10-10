@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ONhdUgine0c=",
+  "dgSpecHash": "C6Fy9JuHDxA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Ykire System.csproj",
+  "projectFilePath": "\\\\TEC\\Ykire System2\\Ykire System\\Ykire System.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\tec\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
-    "C:\\Users\\tec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\tec\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\tec\\.nuget\\packages\\npgsql\\8.0.4\\npgsql.8.0.4.nupkg.sha512"
+    "C:\\Users\\frota\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
+    "C:\\Users\\frota\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\frota\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\frota\\.nuget\\packages\\npgsql\\8.0.4\\npgsql.8.0.4.nupkg.sha512"
   ],
   "logs": []
 }

@@ -56,7 +56,7 @@
             panel3.Controls.Add(lv_est);
             panel3.Location = new Point(597, 25);
             panel3.Name = "panel3";
-            panel3.Size = new Size(847, 412);
+            panel3.Size = new Size(847, 791);
             panel3.TabIndex = 25;
             // 
             // label6
@@ -76,7 +76,7 @@
             lv_est.Columns.AddRange(new ColumnHeader[] { codigo, nome, qt, obs });
             lv_est.Location = new Point(54, 60);
             lv_est.Name = "lv_est";
-            lv_est.Size = new Size(773, 333);
+            lv_est.Size = new Size(773, 706);
             lv_est.TabIndex = 0;
             lv_est.UseCompatibleStateImageBehavior = false;
             lv_est.View = View.Details;
@@ -166,7 +166,7 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(116, 450);
+            panel2.Size = new Size(116, 828);
             panel2.TabIndex = 16;
             // 
             // btn_salva_est
@@ -203,7 +203,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(233, 240, 245);
-            ClientSize = new Size(1485, 450);
+            ClientSize = new Size(1485, 828);
             Controls.Add(txt_cod_entr);
             Controls.Add(date_est);
             Controls.Add(panel3);
@@ -216,7 +216,7 @@
             Controls.Add(panel2);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form3";
-            Text = "Estoque";
+            Text = "Entrada";
             Load += Form3_Load;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();

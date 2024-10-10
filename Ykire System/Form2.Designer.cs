@@ -58,7 +58,7 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(116, 450);
+            panel2.Size = new Size(116, 821);
             panel2.TabIndex = 4;
             // 
             // btn_salva_cad
@@ -151,7 +151,7 @@
             lv_cad.Columns.AddRange(new ColumnHeader[] { codigo, produto, fornecedor, cnpj, obs });
             lv_cad.Location = new Point(26, 50);
             lv_cad.Name = "lv_cad";
-            lv_cad.Size = new Size(707, 333);
+            lv_cad.Size = new Size(707, 733);
             lv_cad.TabIndex = 0;
             lv_cad.UseCompatibleStateImageBehavior = false;
             lv_cad.View = View.Details;
@@ -189,7 +189,7 @@
             panel3.Controls.Add(lv_cad);
             panel3.Location = new Point(586, 26);
             panel3.Name = "panel3";
-            panel3.Size = new Size(748, 412);
+            panel3.Size = new Size(748, 795);
             panel3.TabIndex = 15;
             // 
             // label6
@@ -208,7 +208,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(233, 240, 245);
-            ClientSize = new Size(1346, 450);
+            ClientSize = new Size(1346, 821);
             Controls.Add(panel3);
             Controls.Add(txt_obs);
             Controls.Add(txt_cnpj);

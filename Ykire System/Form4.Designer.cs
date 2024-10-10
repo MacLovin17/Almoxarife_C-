@@ -64,9 +64,9 @@
             // 
             panel3.Controls.Add(label6);
             panel3.Controls.Add(lv_est_said);
-            panel3.Location = new Point(602, 25);
+            panel3.Location = new Point(597, 25);
             panel3.Name = "panel3";
-            panel3.Size = new Size(556, 412);
+            panel3.Size = new Size(561, 796);
             panel3.TabIndex = 34;
             // 
             // label6
@@ -74,7 +74,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 18F);
             label6.ForeColor = SystemColors.ActiveCaptionText;
-            label6.Location = new Point(55, 6);
+            label6.Location = new Point(31, 6);
             label6.Name = "label6";
             label6.Size = new Size(207, 32);
             label6.TabIndex = 1;
@@ -83,9 +83,9 @@
             // lv_est_said
             // 
             lv_est_said.Columns.AddRange(new ColumnHeader[] { codigo, qt, cgo, obs });
-            lv_est_said.Location = new Point(67, 60);
+            lv_est_said.Location = new Point(43, 60);
             lv_est_said.Name = "lv_est_said";
-            lv_est_said.Size = new Size(473, 333);
+            lv_est_said.Size = new Size(473, 718);
             lv_est_said.TabIndex = 0;
             lv_est_said.UseCompatibleStateImageBehavior = false;
             lv_est_said.View = View.Details;
@@ -119,6 +119,7 @@
             txt_data_est_said.Name = "txt_data_est_said";
             txt_data_est_said.Size = new Size(161, 23);
             txt_data_est_said.TabIndex = 33;
+            
             // 
             // txt_qt_est_said
             // 
@@ -175,7 +176,7 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(116, 450);
+            panel2.Size = new Size(116, 825);
             panel2.TabIndex = 27;
             // 
             // btn_salva_est_said
@@ -227,14 +228,14 @@
             txt_cod_prod.Name = "txt_cod_prod";
             txt_cod_prod.Size = new Size(276, 23);
             txt_cod_prod.TabIndex = 38;
-            txt_cod_prod.TextChanged += txt_cod_prod_TextChanged;
+            
             // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(233, 240, 245);
-            ClientSize = new Size(1454, 450);
+            ClientSize = new Size(1454, 825);
             Controls.Add(txt_cod_prod);
             Controls.Add(txt_cgo_desc);
             Controls.Add(label2);
@@ -250,7 +251,7 @@
             Controls.Add(panel2);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form4";
-            Text = "Form4";
+            Text = "Baixa";
             Load += Form4_Load_1;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();

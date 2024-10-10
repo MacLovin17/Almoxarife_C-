@@ -24,7 +24,7 @@ namespace Ykire_System
         private void obterProdutos_est_said()
         {
             baixas = _baixaRepository.Get();
-           
+
             lv_est_said.Items.Clear();
             foreach (var item in baixas)
             {
@@ -146,12 +146,11 @@ namespace Ykire_System
 
         private void Form4_Load_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void txt_cod_prod_TextChanged(object sender, EventArgs e)
-        {
-
+            txt_cod_est_said.Text = "";
+            txt_qt_est_said.Text = "";
+            txt_data_est_said.Text = date_est_said.Text;
         }
     }
-}
+
+
+}   
