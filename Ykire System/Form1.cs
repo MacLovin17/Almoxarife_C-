@@ -95,5 +95,10 @@ namespace Ykire_System
         {
 
         }
+
+        private void btn_ger_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

@@ -106,6 +106,7 @@
             btn_ger.TabIndex = 3;
             btn_ger.Text = "Gerencial";
             btn_ger.UseVisualStyleBackColor = false;
+            btn_ger.Click += btn_ger_Click;
             // 
             // btn_cad
             // 

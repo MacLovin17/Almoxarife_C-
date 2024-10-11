@@ -150,6 +150,41 @@ namespace Ykire_System
             txt_qt_est_said.Text = "";
             txt_data_est_said.Text = date_est_said.Text;
         }
+
+        private void txt_cgo_desc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_cod_est_said_TextChanged_1(object sender, EventArgs e)
+        {
+            if (int.TryParse(txt_cod_est_said.Text, out int codigo))
+            {
+                // Busca o nome do produto pelo código
+                string nomeProduto = _baixaRepository.ObterNomeProdutoPorCodigo(codigo);
+
+                // Exibe o nome do produto no campo de texto
+                txt_cod_prod.Text = nomeProduto ?? "Produto não encontrado";
+
+                // Habilita ou desabilita o botão baseado na existência do produto
+                btn_salva_est_said.Enabled = nomeProduto != null;
+            }
+            else
+            {
+                txt_cod_prod.Text = string.Empty;
+                btn_salva_est_said.Enabled = false; // Desabilita o botão se o código não for válido
+            }
+        }
+
+        private void txt_qt_est_said_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_cod_prod_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

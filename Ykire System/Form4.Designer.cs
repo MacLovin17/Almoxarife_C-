@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
-            date_est_said = new DateTimePicker();
             panel3 = new Panel();
             label6 = new Label();
             lv_est_said = new ListView();
@@ -38,8 +37,6 @@
             cgo = new ColumnHeader();
             obs = new ColumnHeader();
             txt_data_est_said = new TextBox();
-            txt_qt_est_said = new TextBox();
-            txt_cod_est_said = new TextBox();
             label4 = new Label();
             label3 = new Label();
             label1 = new Label();
@@ -49,16 +46,12 @@
             label2 = new Label();
             txt_cgo_desc = new TextBox();
             txt_cod_prod = new TextBox();
+            txt_qt_est_said = new TextBox();
+            txt_cod_est_said = new TextBox();
+            date_est_said = new DateTimePicker();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
-            // 
-            // date_est_said
-            // 
-            date_est_said.Location = new Point(155, 230);
-            date_est_said.Name = "date_est_said";
-            date_est_said.Size = new Size(161, 23);
-            date_est_said.TabIndex = 26;
             // 
             // panel3
             // 
@@ -119,22 +112,6 @@
             txt_data_est_said.Name = "txt_data_est_said";
             txt_data_est_said.Size = new Size(161, 23);
             txt_data_est_said.TabIndex = 33;
-            
-            // 
-            // txt_qt_est_said
-            // 
-            txt_qt_est_said.Location = new Point(156, 116);
-            txt_qt_est_said.Name = "txt_qt_est_said";
-            txt_qt_est_said.Size = new Size(403, 23);
-            txt_qt_est_said.TabIndex = 32;
-            // 
-            // txt_cod_est_said
-            // 
-            txt_cod_est_said.Location = new Point(156, 59);
-            txt_cod_est_said.Name = "txt_cod_est_said";
-            txt_cod_est_said.Size = new Size(121, 23);
-            txt_cod_est_said.TabIndex = 31;
-            txt_cod_est_said.TextChanged += txt_cod_est_said_TextChanged;
             // 
             // label4
             // 
@@ -200,6 +177,7 @@
             Cbox_said.Name = "Cbox_said";
             Cbox_said.Size = new Size(121, 23);
             Cbox_said.TabIndex = 35;
+            Cbox_said.UseWaitCursor = true;
             Cbox_said.SelectedIndexChanged += Cbox_said_SelectedIndexChanged;
             // 
             // label2
@@ -220,6 +198,7 @@
             txt_cgo_desc.Name = "txt_cgo_desc";
             txt_cgo_desc.Size = new Size(276, 23);
             txt_cgo_desc.TabIndex = 37;
+            txt_cgo_desc.TextChanged += txt_cgo_desc_TextChanged;
             // 
             // txt_cod_prod
             // 
@@ -228,7 +207,33 @@
             txt_cod_prod.Name = "txt_cod_prod";
             txt_cod_prod.Size = new Size(276, 23);
             txt_cod_prod.TabIndex = 38;
-            
+            txt_cod_prod.TextChanged += txt_cod_prod_TextChanged;
+            // 
+            // txt_qt_est_said
+            // 
+            txt_qt_est_said.Location = new Point(155, 116);
+            txt_qt_est_said.Name = "txt_qt_est_said";
+            txt_qt_est_said.Size = new Size(115, 23);
+            txt_qt_est_said.TabIndex = 40;
+            txt_qt_est_said.TextAlign = HorizontalAlignment.Center;
+            txt_qt_est_said.TextChanged += txt_qt_est_said_TextChanged;
+            // 
+            // txt_cod_est_said
+            // 
+            txt_cod_est_said.Location = new Point(155, 59);
+            txt_cod_est_said.Name = "txt_cod_est_said";
+            txt_cod_est_said.Size = new Size(115, 23);
+            txt_cod_est_said.TabIndex = 39;
+            txt_cod_est_said.TextAlign = HorizontalAlignment.Center;
+            txt_cod_est_said.TextChanged += txt_cod_est_said_TextChanged_1;
+            // 
+            // date_est_said
+            // 
+            date_est_said.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            date_est_said.Location = new Point(155, 230);
+            date_est_said.Name = "date_est_said";
+            date_est_said.Size = new Size(161, 23);
+            date_est_said.TabIndex = 41;
             // 
             // Form4
             // 
@@ -236,15 +241,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(233, 240, 245);
             ClientSize = new Size(1454, 825);
+            Controls.Add(date_est_said);
+            Controls.Add(txt_qt_est_said);
+            Controls.Add(txt_cod_est_said);
             Controls.Add(txt_cod_prod);
             Controls.Add(txt_cgo_desc);
             Controls.Add(label2);
             Controls.Add(Cbox_said);
-            Controls.Add(date_est_said);
             Controls.Add(panel3);
             Controls.Add(txt_data_est_said);
-            Controls.Add(txt_qt_est_said);
-            Controls.Add(txt_cod_est_said);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label1);
@@ -261,8 +266,6 @@
         }
 
         #endregion
-
-        private DateTimePicker date_est_said;
         private Panel panel3;
         private Label label6;
         private ListView lv_est_said;
@@ -270,8 +273,6 @@
         private ColumnHeader qt;
         private ColumnHeader obs;
         private TextBox txt_data_est_said;
-        private TextBox txt_qt_est_said;
-        private TextBox txt_cod_est_said;
         private Label label4;
         private Label label3;
         private Label label1;
@@ -282,5 +283,8 @@
         private ColumnHeader cgo;
         private TextBox txt_cgo_desc;
         private TextBox txt_cod_prod;
+        private TextBox txt_qt_est_said;
+        private TextBox txt_cod_est_said;
+        private DateTimePicker date_est_said;
     }
 }

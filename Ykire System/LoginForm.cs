@@ -22,6 +22,14 @@ namespace Ykire_System
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
+            if(username == "adm" )
+            {
+                username = "ADM";
+            }
+            if (username == "eriky")
+            {
+                username = "ERIKY";
+            }
             // Validação simples para o exemplo
             if ((username == "ADM" && password == "1234") || (username == "ERIKY" && password == "37566"))
             {
@@ -33,6 +41,11 @@ namespace Ykire_System
             {
                 MessageBox.Show("Usuário ou senha inválidos.");
             }
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

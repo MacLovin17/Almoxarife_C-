@@ -87,6 +87,8 @@
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(221, 23);
             txtUsername.TabIndex = 29;
+            txtUsername.TextAlign = HorizontalAlignment.Center;
+            txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // txtPassword
             // 
@@ -94,6 +96,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(221, 23);
             txtPassword.TabIndex = 30;
+            txtPassword.TextAlign = HorizontalAlignment.Center;
             txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
@@ -124,7 +127,6 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LoginForm";
             Text = "Dit Corp";
-            
             panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

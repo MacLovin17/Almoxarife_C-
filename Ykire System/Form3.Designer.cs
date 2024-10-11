@@ -115,8 +115,10 @@
             // 
             txt_qt_est.Location = new Point(151, 116);
             txt_qt_est.Name = "txt_qt_est";
-            txt_qt_est.Size = new Size(403, 23);
+            txt_qt_est.Size = new Size(115, 23);
             txt_qt_est.TabIndex = 22;
+            txt_qt_est.TextAlign = HorizontalAlignment.Center;
+            txt_qt_est.TextChanged += txt_qt_est_TextChanged;
             // 
             // txt_cod_est
             // 
@@ -124,6 +126,7 @@
             txt_cod_est.Name = "txt_cod_est";
             txt_cod_est.Size = new Size(115, 23);
             txt_cod_est.TabIndex = 21;
+            txt_cod_est.TextAlign = HorizontalAlignment.Center;
             txt_cod_est.TextChanged += txt_cod_est_TextChanged;
             // 
             // label4

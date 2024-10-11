@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Ykire_System
-build_property.ProjectDir = \\TEC\Ykire System2\Ykire System\
+build_property.ProjectDir = C:\Users\tec\source\repos\Ykire System\Ykire System\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

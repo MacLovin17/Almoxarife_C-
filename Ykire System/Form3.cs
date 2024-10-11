@@ -111,5 +111,10 @@ namespace Ykire_System
                 btn_salva_est.Enabled = false; // Desabilita o botão se o código não for válido
             }
         }
+
+        private void txt_qt_est_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
