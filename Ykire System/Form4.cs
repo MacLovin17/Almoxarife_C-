@@ -8,20 +8,25 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Windows.Forms;
 using Ykire_System.Infra;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace Ykire_System
 {
-
+    
     public partial class Form4 : Form
     {
-        private StringReader meuLeitor;
+        private PrintDocument printDocument = new PrintDocument();
         public List<Baixa> baixas { get; private set; } = new List<Baixa>();
         private BaixaRepository _baixaRepository;
         private bool ascendingOrder = true; // Controla a ordem da ordenação
         public Form4()
         {
             InitializeComponent();
+
+            printDocument.PrintPage += PrintDocument_PrintPage;
+            printDocument.DefaultPageSettings.Landscape = true;
+
             _baixaRepository = new BaixaRepository();
             btn_salva_est_said.Enabled = false; // Inicialmente desabilitado
             obterProdutos_est_said();
@@ -155,7 +160,7 @@ namespace Ykire_System
 
         private void Cbox_said_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             switch (Cbox_said.Text)
             {
                 case "777":
@@ -318,5 +323,78 @@ namespace Ykire_System
         {
             txt_data_inicio.Text = data_inicio.Text;
         }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+            PrintPreviewDialog preview = new PrintPreviewDialog();
+            preview.Document = printDocument;  // Conecta o documento ao preview
+            preview.ShowDialog();
+        }
+        private int itemIndex = 0; // Controla o índice do item atual entre páginas
+
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            // Fonte e variáveis de formatação
+            Font font = new Font("Arial", 10);
+            int yPosition = e.MarginBounds.Top;
+            int xPosition = e.MarginBounds.Left;
+            int rowHeight = 20;
+
+            // Cabeçalho da ListView (imprime uma vez por página)
+            xPosition = e.MarginBounds.Left; // Reinicializa xPosition para cada nova linha
+            for (int i = 0; i < lv_est_said.Columns.Count; i++)
+            {
+                e.Graphics.DrawString(lv_est_said.Columns[i].Text, font, Brushes.Black, xPosition, yPosition);
+
+                // Ajusta xPosition com base na largura de cada coluna
+                if (i == 0) // Código
+                    xPosition += 80; // 80 pixels para a coluna Código
+                else if (i == 1) // Descrição
+                    xPosition += 500; // 300 pixels para a coluna Descrição
+                else
+                    xPosition += 100; // Ajuste padrão para outras colunas
+            }
+
+            yPosition += rowHeight; // Move para a próxima linha
+
+            // Controla o espaçamento vertical, garantindo que cabe na página
+            while (itemIndex < lv_est_said.Items.Count)
+            {
+                xPosition = e.MarginBounds.Left; // Reinicializa xPosition para cada nova linha
+                ListViewItem item = lv_est_said.Items[itemIndex];
+
+                // Imprime o conteúdo da ListView por coluna
+                for (int i = 0; i < item.SubItems.Count; i++)
+                {
+                    e.Graphics.DrawString(item.SubItems[i].Text, font, Brushes.Black, xPosition, yPosition);
+
+                    // Ajusta xPosition com base na largura de cada coluna
+                    if (i == 0) // Código
+                        xPosition += 80; // 80 pixels para a coluna Código
+                    else if (i == 1) // Descrição
+                        xPosition += 500; // 300 pixels para a coluna Descrição
+                    else
+                        xPosition += 100; // Ajuste padrão para outras colunas
+                }
+
+                yPosition += rowHeight; // Move para a próxima linha
+
+                // Verifica se a página está cheia
+                if (yPosition + rowHeight > e.MarginBounds.Bottom)
+                {
+                    e.HasMorePages = true; // Informa que há mais páginas
+                    itemIndex++; // Incrementa o índice do item
+                    return; // Sai do método para imprimir a próxima página
+                }
+
+                itemIndex++; // Avança para o próximo item
+            }
+
+            // Se todos os itens foram impressos, reseta o índice e encerra
+            e.HasMorePages = false;
+            itemIndex = 0; // Reseta o índice para permitir nova impressão corretamente
+        }
+
+
     }
 }   

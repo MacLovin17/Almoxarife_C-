@@ -170,7 +170,7 @@
             // nome
             // 
             nome.Text = "Descrição";
-            nome.Width = 310;
+            nome.Width = 320;
             // 
             // qt
             // 
@@ -253,6 +253,7 @@
             btn_print.TabIndex = 3;
             btn_print.Text = "Imprimir";
             btn_print.UseVisualStyleBackColor = false;
+            btn_print.Click += btn_print_Click;
             // 
             // btn_salva_est_said
             // 
