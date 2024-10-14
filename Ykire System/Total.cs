@@ -13,9 +13,10 @@ namespace Ykire_System
         public string total_entradas { get; private set; }
         public string total_saidas { get; private set; }
         public string total_estoque  { get; private set; }
+        public string obs { get; private set; } 
         public Total() { }
 
-        public Total(string codigo, string produto, string total_entradas, string total_saidas, string total_estoque)
+        public Total(string codigo, string produto, string total_entradas, string total_saidas, string total_estoque, string obs)
         {
             if (string.IsNullOrEmpty(codigo))
             {
@@ -26,9 +27,10 @@ namespace Ykire_System
             this.total_entradas = total_entradas;
             this.total_saidas = total_saidas;
             this.total_estoque = total_estoque;
-
+            this.obs = obs;
 
         }
+
         
     }
 }

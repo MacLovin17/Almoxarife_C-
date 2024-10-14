@@ -1,16 +1,27 @@
-﻿using System;
+﻿using Npgsql.Internal;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Drawing.Printing;
 using System.Linq;
+using System.Reflection.Metadata;
+using System.Text;
 using System.Windows.Forms;
 using Ykire_System.Infra;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
 
 namespace Ykire_System
 {
+
     public partial class Form4 : Form
     {
+        private StringReader meuLeitor;
         public List<Baixa> baixas { get; private set; } = new List<Baixa>();
         private BaixaRepository _baixaRepository;
-
+        private bool ascendingOrder = true; // Controla a ordem da ordenação
         public Form4()
         {
             InitializeComponent();
@@ -19,6 +30,10 @@ namespace Ykire_System
             obterProdutos_est_said();
             date_est_said.Format = DateTimePickerFormat.Custom;
             date_est_said.CustomFormat = "dd/MM/yyyy";
+            data_final.Format = DateTimePickerFormat.Custom;
+            data_final.CustomFormat = "dd/MM/yyyy";
+            data_inicio.Format = DateTimePickerFormat.Custom;
+            data_inicio.CustomFormat = "dd/MM/yyyy";
         }
 
         private void obterProdutos_est_said()
@@ -31,12 +46,40 @@ namespace Ykire_System
                 lv_est_said.Items.Add(new ListViewItem(new String[]
                 {
                     item.codigo.ToString(),
+                    item.nome,
                     item.qt.ToString(),
                     item.cgo.ToString(),
                     item.data
                 }));
             }
         }
+        private void AtualizarListViewPorPeriodo(DateTime dataInicio, DateTime dataFim)
+        {
+            // Obtém as baixas do repositório, filtrando e ordenando pela data
+            baixas = _baixaRepository.Get()
+                .Where(item => DateTime.TryParse(item.data, out DateTime dataBaixa)
+                    && dataBaixa >= dataInicio
+                    && dataBaixa <= dataFim)
+                .OrderBy(item => DateTime.Parse(item.data)) // Ordena pela data
+                .ToList();
+
+            // Limpa os itens da ListView
+            lv_est_said.Items.Clear();
+
+            // Adiciona os itens filtrados e ordenados à ListView
+            foreach (var item in baixas)
+            {
+                lv_est_said.Items.Add(new ListViewItem(new String[]
+                {
+            item.codigo.ToString(),
+            item.nome,
+            item.qt.ToString(),
+            item.cgo.ToString(),
+            item.data
+                }));
+            }
+        }
+
 
         private void btn_salva_est_said_Click(object sender, EventArgs e)
         {
@@ -64,6 +107,8 @@ namespace Ykire_System
             txt_cod_est_said.Text = "";
             txt_qt_est_said.Text = "";
             txt_data_est_said.Text = date_est_said.Text;
+            txt_data_inicio.Text = data_inicio.Text;
+            txt_data_final.Text = data_final.Text;
         }
 
         private void date_est_said_ValueChanged(object sender, EventArgs e)
@@ -149,6 +194,18 @@ namespace Ykire_System
             txt_cod_est_said.Text = "";
             txt_qt_est_said.Text = "";
             txt_data_est_said.Text = date_est_said.Text;
+            txt_data_inicio.Text = data_inicio.Text;
+            txt_data_final.Text = data_final.Text;
+            obterProdutos_est_said();
+        }
+
+        private void FiltrarPorData()
+        {
+            if (DateTime.TryParse(txt_data_inicio.Text, out DateTime dataInicio) &&
+                DateTime.TryParse(txt_data_final.Text, out DateTime dataFim))
+            {
+                AtualizarListViewPorPeriodo(dataInicio, dataFim);
+            }
         }
 
         private void txt_cgo_desc_TextChanged(object sender, EventArgs e)
@@ -185,7 +242,70 @@ namespace Ykire_System
         {
 
         }
+
+        private void lv_est_said_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void lv_est_said_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            // Verifica se o usuário clicou na segunda coluna (índice 1)
+            if (e.Column == 1)
+            {
+                // Alterna entre crescente e decrescente
+                if (ascendingOrder)
+                    baixas = baixas.OrderBy(item => item.nome).ToList();
+                else
+                    baixas = baixas.OrderByDescending(item => item.nome).ToList();
+
+                ascendingOrder = !ascendingOrder; // Alterna a ordem para o próximo clique
+                obterProdutos_est_said(); // Atualiza a ListView com a lista ordenada
+            }
+        }
+
+        private void date_est_said_ValueChanged_1(object sender, EventArgs e)
+        {
+            txt_data_est_said.Text = date_est_said.Text;
+        }
+
+        private void txt_data_est_said_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void data_inicio_ValueChanged(object sender, EventArgs e)
+        {
+            txt_data_inicio.Text = data_inicio.Text;
+        }
+
+        private void data_final_ValueChanged(object sender, EventArgs e)
+        {
+            txt_data_final.Text = data_final.Text;
+        }
+
+        private void data_inicio_ValueChanged_1(object sender, EventArgs e)
+        {
+            txt_data_inicio.Text = data_inicio.Text;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FiltrarPorData();
+        }
+
+        private void txt_data_inicio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void data_final_ValueChanged_1(object sender, EventArgs e)
+        {
+            txt_data_final.Text = data_final.Text;
+        }
+
+        private void data_inicio_ValueChanged_2(object sender, EventArgs e)
+        {
+            txt_data_inicio.Text = data_inicio.Text;
+        }
     }
-
-
 }   

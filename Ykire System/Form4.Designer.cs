@@ -28,11 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             panel3 = new Panel();
+            button2 = new Button();
+            data_final = new DateTimePicker();
+            data_inicio = new DateTimePicker();
+            label5 = new Label();
+            txt_data_final = new TextBox();
+            txt_data_inicio = new TextBox();
             label6 = new Label();
             lv_est_said = new ListView();
-            codigo = new ColumnHeader();
+            codigo = new ColumnHeader("(nenhum)");
+            nome = new ColumnHeader();
             qt = new ColumnHeader();
             cgo = new ColumnHeader();
             obs = new ColumnHeader();
@@ -41,6 +49,7 @@
             label3 = new Label();
             label1 = new Label();
             panel2 = new Panel();
+            btn_print = new Button();
             btn_salva_est_said = new Button();
             Cbox_said = new ComboBox();
             label2 = new Label();
@@ -49,18 +58,85 @@
             txt_qt_est_said = new TextBox();
             txt_cod_est_said = new TextBox();
             date_est_said = new DateTimePicker();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            PrintDialog1 = new PrintDialog();
+            pd1 = new System.Drawing.Printing.PrintDocument();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel3
             // 
+            panel3.Controls.Add(button2);
+            panel3.Controls.Add(data_final);
+            panel3.Controls.Add(data_inicio);
+            panel3.Controls.Add(label5);
+            panel3.Controls.Add(txt_data_final);
+            panel3.Controls.Add(txt_data_inicio);
             panel3.Controls.Add(label6);
             panel3.Controls.Add(lv_est_said);
             panel3.Location = new Point(597, 25);
             panel3.Name = "panel3";
-            panel3.Size = new Size(561, 796);
+            panel3.Size = new Size(783, 796);
             panel3.TabIndex = 34;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(233, 240, 245);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 12F);
+            button2.ForeColor = Color.FromArgb(31, 44, 50);
+            button2.Location = new Point(676, 23);
+            button2.Name = "button2";
+            button2.Size = new Size(104, 34);
+            button2.TabIndex = 46;
+            button2.Text = "Atualizar";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // data_final
+            // 
+            data_final.Location = new Point(549, 31);
+            data_final.Name = "data_final";
+            data_final.Size = new Size(115, 23);
+            data_final.TabIndex = 45;
+            data_final.ValueChanged += data_final_ValueChanged_1;
+            // 
+            // data_inicio
+            // 
+            data_inicio.Location = new Point(428, 31);
+            data_inicio.Name = "data_inicio";
+            data_inicio.Size = new Size(115, 23);
+            data_inicio.TabIndex = 47;
+            data_inicio.ValueChanged += data_inicio_ValueChanged_2;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F);
+            label5.ForeColor = SystemColors.ActiveCaptionText;
+            label5.Location = new Point(352, 33);
+            label5.Name = "label5";
+            label5.Size = new Size(70, 21);
+            label5.TabIndex = 42;
+            label5.Text = "Período :";
+            // 
+            // txt_data_final
+            // 
+            txt_data_final.Location = new Point(549, 31);
+            txt_data_final.Name = "txt_data_final";
+            txt_data_final.Size = new Size(115, 23);
+            txt_data_final.TabIndex = 44;
+            txt_data_final.TextAlign = HorizontalAlignment.Center;
+            // 
+            // txt_data_inicio
+            // 
+            txt_data_inicio.Location = new Point(428, 31);
+            txt_data_inicio.Name = "txt_data_inicio";
+            txt_data_inicio.Size = new Size(115, 23);
+            txt_data_inicio.TabIndex = 43;
+            txt_data_inicio.TextAlign = HorizontalAlignment.Center;
+            txt_data_inicio.TextChanged += txt_data_inicio_TextChanged;
             // 
             // label6
             // 
@@ -75,18 +151,26 @@
             // 
             // lv_est_said
             // 
-            lv_est_said.Columns.AddRange(new ColumnHeader[] { codigo, qt, cgo, obs });
+            lv_est_said.Columns.AddRange(new ColumnHeader[] { codigo, nome, qt, cgo, obs });
+            lv_est_said.FullRowSelect = true;
+            lv_est_said.GridLines = true;
             lv_est_said.Location = new Point(43, 60);
             lv_est_said.Name = "lv_est_said";
-            lv_est_said.Size = new Size(473, 718);
+            lv_est_said.Size = new Size(737, 718);
             lv_est_said.TabIndex = 0;
             lv_est_said.UseCompatibleStateImageBehavior = false;
             lv_est_said.View = View.Details;
+            lv_est_said.SelectedIndexChanged += lv_est_said_SelectedIndexChanged;
             // 
             // codigo
             // 
             codigo.Text = "Código";
             codigo.Width = 80;
+            // 
+            // nome
+            // 
+            nome.Text = "Descrição";
+            nome.Width = 300;
             // 
             // qt
             // 
@@ -110,8 +194,9 @@
             // 
             txt_data_est_said.Location = new Point(155, 230);
             txt_data_est_said.Name = "txt_data_est_said";
-            txt_data_est_said.Size = new Size(161, 23);
+            txt_data_est_said.Size = new Size(140, 23);
             txt_data_est_said.TabIndex = 33;
+            txt_data_est_said.TextChanged += txt_data_est_said_TextChanged;
             // 
             // label4
             // 
@@ -149,12 +234,26 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(31, 44, 50);
+            panel2.Controls.Add(btn_print);
             panel2.Controls.Add(btn_salva_est_said);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(116, 825);
             panel2.TabIndex = 27;
+            // 
+            // btn_print
+            // 
+            btn_print.BackColor = Color.FromArgb(31, 44, 50);
+            btn_print.FlatStyle = FlatStyle.Flat;
+            btn_print.ForeColor = Color.FromArgb(186, 200, 208);
+            btn_print.Location = new Point(12, 69);
+            btn_print.Name = "btn_print";
+            btn_print.Size = new Size(94, 34);
+            btn_print.TabIndex = 3;
+            btn_print.Text = "Imprimir";
+            btn_print.UseVisualStyleBackColor = false;
+           
             // 
             // btn_salva_est_said
             // 
@@ -229,11 +328,20 @@
             // 
             // date_est_said
             // 
-            date_est_said.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             date_est_said.Location = new Point(155, 230);
             date_est_said.Name = "date_est_said";
-            date_est_said.Size = new Size(161, 23);
+            date_est_said.Size = new Size(140, 23);
             date_est_said.TabIndex = 41;
+            date_est_said.ValueChanged += date_est_said_ValueChanged_1;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
+            // 
+            // PrintDialog1
+            // 
+            PrintDialog1.UseEXDialog = true;
             // 
             // Form4
             // 
@@ -286,5 +394,16 @@
         private TextBox txt_qt_est_said;
         private TextBox txt_cod_est_said;
         private DateTimePicker date_est_said;
+        private ColumnHeader nome;
+        private TextBox txt_data_final;
+        private TextBox txt_data_inicio;
+        private ContextMenuStrip contextMenuStrip1;
+        private DateTimePicker data_final;
+        private Label label5;
+        private Button button2;
+        private DateTimePicker data_inicio;
+        private Button btn_print;
+        private PrintDialog PrintDialog1;
+        private System.Drawing.Printing.PrintDocument pd1;
     }
 }

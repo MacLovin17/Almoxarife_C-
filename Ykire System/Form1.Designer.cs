@@ -43,6 +43,7 @@
             lv_est_tot = new ListView();
             codigo = new ColumnHeader();
             estoque_atual = new ColumnHeader();
+            obs = new ColumnHeader();
             button2 = new Button();
             btn_pesquisa = new Button();
             produto = new ColumnHeader();
@@ -150,10 +151,11 @@
             groupBox1.Font = new Font("Segoe UI", 15F);
             groupBox1.Location = new Point(158, 111);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(670, 875);
+            groupBox1.Size = new Size(691, 891);
             groupBox1.TabIndex = 27;
             groupBox1.TabStop = false;
             groupBox1.Text = "Estoque Total";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // txt_pesquisa
             // 
@@ -176,11 +178,13 @@
             // 
             // lv_est_tot
             // 
-            lv_est_tot.Columns.AddRange(new ColumnHeader[] { codigo, produto, estoque_atual });
+            lv_est_tot.Columns.AddRange(new ColumnHeader[] { codigo, produto, estoque_atual, obs });
             lv_est_tot.Font = new Font("Segoe UI", 9F);
+            lv_est_tot.FullRowSelect = true;
+            lv_est_tot.GridLines = true;
             lv_est_tot.Location = new Point(26, 72);
             lv_est_tot.Name = "lv_est_tot";
-            lv_est_tot.Size = new Size(551, 803);
+            lv_est_tot.Size = new Size(638, 803);
             lv_est_tot.TabIndex = 0;
             lv_est_tot.UseCompatibleStateImageBehavior = false;
             lv_est_tot.View = View.Details;
@@ -196,6 +200,11 @@
             estoque_atual.Text = "Estoque ";
             estoque_atual.TextAlign = HorizontalAlignment.Center;
             estoque_atual.Width = 80;
+            // 
+            // obs
+            // 
+            obs.Text = "OBS";
+            obs.Width = 120;
             // 
             // button2
             // 
@@ -237,6 +246,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Menu";
+            Load += Form1_Load;
             panel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
@@ -260,5 +270,6 @@
         private Button btn_pesquisa;
         private Button button2;
         private TextBox txt_pesquisa;
+        private ColumnHeader obs;
     }
 }

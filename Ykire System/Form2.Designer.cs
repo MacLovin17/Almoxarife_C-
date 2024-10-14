@@ -149,6 +149,8 @@
             // lv_cad
             // 
             lv_cad.Columns.AddRange(new ColumnHeader[] { codigo, produto, fornecedor, cnpj, obs });
+            lv_cad.FullRowSelect = true;
+            lv_cad.GridLines = true;
             lv_cad.Location = new Point(26, 50);
             lv_cad.Name = "lv_cad";
             lv_cad.Size = new Size(707, 733);

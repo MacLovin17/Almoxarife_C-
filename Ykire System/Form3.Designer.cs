@@ -74,6 +74,8 @@
             // lv_est
             // 
             lv_est.Columns.AddRange(new ColumnHeader[] { codigo, nome, qt, obs });
+            lv_est.FullRowSelect = true;
+            lv_est.GridLines = true;
             lv_est.Location = new Point(54, 60);
             lv_est.Name = "lv_est";
             lv_est.Size = new Size(773, 706);

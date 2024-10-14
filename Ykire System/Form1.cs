@@ -34,7 +34,10 @@ namespace Ykire_System
                 {
                     item.codigo.ToString(),
                     item.produto,
-                    item.total_estoque.ToString()
+                    item.total_estoque.ToString(),
+                    item.obs
+
+
                 }));
             }
         }
@@ -98,7 +101,17 @@ namespace Ykire_System
 
         private void btn_ger_Click(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
