@@ -22,7 +22,7 @@ namespace Ykire_System
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
-            if(username == "adm" )
+            if (username == "adm")
             {
                 username = "ADM";
             }
@@ -44,6 +44,11 @@ namespace Ykire_System
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginForm_Load_1(object sender, EventArgs e)
         {
 
         }

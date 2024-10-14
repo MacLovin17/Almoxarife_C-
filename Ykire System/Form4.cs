@@ -8,10 +8,7 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Windows.Forms;
 using Ykire_System.Infra;
-using iText.Kernel.Pdf;
-using iText.Layout;
-using iText.Layout.Element;
-using iText.Layout.Properties;
+
 
 namespace Ykire_System
 {
@@ -90,6 +87,10 @@ namespace Ykire_System
                 var data = txt_data_est_said.Text;
                 var cgo = Cbox_said.Text;
 
+                if (cgo == "892") // use "892" como string, se Cbox_said é string
+                {
+                    qt = (int.Parse(qt) * -1).ToString(); // Certifique-se que o tipo seja consistente
+                }
                 var baixa = new Baixa(codigo, qt, cgo, data);
                 baixas.Add(baixa);
 
@@ -154,6 +155,7 @@ namespace Ykire_System
 
         private void Cbox_said_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             switch (Cbox_said.Text)
             {
                 case "777":
@@ -191,6 +193,15 @@ namespace Ykire_System
 
         private void Form4_Load_1(object sender, EventArgs e)
         {
+            Cbox_said.Items.Add("777"); // Baixa Peça
+            Cbox_said.Items.Add("778"); // Baixa Ferramenta/uso
+            Cbox_said.Items.Add("779"); // Baixa Produto de Limpeza
+            Cbox_said.Items.Add("780"); // Baixa Consumo
+            Cbox_said.Items.Add("781"); // Baixa Elétrica
+            Cbox_said.Items.Add("782"); // Baixa Mecânica
+            Cbox_said.Items.Add("888"); // EPI
+            Cbox_said.Items.Add("892"); // Invent Entrada
+            Cbox_said.Items.Add("893"); // Invent Baixa
             txt_cod_est_said.Text = "";
             txt_qt_est_said.Text = "";
             txt_data_est_said.Text = date_est_said.Text;

@@ -77,7 +77,7 @@
             panel3.Controls.Add(lv_est_said);
             panel3.Location = new Point(597, 25);
             panel3.Name = "panel3";
-            panel3.Size = new Size(783, 796);
+            panel3.Size = new Size(814, 796);
             panel3.TabIndex = 34;
             // 
             // button2
@@ -170,7 +170,7 @@
             // nome
             // 
             nome.Text = "Descrição";
-            nome.Width = 300;
+            nome.Width = 310;
             // 
             // qt
             // 
@@ -253,7 +253,6 @@
             btn_print.TabIndex = 3;
             btn_print.Text = "Imprimir";
             btn_print.UseVisualStyleBackColor = false;
-           
             // 
             // btn_salva_est_said
             // 
@@ -271,7 +270,6 @@
             // Cbox_said
             // 
             Cbox_said.FormattingEnabled = true;
-            Cbox_said.Items.AddRange(new object[] { "777", "778", "779", "780", "781", "782", "888", "892", "893" });
             Cbox_said.Location = new Point(156, 173);
             Cbox_said.Name = "Cbox_said";
             Cbox_said.Size = new Size(121, 23);

@@ -127,6 +127,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LoginForm";
             Text = "Dit Corp";
+            Load += LoginForm_Load_1;
             panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
