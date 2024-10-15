@@ -76,6 +76,7 @@ namespace Ykire_System
             txt_qt_est.Text = "";
             txt_data_est.Text = date_est.Text;
             obterProdutos_est();
+            btn_salva_est.Enabled = false; // Inicialmente desabilitado
         }
 
         private void date_est_ValueChanged(object sender, EventArgs e)

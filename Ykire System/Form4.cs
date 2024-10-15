@@ -25,7 +25,7 @@ namespace Ykire_System
             InitializeComponent();
 
             printDocument.PrintPage += PrintDocument_PrintPage;
-            printDocument.DefaultPageSettings.Landscape = true;
+            printDocument.DefaultPageSettings.Landscape = true; 
 
             _baixaRepository = new BaixaRepository();
             btn_salva_est_said.Enabled = false; // Inicialmente desabilitado
