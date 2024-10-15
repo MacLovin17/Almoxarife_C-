@@ -83,20 +83,22 @@
             // button2
             // 
             button2.BackColor = Color.FromArgb(233, 240, 245);
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Zoom;
+            button2.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F);
             button2.ForeColor = Color.FromArgb(31, 44, 50);
-            button2.Location = new Point(676, 23);
+            button2.Location = new Point(706, 23);
             button2.Name = "button2";
-            button2.Size = new Size(104, 34);
+            button2.Size = new Size(74, 34);
             button2.TabIndex = 46;
-            button2.Text = "Atualizar";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // data_final
             // 
-            data_final.Location = new Point(549, 31);
+            data_final.Location = new Point(585, 34);
             data_final.Name = "data_final";
             data_final.Size = new Size(115, 23);
             data_final.TabIndex = 45;
@@ -104,7 +106,7 @@
             // 
             // data_inicio
             // 
-            data_inicio.Location = new Point(428, 31);
+            data_inicio.Location = new Point(464, 34);
             data_inicio.Name = "data_inicio";
             data_inicio.Size = new Size(115, 23);
             data_inicio.TabIndex = 47;
@@ -115,7 +117,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
             label5.ForeColor = SystemColors.ActiveCaptionText;
-            label5.Location = new Point(352, 33);
+            label5.Location = new Point(397, 36);
             label5.Name = "label5";
             label5.Size = new Size(70, 21);
             label5.TabIndex = 42;
@@ -123,7 +125,7 @@
             // 
             // txt_data_final
             // 
-            txt_data_final.Location = new Point(549, 31);
+            txt_data_final.Location = new Point(585, 34);
             txt_data_final.Name = "txt_data_final";
             txt_data_final.Size = new Size(115, 23);
             txt_data_final.TabIndex = 44;
@@ -131,7 +133,7 @@
             // 
             // txt_data_inicio
             // 
-            txt_data_inicio.Location = new Point(428, 31);
+            txt_data_inicio.Location = new Point(464, 34);
             txt_data_inicio.Name = "txt_data_inicio";
             txt_data_inicio.Size = new Size(115, 23);
             txt_data_inicio.TabIndex = 43;
@@ -245,26 +247,30 @@
             // btn_print
             // 
             btn_print.BackColor = Color.FromArgb(31, 44, 50);
+            btn_print.BackgroundImage = Properties.Resources.printer;
+            btn_print.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_print.FlatAppearance.BorderColor = Color.FromArgb(31, 44, 50);
             btn_print.FlatStyle = FlatStyle.Flat;
             btn_print.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_print.Location = new Point(12, 69);
+            btn_print.Location = new Point(12, 79);
             btn_print.Name = "btn_print";
             btn_print.Size = new Size(94, 34);
             btn_print.TabIndex = 3;
-            btn_print.Text = "Imprimir";
             btn_print.UseVisualStyleBackColor = false;
             btn_print.Click += btn_print_Click;
             // 
             // btn_salva_est_said
             // 
             btn_salva_est_said.BackColor = Color.FromArgb(31, 44, 50);
+            btn_salva_est_said.BackgroundImage = Properties.Resources.pngwing_com;
+            btn_salva_est_said.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_salva_est_said.FlatAppearance.BorderColor = Color.FromArgb(31, 44, 50);
             btn_salva_est_said.FlatStyle = FlatStyle.Flat;
             btn_salva_est_said.ForeColor = Color.FromArgb(186, 200, 208);
             btn_salva_est_said.Location = new Point(12, 29);
             btn_salva_est_said.Name = "btn_salva_est_said";
             btn_salva_est_said.Size = new Size(94, 34);
             btn_salva_est_said.TabIndex = 2;
-            btn_salva_est_said.Text = "Confirmar";
             btn_salva_est_said.UseVisualStyleBackColor = false;
             btn_salva_est_said.Click += btn_salva_est_said_Click;
             // 

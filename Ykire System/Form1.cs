@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Windows.Forms;
 using Ykire_System.Infra;
@@ -8,12 +9,17 @@ namespace Ykire_System
 {
     public partial class Form1 : Form
     {
+        private PrintDocument printDocument = new PrintDocument();
         public List<Total> totais { get; private set; } = new List<Total>();
         private bool ascendingOrder = true; // Controla a ordem da ordenação
 
         public Form1()
         {
             InitializeComponent();
+
+            printDocument.PrintPage += PrintDocument_PrintPage;
+            printDocument.DefaultPageSettings.Landscape = true;
+
             obterProdutos_tot();
             lv_est_tot.ColumnClick += Lv_est_tot_ColumnClick; // Adiciona o evento de clique na coluna
         }
@@ -106,12 +112,88 @@ namespace Ykire_System
 
         private void Form1_Load(object sender, EventArgs e)
         {
-              
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+        private int itemIndex = 0; // Controla o índice do item atual entre páginas
+
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            // Fonte para o título e variáveis de formatação
+            Font titleFont = new Font("Arial", 14, FontStyle.Bold);
+            Font font = new Font("Arial", 10);
+            int yPosition = e.MarginBounds.Top;
+            int xPosition = e.MarginBounds.Left;
+            int rowHeight = 20;
+
+            // Título "Movimentação de Estoque"
+            e.Graphics.DrawString("Relatório de Estoque", titleFont, Brushes.Black, xPosition, yPosition);
+            yPosition += 40; // Ajusta a posição vertical para o próximo conteúdo, abaixo do título
+
+            // Cabeçalho da ListView (imprime uma vez por página)
+            xPosition = e.MarginBounds.Left; // Reinicializa xPosition para cada nova linha
+            for (int i = 0; i < lv_est_tot.Columns.Count; i++)
+            {
+                e.Graphics.DrawString(lv_est_tot.Columns[i].Text, font, Brushes.Black, xPosition, yPosition);
+
+                // Ajusta xPosition com base na largura de cada coluna
+                if (i == 0) // Código
+                    xPosition += 80; // 80 pixels para a coluna Código
+                else if (i == 1) // Descrição
+                    xPosition += 500; // 500 pixels para a coluna Descrição
+                else
+                    xPosition += 100; // Ajuste padrão para outras colunas
+            }
+
+            yPosition += rowHeight; // Move para a próxima linha
+
+            // Controla o espaçamento vertical, garantindo que cabe na página
+            while (itemIndex < lv_est_tot.Items.Count)
+            {
+                xPosition = e.MarginBounds.Left; // Reinicializa xPosition para cada nova linha
+                ListViewItem item = lv_est_tot.Items[itemIndex];
+
+                // Imprime o conteúdo da ListView por coluna
+                for (int i = 0; i < item.SubItems.Count; i++)
+                {
+                    e.Graphics.DrawString(item.SubItems[i].Text, font, Brushes.Black, xPosition, yPosition);
+
+                    // Ajusta xPosition com base na largura de cada coluna
+                    if (i == 0) // Código
+                        xPosition += 80; // 80 pixels para a coluna Código
+                    else if (i == 1) // Descrição
+                        xPosition += 500; // 500 pixels para a coluna Descrição
+                    else
+                        xPosition += 100; // Ajuste padrão para outras colunas
+                }
+
+                yPosition += rowHeight; // Move para a próxima linha
+
+                // Verifica se a página está cheia
+                if (yPosition + rowHeight > e.MarginBounds.Bottom)
+                {
+                    e.HasMorePages = true; // Informa que há mais páginas
+                    itemIndex++; // Incrementa o índice do item
+                    return; // Sai do método para imprimir a próxima página
+                }
+
+                itemIndex++; // Avança para o próximo item
+            }
+
+            // Se todos os itens foram impressos, reseta o índice e encerra
+            e.HasMorePages = false;
+            itemIndex = 0; // Reseta o índice para permitir nova impressão corretamente
+        }
+
+        private void btn_print_est_Click(object sender, EventArgs e)
+        {
+            PrintPreviewDialog preview = new PrintPreviewDialog();
+            preview.Document = printDocument;  // Conecta o documento ao preview
+            preview.ShowDialog();
         }
     }
 }

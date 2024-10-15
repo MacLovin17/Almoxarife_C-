@@ -31,6 +31,10 @@
             ColumnHeader produto;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel2 = new Panel();
+            panel7 = new Panel();
+            panel6 = new Panel();
+            panel5 = new Panel();
+            panel4 = new Panel();
             button1 = new Button();
             btn_estoq = new Button();
             btn_ger = new Button();
@@ -38,14 +42,15 @@
             panel3 = new Panel();
             panel1 = new Panel();
             groupBox1 = new GroupBox();
+            btn_print_est = new Button();
             txt_pesquisa = new TextBox();
             label6 = new Label();
             lv_est_tot = new ListView();
             codigo = new ColumnHeader();
             estoque_atual = new ColumnHeader();
             obs = new ColumnHeader();
-            button2 = new Button();
             btn_pesquisa = new Button();
+            button2 = new Button();
             produto = new ColumnHeader();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -60,6 +65,10 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(31, 44, 50);
+            panel2.Controls.Add(panel7);
+            panel2.Controls.Add(panel6);
+            panel2.Controls.Add(panel5);
+            panel2.Controls.Add(panel4);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(btn_estoq);
             panel2.Controls.Add(btn_ger);
@@ -70,6 +79,46 @@
             panel2.Size = new Size(123, 961);
             panel2.TabIndex = 1;
             // 
+            // panel7
+            // 
+            panel7.BackgroundImage = (Image)resources.GetObject("panel7.BackgroundImage");
+            panel7.BackgroundImageLayout = ImageLayout.Zoom;
+            panel7.Enabled = false;
+            panel7.Location = new Point(12, 153);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(33, 25);
+            panel7.TabIndex = 31;
+            // 
+            // panel6
+            // 
+            panel6.BackgroundImage = (Image)resources.GetObject("panel6.BackgroundImage");
+            panel6.BackgroundImageLayout = ImageLayout.Zoom;
+            panel6.Enabled = false;
+            panel6.Location = new Point(12, 113);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(33, 25);
+            panel6.TabIndex = 30;
+            // 
+            // panel5
+            // 
+            panel5.BackgroundImage = (Image)resources.GetObject("panel5.BackgroundImage");
+            panel5.BackgroundImageLayout = ImageLayout.Zoom;
+            panel5.Enabled = false;
+            panel5.Location = new Point(11, 74);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(33, 25);
+            panel5.TabIndex = 29;
+            // 
+            // panel4
+            // 
+            panel4.BackgroundImage = Properties.Resources._4514864_middle__1_3;
+            panel4.BackgroundImageLayout = ImageLayout.Zoom;
+            panel4.Enabled = false;
+            panel4.Location = new Point(11, 35);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(33, 25);
+            panel4.TabIndex = 28;
+            // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(31, 44, 50);
@@ -77,9 +126,10 @@
             button1.ForeColor = Color.FromArgb(186, 200, 208);
             button1.Location = new Point(9, 109);
             button1.Name = "button1";
-            button1.Size = new Size(104, 34);
+            button1.Size = new Size(96, 34);
             button1.TabIndex = 5;
-            button1.Text = "Baixa";
+            button1.Text = "Baixa    ";
+            button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -88,11 +138,13 @@
             btn_estoq.BackColor = Color.FromArgb(31, 44, 50);
             btn_estoq.FlatStyle = FlatStyle.Flat;
             btn_estoq.ForeColor = Color.FromArgb(186, 200, 208);
+            btn_estoq.ImageAlign = ContentAlignment.MiddleLeft;
             btn_estoq.Location = new Point(9, 69);
             btn_estoq.Name = "btn_estoq";
-            btn_estoq.Size = new Size(104, 34);
+            btn_estoq.Size = new Size(96, 34);
             btn_estoq.TabIndex = 4;
             btn_estoq.Text = "Entrada";
+            btn_estoq.TextAlign = ContentAlignment.MiddleRight;
             btn_estoq.UseVisualStyleBackColor = false;
             btn_estoq.Click += btn_estoq_Click;
             // 
@@ -103,9 +155,10 @@
             btn_ger.ForeColor = Color.FromArgb(186, 200, 208);
             btn_ger.Location = new Point(9, 149);
             btn_ger.Name = "btn_ger";
-            btn_ger.Size = new Size(104, 34);
+            btn_ger.Size = new Size(96, 34);
             btn_ger.TabIndex = 3;
             btn_ger.Text = "Gerencial";
+            btn_ger.TextAlign = ContentAlignment.MiddleRight;
             btn_ger.UseVisualStyleBackColor = false;
             btn_ger.Click += btn_ger_Click;
             // 
@@ -114,11 +167,13 @@
             btn_cad.BackColor = Color.FromArgb(31, 44, 50);
             btn_cad.FlatStyle = FlatStyle.Flat;
             btn_cad.ForeColor = Color.FromArgb(186, 200, 208);
+            btn_cad.ImageAlign = ContentAlignment.MiddleLeft;
             btn_cad.Location = new Point(9, 29);
             btn_cad.Name = "btn_cad";
-            btn_cad.Size = new Size(104, 34);
+            btn_cad.Size = new Size(96, 34);
             btn_cad.TabIndex = 2;
             btn_cad.Text = "Cadastro";
+            btn_cad.TextAlign = ContentAlignment.MiddleRight;
             btn_cad.UseVisualStyleBackColor = false;
             btn_cad.Click += btn_cad_Click;
             // 
@@ -143,11 +198,12 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btn_print_est);
             groupBox1.Controls.Add(txt_pesquisa);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(lv_est_tot);
-            groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(btn_pesquisa);
+            groupBox1.Controls.Add(button2);
             groupBox1.Font = new Font("Segoe UI", 15F);
             groupBox1.Location = new Point(158, 111);
             groupBox1.Name = "groupBox1";
@@ -156,6 +212,21 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Estoque Total";
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // btn_print_est
+            // 
+            btn_print_est.BackColor = Color.FromArgb(233, 240, 245);
+            btn_print_est.BackgroundImage = Properties.Resources.printer;
+            btn_print_est.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_print_est.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
+            btn_print_est.FlatStyle = FlatStyle.Flat;
+            btn_print_est.ForeColor = Color.FromArgb(186, 200, 208);
+            btn_print_est.Location = new Point(605, 32);
+            btn_print_est.Name = "btn_print_est";
+            btn_print_est.Size = new Size(59, 34);
+            btn_print_est.TabIndex = 28;
+            btn_print_est.UseVisualStyleBackColor = false;
+            btn_print_est.Click += btn_print_est_Click;
             // 
             // txt_pesquisa
             // 
@@ -206,33 +277,37 @@
             obs.Text = "OBS";
             obs.Width = 120;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(233, 240, 245);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 12F);
-            button2.ForeColor = Color.FromArgb(31, 44, 50);
-            button2.Location = new Point(477, 32);
-            button2.Name = "button2";
-            button2.Size = new Size(104, 34);
-            button2.TabIndex = 3;
-            button2.Text = "Atualizar";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
             // btn_pesquisa
             // 
             btn_pesquisa.BackColor = Color.FromArgb(233, 240, 245);
+            btn_pesquisa.BackgroundImage = (Image)resources.GetObject("btn_pesquisa.BackgroundImage");
+            btn_pesquisa.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_pesquisa.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             btn_pesquisa.FlatStyle = FlatStyle.Flat;
             btn_pesquisa.Font = new Font("Segoe UI", 12F);
             btn_pesquisa.ForeColor = Color.FromArgb(31, 44, 50);
-            btn_pesquisa.Location = new Point(293, 32);
+            btn_pesquisa.Location = new Point(293, 33);
             btn_pesquisa.Name = "btn_pesquisa";
-            btn_pesquisa.Size = new Size(104, 34);
+            btn_pesquisa.Size = new Size(39, 33);
             btn_pesquisa.TabIndex = 27;
-            btn_pesquisa.Text = "Pesquisar";
             btn_pesquisa.UseVisualStyleBackColor = false;
             btn_pesquisa.Click += btn_pesquisa_Click_1;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(233, 240, 245);
+            button2.BackgroundImage = Properties.Resources.atualizar;
+            button2.BackgroundImageLayout = ImageLayout.Zoom;
+            button2.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 12F);
+            button2.ForeColor = Color.FromArgb(31, 44, 50);
+            button2.Location = new Point(538, 32);
+            button2.Name = "button2";
+            button2.Size = new Size(48, 34);
+            button2.TabIndex = 3;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // Form1
             // 
@@ -271,5 +346,10 @@
         private Button button2;
         private TextBox txt_pesquisa;
         private ColumnHeader obs;
+        private Panel panel4;
+        private Panel panel5;
+        private Panel panel6;
+        private Panel panel7;
+        private Button btn_print_est;
     }
 }

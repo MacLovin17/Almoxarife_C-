@@ -64,13 +64,15 @@
             // btn_salva_cad
             // 
             btn_salva_cad.BackColor = Color.FromArgb(31, 44, 50);
+            btn_salva_cad.BackgroundImage = Properties.Resources.pngwing_com;
+            btn_salva_cad.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_salva_cad.FlatAppearance.BorderColor = Color.FromArgb(31, 44, 50);
             btn_salva_cad.FlatStyle = FlatStyle.Flat;
             btn_salva_cad.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_salva_cad.Location = new Point(12, 29);
+            btn_salva_cad.Location = new Point(21, 12);
             btn_salva_cad.Name = "btn_salva_cad";
-            btn_salva_cad.Size = new Size(94, 34);
+            btn_salva_cad.Size = new Size(60, 45);
             btn_salva_cad.TabIndex = 2;
-            btn_salva_cad.Text = "Adicionar";
             btn_salva_cad.UseVisualStyleBackColor = false;
             btn_salva_cad.Click += btn_salva_cad_Click;
             // 

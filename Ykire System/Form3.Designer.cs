@@ -173,17 +173,20 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(116, 828);
             panel2.TabIndex = 16;
+            panel2.Paint += panel2_Paint;
             // 
             // btn_salva_est
             // 
             btn_salva_est.BackColor = Color.FromArgb(31, 44, 50);
+            btn_salva_est.BackgroundImage = Properties.Resources.pngwing_com;
+            btn_salva_est.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_salva_est.FlatAppearance.BorderColor = Color.FromArgb(31, 44, 50);
             btn_salva_est.FlatStyle = FlatStyle.Flat;
             btn_salva_est.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_salva_est.Location = new Point(12, 29);
+            btn_salva_est.Location = new Point(12, 25);
             btn_salva_est.Name = "btn_salva_est";
-            btn_salva_est.Size = new Size(94, 34);
+            btn_salva_est.Size = new Size(81, 57);
             btn_salva_est.TabIndex = 2;
-            btn_salva_est.Text = "Confirmar";
             btn_salva_est.UseVisualStyleBackColor = false;
             btn_salva_est.Click += btn_salva_est_Click;
             // 

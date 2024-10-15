@@ -94,7 +94,7 @@ namespace Ykire_System
 
                 if (cgo == "892") // use "892" como string, se Cbox_said é string
                 {
-                    qt = (int.Parse(qt) * -1).ToString(); // Certifique-se que o tipo seja consistente
+                    qt = (int.Parse(qt) * -1).ToString(); 
                 }
                 var baixa = new Baixa(codigo, qt, cgo, data);
                 baixas.Add(baixa);
@@ -334,11 +334,16 @@ namespace Ykire_System
 
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
-            // Fonte e variáveis de formatação
+            // Fonte para o título e variáveis de formatação
+            Font titleFont = new Font("Arial", 14, FontStyle.Bold);
             Font font = new Font("Arial", 10);
             int yPosition = e.MarginBounds.Top;
             int xPosition = e.MarginBounds.Left;
             int rowHeight = 20;
+
+            // Título "Movimentação de Estoque"
+            e.Graphics.DrawString("Movimentação de Estoque", titleFont, Brushes.Black, xPosition, yPosition);
+            yPosition += 40; // Ajusta a posição vertical para o próximo conteúdo, abaixo do título
 
             // Cabeçalho da ListView (imprime uma vez por página)
             xPosition = e.MarginBounds.Left; // Reinicializa xPosition para cada nova linha
@@ -350,7 +355,7 @@ namespace Ykire_System
                 if (i == 0) // Código
                     xPosition += 80; // 80 pixels para a coluna Código
                 else if (i == 1) // Descrição
-                    xPosition += 500; // 300 pixels para a coluna Descrição
+                    xPosition += 500; // 500 pixels para a coluna Descrição
                 else
                     xPosition += 100; // Ajuste padrão para outras colunas
             }
@@ -372,7 +377,7 @@ namespace Ykire_System
                     if (i == 0) // Código
                         xPosition += 80; // 80 pixels para a coluna Código
                     else if (i == 1) // Descrição
-                        xPosition += 500; // 300 pixels para a coluna Descrição
+                        xPosition += 500; // 500 pixels para a coluna Descrição
                     else
                         xPosition += 100; // Ajuste padrão para outras colunas
                 }
@@ -394,6 +399,7 @@ namespace Ykire_System
             e.HasMorePages = false;
             itemIndex = 0; // Reseta o índice para permitir nova impressão corretamente
         }
+
 
 
     }

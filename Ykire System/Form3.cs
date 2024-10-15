@@ -75,6 +75,7 @@ namespace Ykire_System
             txt_cod_est.Text = "";
             txt_qt_est.Text = "";
             txt_data_est.Text = date_est.Text;
+            obterProdutos_est();
         }
 
         private void date_est_ValueChanged(object sender, EventArgs e)
@@ -113,6 +114,11 @@ namespace Ykire_System
         }
 
         private void txt_qt_est_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
