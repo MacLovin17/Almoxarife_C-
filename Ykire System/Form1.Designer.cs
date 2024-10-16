@@ -31,11 +31,13 @@
             ColumnHeader produto;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel2 = new Panel();
+            panel8 = new Panel();
             panel7 = new Panel();
+            btn_epi = new Button();
             panel6 = new Panel();
             panel5 = new Panel();
             panel4 = new Panel();
-            button1 = new Button();
+            btn_baixa = new Button();
             btn_estoq = new Button();
             btn_ger = new Button();
             btn_cad = new Button();
@@ -65,11 +67,13 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(31, 44, 50);
+            panel2.Controls.Add(panel8);
             panel2.Controls.Add(panel7);
+            panel2.Controls.Add(btn_epi);
             panel2.Controls.Add(panel6);
             panel2.Controls.Add(panel5);
             panel2.Controls.Add(panel4);
-            panel2.Controls.Add(button1);
+            panel2.Controls.Add(btn_baixa);
             panel2.Controls.Add(btn_estoq);
             panel2.Controls.Add(btn_ger);
             panel2.Controls.Add(btn_cad);
@@ -79,15 +83,39 @@
             panel2.Size = new Size(123, 961);
             panel2.TabIndex = 1;
             // 
+            // panel8
+            // 
+            panel8.BackgroundImage = (Image)resources.GetObject("panel8.BackgroundImage");
+            panel8.BackgroundImageLayout = ImageLayout.Zoom;
+            panel8.Enabled = false;
+            panel8.Location = new Point(12, 153);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(33, 25);
+            panel8.TabIndex = 33;
+            // 
             // panel7
             // 
             panel7.BackgroundImage = (Image)resources.GetObject("panel7.BackgroundImage");
             panel7.BackgroundImageLayout = ImageLayout.Zoom;
             panel7.Enabled = false;
-            panel7.Location = new Point(12, 153);
+            panel7.Location = new Point(12, 193);
             panel7.Name = "panel7";
             panel7.Size = new Size(33, 25);
             panel7.TabIndex = 31;
+            // 
+            // btn_epi
+            // 
+            btn_epi.BackColor = Color.FromArgb(31, 44, 50);
+            btn_epi.FlatStyle = FlatStyle.Flat;
+            btn_epi.ForeColor = Color.FromArgb(186, 200, 208);
+            btn_epi.Location = new Point(9, 149);
+            btn_epi.Name = "btn_epi";
+            btn_epi.Size = new Size(96, 34);
+            btn_epi.TabIndex = 32;
+            btn_epi.Text = "EPI       ";
+            btn_epi.TextAlign = ContentAlignment.MiddleRight;
+            btn_epi.UseVisualStyleBackColor = false;
+            btn_epi.Click += btn_epi_Click;
             // 
             // panel6
             // 
@@ -119,19 +147,19 @@
             panel4.Size = new Size(33, 25);
             panel4.TabIndex = 28;
             // 
-            // button1
+            // btn_baixa
             // 
-            button1.BackColor = Color.FromArgb(31, 44, 50);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.FromArgb(186, 200, 208);
-            button1.Location = new Point(9, 109);
-            button1.Name = "button1";
-            button1.Size = new Size(96, 34);
-            button1.TabIndex = 5;
-            button1.Text = "Baixa    ";
-            button1.TextAlign = ContentAlignment.MiddleRight;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btn_baixa.BackColor = Color.FromArgb(31, 44, 50);
+            btn_baixa.FlatStyle = FlatStyle.Flat;
+            btn_baixa.ForeColor = Color.FromArgb(186, 200, 208);
+            btn_baixa.Location = new Point(9, 109);
+            btn_baixa.Name = "btn_baixa";
+            btn_baixa.Size = new Size(96, 34);
+            btn_baixa.TabIndex = 5;
+            btn_baixa.Text = "Baixa    ";
+            btn_baixa.TextAlign = ContentAlignment.MiddleRight;
+            btn_baixa.UseVisualStyleBackColor = false;
+            btn_baixa.Click += button1_Click;
             // 
             // btn_estoq
             // 
@@ -153,7 +181,7 @@
             btn_ger.BackColor = Color.FromArgb(31, 44, 50);
             btn_ger.FlatStyle = FlatStyle.Flat;
             btn_ger.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_ger.Location = new Point(9, 149);
+            btn_ger.Location = new Point(9, 189);
             btn_ger.Name = "btn_ger";
             btn_ger.Size = new Size(96, 34);
             btn_ger.TabIndex = 3;
@@ -251,6 +279,7 @@
             // 
             lv_est_tot.Columns.AddRange(new ColumnHeader[] { codigo, produto, estoque_atual, obs });
             lv_est_tot.Font = new Font("Segoe UI", 9F);
+            lv_est_tot.ForeColor = SystemColors.InfoText;
             lv_est_tot.FullRowSelect = true;
             lv_est_tot.GridLines = true;
             lv_est_tot.Location = new Point(26, 72);
@@ -336,7 +365,7 @@
         private Button btn_cad;
         private Panel panel3;
         private Panel panel1;
-        private Button button1;
+        private Button btn_baixa;
         private GroupBox groupBox1;
         private Label label6;
         private ListView lv_est_tot;
@@ -351,5 +380,7 @@
         private Panel panel6;
         private Panel panel7;
         private Button btn_print_est;
+        private Panel panel8;
+        private Button btn_epi;
     }
 }

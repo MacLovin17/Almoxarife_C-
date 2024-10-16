@@ -195,5 +195,16 @@ namespace Ykire_System
             preview.Document = printDocument;  // Conecta o documento ao preview
             preview.ShowDialog();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_epi_Click(object sender, EventArgs e)
+        {
+            epi epi = new epi();
+            epi.Show();
+        }
     }
 }
