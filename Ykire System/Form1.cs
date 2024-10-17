@@ -206,5 +206,10 @@ namespace Ykire_System
             epi epi = new epi();
             epi.Show();
         }
+
+        private void txt_pesquisa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

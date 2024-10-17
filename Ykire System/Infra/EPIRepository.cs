@@ -20,22 +20,37 @@ namespace Ykire_System.Infra
             return result == 1;
         }
 
-        public List<CEPI> Get()
+        public List<CEPI> Get(string pesquisa_epi = null)
         {
             using var conn = new DbConnection();
 
-            string query = @"SELECT * FROM epi;";
+            // Query base
+            string query = @"SELECT * FROM epi";
 
-            var epis = conn.Connection.Query<CEPI>(sql: query);
+            // Adiciona a cláusula WHERE somente se houver um valor de pesquisa
+            if (!string.IsNullOrWhiteSpace(pesquisa_epi))
+            {
+                query += " WHERE LOWER(nome) LIKE @Pesquisa";
+                pesquisa_epi = $"%{pesquisa_epi.ToLower()}%";
+            }
+
+            // Executa a query
+            var epis = conn.Connection.Query<CEPI>(query, new { Pesquisa = pesquisa_epi });
 
             return epis.ToList();
-
         }
+
         public string ObterNomeProdutoPorCodigo_EPI(int matricula)
         {
             using var conn = new DbConnection();
-            string query = @"SELECT nome FROM epi WHERE matricula = @matricula;";
+            string query = @"SELECT nome FROM func WHERE matricula = @matricula;";
             return conn.Connection.QuerySingleOrDefault<string>(query, new { matricula });
+        }
+        public string ObterNomeEPIPorCodigo_EPI(int codigo)
+        {
+            using var conn = new DbConnection();
+            string query = @"SELECT nome FROM cad_prod WHERE codigo = @codigo;";
+            return conn.Connection.QuerySingleOrDefault<string>(query, new { codigo });
         }
     }
 }

@@ -46,6 +46,8 @@
             panel2 = new Panel();
             btn_print_epi = new Button();
             groupBox2 = new GroupBox();
+            txt_epi_cod = new TextBox();
+            btn_pesquisa_epi = new Button();
             btn_epi_save = new Button();
             txt_qt_epi = new TextBox();
             label9 = new Label();
@@ -64,7 +66,6 @@
             qt_epi = new ColumnHeader();
             data = new ColumnHeader();
             groupBox1.SuspendLayout();
-            panel2.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
@@ -208,7 +209,6 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(31, 44, 50);
-            panel2.Controls.Add(btn_print_epi);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
@@ -217,20 +217,23 @@
             // 
             // btn_print_epi
             // 
-            btn_print_epi.BackColor = Color.FromArgb(31, 44, 50);
+            btn_print_epi.BackColor = Color.FromArgb(233, 240, 245);
             btn_print_epi.BackgroundImage = Properties.Resources.printer;
             btn_print_epi.BackgroundImageLayout = ImageLayout.Zoom;
-            btn_print_epi.FlatAppearance.BorderColor = Color.FromArgb(31, 44, 50);
+            btn_print_epi.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             btn_print_epi.FlatStyle = FlatStyle.Flat;
             btn_print_epi.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_print_epi.Location = new Point(12, 79);
+            btn_print_epi.Location = new Point(671, 45);
             btn_print_epi.Name = "btn_print_epi";
-            btn_print_epi.Size = new Size(94, 34);
+            btn_print_epi.Size = new Size(56, 34);
             btn_print_epi.TabIndex = 3;
             btn_print_epi.UseVisualStyleBackColor = false;
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(txt_epi_cod);
+            groupBox2.Controls.Add(btn_print_epi);
+            groupBox2.Controls.Add(btn_pesquisa_epi);
             groupBox2.Controls.Add(btn_epi_save);
             groupBox2.Controls.Add(txt_qt_epi);
             groupBox2.Controls.Add(label9);
@@ -252,6 +255,30 @@
             groupBox2.Text = "EPI";
             groupBox2.Enter += groupBox2_Enter;
             // 
+            // txt_epi_cod
+            // 
+            txt_epi_cod.Enabled = false;
+            txt_epi_cod.Location = new Point(259, 85);
+            txt_epi_cod.Name = "txt_epi_cod";
+            txt_epi_cod.Size = new Size(191, 29);
+            txt_epi_cod.TabIndex = 76;
+            // 
+            // btn_pesquisa_epi
+            // 
+            btn_pesquisa_epi.BackColor = Color.FromArgb(233, 240, 245);
+            btn_pesquisa_epi.BackgroundImage = (Image)resources.GetObject("btn_pesquisa_epi.BackgroundImage");
+            btn_pesquisa_epi.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_pesquisa_epi.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
+            btn_pesquisa_epi.FlatStyle = FlatStyle.Flat;
+            btn_pesquisa_epi.Font = new Font("Segoe UI", 12F);
+            btn_pesquisa_epi.ForeColor = Color.FromArgb(31, 44, 50);
+            btn_pesquisa_epi.Location = new Point(456, 44);
+            btn_pesquisa_epi.Name = "btn_pesquisa_epi";
+            btn_pesquisa_epi.Size = new Size(39, 33);
+            btn_pesquisa_epi.TabIndex = 75;
+            btn_pesquisa_epi.UseVisualStyleBackColor = false;
+            btn_pesquisa_epi.Click += btn_pesquisa_epi_Click;
+            // 
             // btn_epi_save
             // 
             btn_epi_save.BackColor = Color.FromArgb(233, 240, 245);
@@ -260,9 +287,9 @@
             btn_epi_save.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             btn_epi_save.FlatStyle = FlatStyle.Flat;
             btn_epi_save.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_epi_save.Location = new Point(601, 79);
+            btn_epi_save.Location = new Point(607, 44);
             btn_epi_save.Name = "btn_epi_save";
-            btn_epi_save.Size = new Size(94, 34);
+            btn_epi_save.Size = new Size(47, 34);
             btn_epi_save.TabIndex = 61;
             btn_epi_save.UseVisualStyleBackColor = false;
             btn_epi_save.Click += btn_epi_save_Click;
@@ -299,6 +326,7 @@
             Txt_epi_epi.Name = "Txt_epi_epi";
             Txt_epi_epi.Size = new Size(115, 29);
             Txt_epi_epi.TabIndex = 70;
+            Txt_epi_epi.TextChanged += Txt_epi_epi_TextChanged;
             // 
             // label8
             // 
@@ -412,7 +440,6 @@
             Load += epi_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            panel2.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ResumeLayout(false);
@@ -454,5 +481,7 @@
         private ColumnHeader data;
         private Button btn_epi_save;
         private ColumnHeader qt_epi;
+        private Button btn_pesquisa_epi;
+        private TextBox txt_epi_cod;
     }
 }

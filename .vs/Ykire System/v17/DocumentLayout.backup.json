@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\tec\\source\\repos\\Ykire System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\epi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|C:\\Users\\tec\\source\\repos\\Ykire System\\ykire system\\epi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\epi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -11,32 +11,52 @@
       "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\epi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|C:\\Users\\tec\\source\\repos\\Ykire System\\ykire system\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\cepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\cepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\infra\\epirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\infra\\epirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\cepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\cepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\infra\\totalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\infra\\totalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\infra\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\infra\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|C:\\Users\\tec\\source\\repos\\Ykire System\\ykire system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\epi.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\epi.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\infra\\funcrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\infra\\funcrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\infra\\estoquerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\infra\\estoquerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|C:\\Users\\tec\\source\\repos\\Ykire System\\ykire system\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\infra\\baixarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,10 +71,6 @@
       "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\infra\\funcrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\infra\\funcrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -63,12 +79,8 @@
       "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|C:\\Users\\tec\\source\\repos\\Ykire System\\ykire system\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|c:\\users\\tec\\source\\repos\\ykire system\\ykire system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDE8FE7C-EA56-48CB-B673-009DEA274040}|Ykire System\\Ykire System.csproj|solutionrelative:ykire system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,22 +90,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "epi.cs",
-              "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\epi.cs",
-              "RelativeDocumentMoniker": "Ykire System\\epi.cs",
-              "ToolTip": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\epi.cs",
-              "RelativeToolTip": "Ykire System\\epi.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAxwDUAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T13:29:57.172Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -109,7 +107,74 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
+              "Title": "epi.cs",
+              "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\epi.cs",
+              "RelativeDocumentMoniker": "Ykire System\\epi.cs",
+              "ToolTip": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\epi.cs",
+              "RelativeToolTip": "Ykire System\\epi.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAswJAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T13:29:57.172Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Form1.cs",
+              "RelativeDocumentMoniker": "Ykire System\\Form1.cs",
+              "ToolTip": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Form1.cs",
+              "RelativeToolTip": "Ykire System\\Form1.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T10:43:11.87Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Infra\\ProdutoRepository.cs",
+              "RelativeDocumentMoniker": "Ykire System\\Infra\\ProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Infra\\ProdutoRepository.cs",
+              "RelativeToolTip": "Ykire System\\Infra\\ProdutoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T18:09:51.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "epi.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\epi.Designer.cs",
+              "RelativeDocumentMoniker": "Ykire System\\epi.Designer.cs",
+              "ToolTip": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\epi.Designer.cs",
+              "RelativeToolTip": "Ykire System\\epi.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T18:04:24.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TotalRepository.cs",
+              "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Infra\\TotalRepository.cs",
+              "RelativeDocumentMoniker": "Ykire System\\Infra\\TotalRepository.cs",
+              "ToolTip": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Infra\\TotalRepository.cs",
+              "RelativeToolTip": "Ykire System\\Infra\\TotalRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T17:13:06.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "BaixaRepository.cs",
               "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Infra\\BaixaRepository.cs",
               "RelativeDocumentMoniker": "Ykire System\\Infra\\BaixaRepository.cs",
@@ -117,12 +182,11 @@
               "RelativeToolTip": "Ykire System\\Infra\\BaixaRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T17:10:28.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T17:10:28.216Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "Estoque.cs",
               "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Estoque.cs",
               "RelativeDocumentMoniker": "Ykire System\\Estoque.cs",
@@ -135,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Program.cs",
               "RelativeDocumentMoniker": "Ykire System\\Program.cs",
@@ -143,12 +207,11 @@
               "RelativeToolTip": "Ykire System\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T16:55:48.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T16:55:48.255Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "Produto.cs",
               "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Produto.cs",
               "RelativeDocumentMoniker": "Ykire System\\Produto.cs",
@@ -156,12 +219,11 @@
               "RelativeToolTip": "Ykire System\\Produto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T16:54:32.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T16:54:32.177Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "Funcionario.cs",
               "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Funcionario.cs",
               "RelativeDocumentMoniker": "Ykire System\\Funcionario.cs",
@@ -169,25 +231,24 @@
               "RelativeToolTip": "Ykire System\\Funcionario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T16:54:27.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T16:54:27.571Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "CEPI.cs",
               "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\CEPI.cs",
               "RelativeDocumentMoniker": "Ykire System\\CEPI.cs",
               "ToolTip": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\CEPI.cs",
               "RelativeToolTip": "Ykire System\\CEPI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T16:54:23.36Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "FuncRepository.cs",
               "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Infra\\FuncRepository.cs",
               "RelativeDocumentMoniker": "Ykire System\\Infra\\FuncRepository.cs",
@@ -200,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "EstoqueRepository.cs",
               "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Infra\\EstoqueRepository.cs",
               "RelativeDocumentMoniker": "Ykire System\\Infra\\EstoqueRepository.cs",
@@ -219,14 +280,14 @@
               "RelativeDocumentMoniker": "Ykire System\\Infra\\EPIRepository.cs",
               "ToolTip": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Infra\\EPIRepository.cs",
               "RelativeToolTip": "Ykire System\\Infra\\EPIRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwDAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T16:53:14.457Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "Form4.cs",
               "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Form4.cs",
               "RelativeDocumentMoniker": "Ykire System\\Form4.cs",
@@ -239,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "Form3.cs",
               "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Form3.cs",
               "RelativeDocumentMoniker": "Ykire System\\Form3.cs",
@@ -252,44 +313,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "Form3.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Form3.cs",
               "RelativeDocumentMoniker": "Ykire System\\Form3.cs",
               "ToolTip": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Form3.cs [Projeto]",
               "RelativeToolTip": "Ykire System\\Form3.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T14:48:04.435Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2024-10-16T14:48:04.435Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "Form4.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Form4.cs",
               "RelativeDocumentMoniker": "Ykire System\\Form4.cs",
               "ToolTip": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Form4.cs [Projeto]",
               "RelativeToolTip": "Ykire System\\Form4.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T13:18:57.945Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2024-10-14T13:18:57.945Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Form1.cs",
-              "RelativeDocumentMoniker": "Ykire System\\Form1.cs",
-              "ToolTip": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Form1.cs",
-              "RelativeToolTip": "Ykire System\\Form1.cs",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAgwNIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T10:43:11.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Form1.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\tec\\source\\repos\\Ykire System\\Ykire System\\Form1.cs",
               "RelativeDocumentMoniker": "Ykire System\\Form1.cs",

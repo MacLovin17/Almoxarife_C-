@@ -16,15 +16,17 @@ namespace Ykire_System
         public List<Funcinario> funcionarios { get; private set; } = new List<Funcinario>();
         public List<CEPI> epis { get; private set; } = new List<CEPI>();
         private EPIRepository _epiRepository;
+        
         public epi()
         {
             InitializeComponent();
-            obterEpis();
             _epiRepository = new EPIRepository();
             obterEpis_func();
+            obterEpis();
             data_epi.Format = DateTimePickerFormat.Custom;
             data_epi.CustomFormat = "dd/MM/yyyy";
         }
+
         private void obterEpis()
         {
             var repository = new FuncRepository();
@@ -37,28 +39,35 @@ namespace Ykire_System
                     item.nome,
                     item.funcao
                 }));
-
             }
         }
-        private void obterEpis_func()
+
+        private void obterEpis_func(string pesquisa_epi = null)
         {
             var repository = new EPIRepository();
-            epis = repository.Get();
+            epis = _epiRepository.Get(pesquisa_epi);
+            AtualizarListView_EPI(epis);
+        }
+
+        private void AtualizarListView_EPI(List<CEPI> epis)
+        {
             lv_epi_func.Items.Clear();
+
             foreach (var item in epis)
             {
                 lv_epi_func.Items.Add(new ListViewItem(new String[] {
-                    item.matricula.ToString(),
-                    item.nome,
-                    item.epi,
-                    item.qt.ToString(),
-                    item.data
+                item.matricula.ToString(),
+                item.nome,
+                item.epi,
+                item.qt.ToString(),
+                item.data
                 }));
-
             }
         }
+
         private void epi_Load(object sender, EventArgs e)
         {
+
             txt_data_epi.Text = data_epi.Text;
         }
 
@@ -101,7 +110,7 @@ namespace Ykire_System
             txt_setor.Text = "";
             txt_funcao_func.Text = "";
 
-            MessageBox.Show("Produto cadastrado");
+            MessageBox.Show("Funcionário cadastrado");
         }
 
         private void data_epi_ValueChanged(object sender, EventArgs e)
@@ -114,7 +123,7 @@ namespace Ykire_System
             try
             {
                 var matricula = Txt_mat_epi.Text;
-                var epi = Txt_epi_epi.Text;
+                var epi = txt_epi_cod.Text;
                 var qt = txt_qt_epi.Text;
                 var data = txt_data_epi.Text;
 
@@ -169,6 +178,32 @@ namespace Ykire_System
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_pesquisa_epi_Click(object sender, EventArgs e)
+        {
+            string textoPesquisa_1 = txt_nome_epi.Text.Trim();
+            obterEpis_func(textoPesquisa_1);
+        }
+
+        private void Txt_epi_epi_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(Txt_epi_epi.Text, out int codigo))
+            {
+                // Busca o nome do produto pelo código
+                string nomeEPI = _epiRepository.ObterNomeEPIPorCodigo_EPI(codigo);
+
+                // Exibe o nome do produto no campo de texto
+                txt_epi_cod.Text = nomeEPI ?? "Funcionário não encontrado";
+
+                // Habilita ou desabilita o botão baseado na existência do produto
+                btn_epi_save.Enabled = nomeEPI != null;
+            }
+            else
+            {
+                txt_nome_epi.Text = string.Empty;
+                btn_epi_save.Enabled = false; // Desabilita o botão se o código não for válido
+            }
         }
     }
 }

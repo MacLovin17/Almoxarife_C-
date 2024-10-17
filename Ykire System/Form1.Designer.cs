@@ -263,6 +263,7 @@
             txt_pesquisa.Name = "txt_pesquisa";
             txt_pesquisa.Size = new Size(196, 23);
             txt_pesquisa.TabIndex = 29;
+            txt_pesquisa.TextChanged += txt_pesquisa_TextChanged;
             // 
             // label6
             // 
