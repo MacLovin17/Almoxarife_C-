@@ -13,7 +13,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Ykire_System
 {
-    
+
     public partial class Form4 : Form
     {
         private PrintDocument printDocument = new PrintDocument();
@@ -25,7 +25,7 @@ namespace Ykire_System
             InitializeComponent();
 
             printDocument.PrintPage += PrintDocument_PrintPage;
-            printDocument.DefaultPageSettings.Landscape = true; 
+            printDocument.DefaultPageSettings.Landscape = true;
 
             _baixaRepository = new BaixaRepository();
             btn_salva_est_said.Enabled = false; // Inicialmente desabilitado
@@ -38,23 +38,40 @@ namespace Ykire_System
             data_inicio.CustomFormat = "dd/MM/yyyy";
         }
 
-        private void obterProdutos_est_said()
+        private void obterProdutos_est_said(string pesquisa = null, DateTime? dataInicio = null, DateTime? dataFim = null)
         {
+            // Obter todas as baixas do repositório
             baixas = _baixaRepository.Get();
 
+            // Filtrar pelo código de pesquisa, se fornecido
+            if (!string.IsNullOrEmpty(pesquisa) && int.TryParse(pesquisa, out int codigoPesquisa))
+            {
+                baixas = baixas.Where(b => b.codigo == codigoPesquisa).ToList();
+            }
+
+            // Filtrar pela data, se fornecida
+            if (dataInicio.HasValue && dataFim.HasValue)
+            {
+                baixas = baixas.Where(item =>
+                    DateTime.TryParse(item.data, out DateTime dataBaixa) &&
+                    dataBaixa >= dataInicio.Value && dataBaixa <= dataFim.Value).ToList();
+            }
+
+            // Atualizar a ListView
             lv_est_said.Items.Clear();
             foreach (var item in baixas)
             {
-                lv_est_said.Items.Add(new ListViewItem(new String[]
+                lv_est_said.Items.Add(new ListViewItem(new string[]
                 {
-                    item.codigo.ToString(),
-                    item.nome,
-                    item.qt.ToString(),
-                    item.cgo.ToString(),
-                    item.data
+            item.codigo.ToString(),
+            item.nome,
+            item.qt.ToString(),
+            item.cgo.ToString(),
+            item.data
                 }));
             }
         }
+
         private void AtualizarListViewPorPeriodo(DateTime dataInicio, DateTime dataFim)
         {
             // Obtém as baixas do repositório, filtrando e ordenando pela data
@@ -94,7 +111,7 @@ namespace Ykire_System
 
                 if (cgo == "892") // use "892" como string, se Cbox_said é string
                 {
-                    qt = (int.Parse(qt) * -1).ToString(); 
+                    qt = (int.Parse(qt) * -1).ToString();
                 }
                 var baixa = new Baixa(codigo, qt, cgo, data);
                 baixas.Add(baixa);
@@ -306,7 +323,23 @@ namespace Ykire_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FiltrarPorData();
+            // Filtra a POHA DA DATA
+            DateTime? dataInicio = null;
+            DateTime? dataFim = null;
+
+            if (DateTime.TryParse(txt_data_inicio.Text, out DateTime dataInicioTemp))
+            {
+                dataInicio = dataInicioTemp;
+            }
+
+            if (DateTime.TryParse(txt_data_final.Text, out DateTime dataFimTemp))
+            {
+                dataFim = dataFimTemp;
+            }
+
+            string textoPesquisa = txt_pesquisa_saida.Text; // Transforma a POHA DO CODIGO em inteiro :)
+            obterProdutos_est_said(textoPesquisa, dataInicio, dataFim);
+
         }
 
         private void txt_data_inicio_TextChanged(object sender, EventArgs e)
@@ -400,7 +433,9 @@ namespace Ykire_System
             itemIndex = 0; // Reseta o índice para permitir nova impressão corretamente
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }   

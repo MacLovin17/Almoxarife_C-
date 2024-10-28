@@ -31,6 +31,8 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             panel3 = new Panel();
+            txt_pesquisa_saida = new TextBox();
+            label7 = new Label();
             button2 = new Button();
             data_final = new DateTimePicker();
             data_inicio = new DateTimePicker();
@@ -67,6 +69,8 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(txt_pesquisa_saida);
+            panel3.Controls.Add(label7);
             panel3.Controls.Add(button2);
             panel3.Controls.Add(data_final);
             panel3.Controls.Add(data_inicio);
@@ -80,6 +84,26 @@
             panel3.Size = new Size(814, 796);
             panel3.TabIndex = 34;
             // 
+            // txt_pesquisa_saida
+            // 
+            txt_pesquisa_saida.Font = new Font("Segoe UI", 9F);
+            txt_pesquisa_saida.Location = new Point(138, 62);
+            txt_pesquisa_saida.Name = "txt_pesquisa_saida";
+            txt_pesquisa_saida.Size = new Size(100, 23);
+            txt_pesquisa_saida.TabIndex = 49;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 10F);
+            label7.ForeColor = SystemColors.ActiveCaptionText;
+            label7.Location = new Point(47, 65);
+            label7.Name = "label7";
+            label7.Size = new Size(94, 19);
+            label7.TabIndex = 48;
+            label7.Text = "Cód. Produto:";
+            label7.Click += label7_Click;
+            // 
             // button2
             // 
             button2.BackColor = Color.FromArgb(233, 240, 245);
@@ -89,7 +113,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F);
             button2.ForeColor = Color.FromArgb(31, 44, 50);
-            button2.Location = new Point(706, 23);
+            button2.Location = new Point(710, 50);
             button2.Name = "button2";
             button2.Size = new Size(74, 34);
             button2.TabIndex = 46;
@@ -98,7 +122,7 @@
             // 
             // data_final
             // 
-            data_final.Location = new Point(585, 34);
+            data_final.Location = new Point(589, 61);
             data_final.Name = "data_final";
             data_final.Size = new Size(115, 23);
             data_final.TabIndex = 45;
@@ -106,7 +130,7 @@
             // 
             // data_inicio
             // 
-            data_inicio.Location = new Point(464, 34);
+            data_inicio.Location = new Point(468, 61);
             data_inicio.Name = "data_inicio";
             data_inicio.Size = new Size(115, 23);
             data_inicio.TabIndex = 47;
@@ -117,7 +141,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
             label5.ForeColor = SystemColors.ActiveCaptionText;
-            label5.Location = new Point(397, 36);
+            label5.Location = new Point(401, 63);
             label5.Name = "label5";
             label5.Size = new Size(70, 21);
             label5.TabIndex = 42;
@@ -125,7 +149,7 @@
             // 
             // txt_data_final
             // 
-            txt_data_final.Location = new Point(585, 34);
+            txt_data_final.Location = new Point(589, 61);
             txt_data_final.Name = "txt_data_final";
             txt_data_final.Size = new Size(115, 23);
             txt_data_final.TabIndex = 44;
@@ -133,7 +157,7 @@
             // 
             // txt_data_inicio
             // 
-            txt_data_inicio.Location = new Point(464, 34);
+            txt_data_inicio.Location = new Point(468, 61);
             txt_data_inicio.Name = "txt_data_inicio";
             txt_data_inicio.Size = new Size(115, 23);
             txt_data_inicio.TabIndex = 43;
@@ -156,7 +180,7 @@
             lv_est_said.Columns.AddRange(new ColumnHeader[] { codigo, nome, qt, cgo, obs });
             lv_est_said.FullRowSelect = true;
             lv_est_said.GridLines = true;
-            lv_est_said.Location = new Point(43, 60);
+            lv_est_said.Location = new Point(47, 91);
             lv_est_said.Name = "lv_est_said";
             lv_est_said.Size = new Size(737, 718);
             lv_est_said.TabIndex = 0;
@@ -252,9 +276,9 @@
             btn_print.FlatAppearance.BorderColor = Color.FromArgb(31, 44, 50);
             btn_print.FlatStyle = FlatStyle.Flat;
             btn_print.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_print.Location = new Point(12, 79);
+            btn_print.Location = new Point(31, 80);
             btn_print.Name = "btn_print";
-            btn_print.Size = new Size(94, 34);
+            btn_print.Size = new Size(39, 33);
             btn_print.TabIndex = 3;
             btn_print.UseVisualStyleBackColor = false;
             btn_print.Click += btn_print_Click;
@@ -267,16 +291,18 @@
             btn_salva_est_said.FlatAppearance.BorderColor = Color.FromArgb(31, 44, 50);
             btn_salva_est_said.FlatStyle = FlatStyle.Flat;
             btn_salva_est_said.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_salva_est_said.Location = new Point(12, 29);
+            btn_salva_est_said.Location = new Point(31, 25);
             btn_salva_est_said.Name = "btn_salva_est_said";
-            btn_salva_est_said.Size = new Size(94, 34);
+            btn_salva_est_said.Size = new Size(39, 33);
             btn_salva_est_said.TabIndex = 2;
             btn_salva_est_said.UseVisualStyleBackColor = false;
             btn_salva_est_said.Click += btn_salva_est_said_Click;
             // 
             // Cbox_said
             // 
+            Cbox_said.DropDownStyle = ComboBoxStyle.DropDownList;
             Cbox_said.FormattingEnabled = true;
+            Cbox_said.ImeMode = ImeMode.NoControl;
             Cbox_said.Location = new Point(156, 173);
             Cbox_said.Name = "Cbox_said";
             Cbox_said.Size = new Size(121, 23);
@@ -410,5 +436,7 @@
         private Button btn_print;
         private PrintDialog PrintDialog1;
         private System.Drawing.Printing.PrintDocument pd1;
+        private TextBox txt_pesquisa_saida;
+        private Label label7;
     }
 }

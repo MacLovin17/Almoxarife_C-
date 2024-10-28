@@ -129,7 +129,7 @@
             btn_cad_epi.ForeColor = Color.FromArgb(186, 200, 208);
             btn_cad_epi.Location = new Point(448, 95);
             btn_cad_epi.Name = "btn_cad_epi";
-            btn_cad_epi.Size = new Size(94, 34);
+            btn_cad_epi.Size = new Size(39, 33);
             btn_cad_epi.TabIndex = 2;
             btn_cad_epi.UseVisualStyleBackColor = false;
             btn_cad_epi.Click += btn_cad_epi_Click;
@@ -223,9 +223,9 @@
             btn_print_epi.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             btn_print_epi.FlatStyle = FlatStyle.Flat;
             btn_print_epi.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_print_epi.Location = new Point(671, 45);
+            btn_print_epi.Location = new Point(654, 44);
             btn_print_epi.Name = "btn_print_epi";
-            btn_print_epi.Size = new Size(56, 34);
+            btn_print_epi.Size = new Size(39, 33);
             btn_print_epi.TabIndex = 3;
             btn_print_epi.UseVisualStyleBackColor = false;
             // 
@@ -249,7 +249,7 @@
             groupBox2.Font = new Font("Segoe UI", 12F);
             groupBox2.Location = new Point(835, 40);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(733, 635);
+            groupBox2.Size = new Size(718, 635);
             groupBox2.TabIndex = 60;
             groupBox2.TabStop = false;
             groupBox2.Text = "EPI";
@@ -287,9 +287,9 @@
             btn_epi_save.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             btn_epi_save.FlatStyle = FlatStyle.Flat;
             btn_epi_save.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_epi_save.Location = new Point(607, 44);
+            btn_epi_save.Location = new Point(596, 44);
             btn_epi_save.Name = "btn_epi_save";
-            btn_epi_save.Size = new Size(47, 34);
+            btn_epi_save.Size = new Size(39, 33);
             btn_epi_save.TabIndex = 61;
             btn_epi_save.UseVisualStyleBackColor = false;
             btn_epi_save.Click += btn_epi_save_Click;
@@ -393,7 +393,7 @@
             lv_epi_func.GridLines = true;
             lv_epi_func.Location = new Point(38, 179);
             lv_epi_func.Name = "lv_epi_func";
-            lv_epi_func.Size = new Size(657, 412);
+            lv_epi_func.Size = new Size(655, 412);
             lv_epi_func.TabIndex = 63;
             lv_epi_func.UseCompatibleStateImageBehavior = false;
             lv_epi_func.View = View.Details;

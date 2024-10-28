@@ -45,8 +45,11 @@
             fornecedor = new ColumnHeader();
             cnpj = new ColumnHeader();
             obs = new ColumnHeader();
+            endereco = new ColumnHeader();
             panel3 = new Panel();
             label6 = new Label();
+            txt_prateleira = new TextBox();
+            label2 = new Label();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -69,9 +72,9 @@
             btn_salva_cad.FlatAppearance.BorderColor = Color.FromArgb(31, 44, 50);
             btn_salva_cad.FlatStyle = FlatStyle.Flat;
             btn_salva_cad.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_salva_cad.Location = new Point(21, 12);
+            btn_salva_cad.Location = new Point(31, 25);
             btn_salva_cad.Name = "btn_salva_cad";
-            btn_salva_cad.Size = new Size(60, 45);
+            btn_salva_cad.Size = new Size(39, 33);
             btn_salva_cad.TabIndex = 2;
             btn_salva_cad.UseVisualStyleBackColor = false;
             btn_salva_cad.Click += btn_salva_cad_Click;
@@ -116,9 +119,9 @@
             label5.ForeColor = SystemColors.ActiveCaptionText;
             label5.Location = new Point(140, 200);
             label5.Name = "label5";
-            label5.Size = new Size(51, 28);
+            label5.Size = new Size(47, 28);
             label5.TabIndex = 9;
-            label5.Text = "Obs:";
+            label5.Text = "Obs";
             // 
             // txt_prod
             // 
@@ -150,12 +153,12 @@
             // 
             // lv_cad
             // 
-            lv_cad.Columns.AddRange(new ColumnHeader[] { codigo, produto, fornecedor, cnpj, obs });
+            lv_cad.Columns.AddRange(new ColumnHeader[] { codigo, produto, fornecedor, cnpj, obs, endereco });
             lv_cad.FullRowSelect = true;
             lv_cad.GridLines = true;
             lv_cad.Location = new Point(26, 50);
             lv_cad.Name = "lv_cad";
-            lv_cad.Size = new Size(707, 733);
+            lv_cad.Size = new Size(828, 733);
             lv_cad.TabIndex = 0;
             lv_cad.UseCompatibleStateImageBehavior = false;
             lv_cad.View = View.Details;
@@ -185,7 +188,13 @@
             // 
             obs.Text = "OBS";
             obs.TextAlign = HorizontalAlignment.Center;
-            obs.Width = 150;
+            obs.Width = 100;
+            // 
+            // endereco
+            // 
+            endereco.Text = "Prateleira";
+            endereco.TextAlign = HorizontalAlignment.Center;
+            endereco.Width = 120;
             // 
             // panel3
             // 
@@ -193,7 +202,7 @@
             panel3.Controls.Add(lv_cad);
             panel3.Location = new Point(586, 26);
             panel3.Name = "panel3";
-            panel3.Size = new Size(748, 795);
+            panel3.Size = new Size(857, 795);
             panel3.TabIndex = 15;
             // 
             // label6
@@ -207,12 +216,33 @@
             label6.TabIndex = 1;
             label6.Text = "Produtos Cadastrados";
             // 
+            // txt_prateleira
+            // 
+            txt_prateleira.Location = new Point(140, 288);
+            txt_prateleira.Name = "txt_prateleira";
+            txt_prateleira.Size = new Size(403, 23);
+            txt_prateleira.TabIndex = 17;
+            txt_prateleira.TextChanged += txt_prateleira_TextChanged;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15F);
+            label2.ForeColor = SystemColors.ActiveCaptionText;
+            label2.Location = new Point(140, 257);
+            label2.Name = "label2";
+            label2.Size = new Size(94, 28);
+            label2.TabIndex = 16;
+            label2.Text = "Prateleira";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(233, 240, 245);
             ClientSize = new Size(1455, 821);
+            Controls.Add(txt_prateleira);
+            Controls.Add(label2);
             Controls.Add(panel3);
             Controls.Add(txt_obs);
             Controls.Add(txt_cnpj);
@@ -254,5 +284,8 @@
         private Panel panel3;
         private Label label6;
         private ColumnHeader cnpj;
+        private TextBox txt_prateleira;
+        private Label label2;
+        private ColumnHeader endereco;
     }
 }

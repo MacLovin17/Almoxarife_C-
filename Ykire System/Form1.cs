@@ -60,7 +60,18 @@ namespace Ykire_System
                     totais = totais.OrderByDescending(item => item.produto).ToList();
 
                 ascendingOrder = !ascendingOrder; // Alterna a ordem para o próximo clique
-                AtualizarListView(totais); // Atualiza a ListView com a lista ordenada
+                AtualizarListView(totais); 
+            }
+            if (e.Column == 2)
+            {
+                // Classifica `total_estoque` como inteiro explicitamente para garantir a ordenação correta
+                if (ascendingOrder)
+                    totais = totais.OrderBy(item => Convert.ToInt32(item.total_estoque)).ToList();
+                else
+                    totais = totais.OrderByDescending(item => Convert.ToInt32(item.total_estoque)).ToList();
+
+                ascendingOrder = !ascendingOrder;
+                AtualizarListView(totais);
             }
         }
 

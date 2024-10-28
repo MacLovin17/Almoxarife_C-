@@ -17,13 +17,34 @@ namespace Ykire_System.Infra
             return result == 1;
         }
 
-        public List<Baixa> Get()
+        public List<Baixa> Get(string pesquisa = null)
         {
             using var conn = new DbConnection();
-            string query = @"SELECT * FROM prod_saida;";
-            var baixas = conn.Connection.Query<Baixa>(sql: query);
-            return baixas.ToList();
+            string query = @"SELECT * FROM prod_saida";
+
+            if (!string.IsNullOrWhiteSpace(pesquisa))
+            {
+                if (int.TryParse(pesquisa, out int codigoPesquisa))
+                {
+                    // Se a pesquisa for um número, faça uma comparação direta com o campo código.
+                    query += " WHERE codigo = @CodigoPesquisa";
+                    return conn.Connection.Query<Baixa>(query, new { CodigoPesquisa = codigoPesquisa }).ToList();
+                }
+                else
+                {
+                    // Se a pesquisa for textual, compare com outros campos relevantes.
+                    query += " WHERE LOWER(algum_campo_texto) LIKE @Pesquisa"; // Trocar 'algum_campo_texto' por um campo de texto real
+                    pesquisa = $"%{pesquisa.ToLower()}%";
+                    return conn.Connection.Query<Baixa>(query, new { Pesquisa = pesquisa }).ToList();
+                }
+            }
+
+            var baixas = conn.Connection.Query<Baixa>(query).ToList();
+            return baixas;
         }
+
+
+
 
         public string ObterNomeProdutoPorCodigo(int codigo)
         {

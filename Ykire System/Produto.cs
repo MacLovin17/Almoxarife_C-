@@ -13,9 +13,10 @@ namespace Ykire_System
         public string fornecedor { get; private set; }
         public string cnpj { get; private set; }
         public string obs { get; private set; }
+        public string endereco { get; private set; }
         public Produto() { }
 
-        public Produto(  string nome, string fornecedor, string cnpj, string obs)
+        public Produto(  string nome, string fornecedor, string cnpj, string obs, string endereco)
         {
             if (string.IsNullOrEmpty(nome))
             {
@@ -27,6 +28,7 @@ namespace Ykire_System
             this.fornecedor = fornecedor;
             this.cnpj = cnpj;
             this.obs = obs;
+            this.endereco = endereco;
         }    
     }
 }

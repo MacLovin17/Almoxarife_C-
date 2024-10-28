@@ -13,8 +13,8 @@ namespace Ykire_System.Infra
         {
             using var conn = new DbConnection();
             string query = @"INSERT INTO public.cad_prod(
-                             nome, fornecedor, cnpj, obs)
-                             VALUES (@nome, @fornecedor, @cnpj, @obs);";
+                             nome, fornecedor, cnpj, obs, endereco)
+                             VALUES (@nome, @fornecedor, @cnpj, @obs, @endereco);";
 
             var result = conn.Connection.Execute(sql:  query, param: produto);
             return result == 1;

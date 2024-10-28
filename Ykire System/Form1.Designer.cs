@@ -88,7 +88,7 @@
             panel8.BackgroundImage = (Image)resources.GetObject("panel8.BackgroundImage");
             panel8.BackgroundImageLayout = ImageLayout.Zoom;
             panel8.Enabled = false;
-            panel8.Location = new Point(12, 153);
+            panel8.Location = new Point(14, 153);
             panel8.Name = "panel8";
             panel8.Size = new Size(33, 25);
             panel8.TabIndex = 33;
@@ -98,7 +98,7 @@
             panel7.BackgroundImage = (Image)resources.GetObject("panel7.BackgroundImage");
             panel7.BackgroundImageLayout = ImageLayout.Zoom;
             panel7.Enabled = false;
-            panel7.Location = new Point(12, 193);
+            panel7.Location = new Point(14, 193);
             panel7.Name = "panel7";
             panel7.Size = new Size(33, 25);
             panel7.TabIndex = 31;
@@ -108,11 +108,11 @@
             btn_epi.BackColor = Color.FromArgb(31, 44, 50);
             btn_epi.FlatStyle = FlatStyle.Flat;
             btn_epi.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_epi.Location = new Point(9, 149);
+            btn_epi.Location = new Point(12, 149);
             btn_epi.Name = "btn_epi";
             btn_epi.Size = new Size(96, 34);
             btn_epi.TabIndex = 32;
-            btn_epi.Text = "EPI       ";
+            btn_epi.Text = "EPI         ";
             btn_epi.TextAlign = ContentAlignment.MiddleRight;
             btn_epi.UseVisualStyleBackColor = false;
             btn_epi.Click += btn_epi_Click;
@@ -122,7 +122,7 @@
             panel6.BackgroundImage = (Image)resources.GetObject("panel6.BackgroundImage");
             panel6.BackgroundImageLayout = ImageLayout.Zoom;
             panel6.Enabled = false;
-            panel6.Location = new Point(12, 113);
+            panel6.Location = new Point(14, 113);
             panel6.Name = "panel6";
             panel6.Size = new Size(33, 25);
             panel6.TabIndex = 30;
@@ -132,7 +132,7 @@
             panel5.BackgroundImage = (Image)resources.GetObject("panel5.BackgroundImage");
             panel5.BackgroundImageLayout = ImageLayout.Zoom;
             panel5.Enabled = false;
-            panel5.Location = new Point(11, 74);
+            panel5.Location = new Point(14, 74);
             panel5.Name = "panel5";
             panel5.Size = new Size(33, 25);
             panel5.TabIndex = 29;
@@ -142,7 +142,7 @@
             panel4.BackgroundImage = Properties.Resources._4514864_middle__1_3;
             panel4.BackgroundImageLayout = ImageLayout.Zoom;
             panel4.Enabled = false;
-            panel4.Location = new Point(11, 35);
+            panel4.Location = new Point(14, 35);
             panel4.Name = "panel4";
             panel4.Size = new Size(33, 25);
             panel4.TabIndex = 28;
@@ -152,11 +152,11 @@
             btn_baixa.BackColor = Color.FromArgb(31, 44, 50);
             btn_baixa.FlatStyle = FlatStyle.Flat;
             btn_baixa.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_baixa.Location = new Point(9, 109);
+            btn_baixa.Location = new Point(12, 109);
             btn_baixa.Name = "btn_baixa";
             btn_baixa.Size = new Size(96, 34);
             btn_baixa.TabIndex = 5;
-            btn_baixa.Text = "Baixa    ";
+            btn_baixa.Text = "Baixa     ";
             btn_baixa.TextAlign = ContentAlignment.MiddleRight;
             btn_baixa.UseVisualStyleBackColor = false;
             btn_baixa.Click += button1_Click;
@@ -167,11 +167,11 @@
             btn_estoq.FlatStyle = FlatStyle.Flat;
             btn_estoq.ForeColor = Color.FromArgb(186, 200, 208);
             btn_estoq.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_estoq.Location = new Point(9, 69);
+            btn_estoq.Location = new Point(12, 69);
             btn_estoq.Name = "btn_estoq";
             btn_estoq.Size = new Size(96, 34);
             btn_estoq.TabIndex = 4;
-            btn_estoq.Text = "Entrada";
+            btn_estoq.Text = "Entrada  ";
             btn_estoq.TextAlign = ContentAlignment.MiddleRight;
             btn_estoq.UseVisualStyleBackColor = false;
             btn_estoq.Click += btn_estoq_Click;
@@ -181,7 +181,7 @@
             btn_ger.BackColor = Color.FromArgb(31, 44, 50);
             btn_ger.FlatStyle = FlatStyle.Flat;
             btn_ger.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_ger.Location = new Point(9, 189);
+            btn_ger.Location = new Point(12, 189);
             btn_ger.Name = "btn_ger";
             btn_ger.Size = new Size(96, 34);
             btn_ger.TabIndex = 3;
@@ -196,7 +196,7 @@
             btn_cad.FlatStyle = FlatStyle.Flat;
             btn_cad.ForeColor = Color.FromArgb(186, 200, 208);
             btn_cad.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_cad.Location = new Point(9, 29);
+            btn_cad.Location = new Point(12, 29);
             btn_cad.Name = "btn_cad";
             btn_cad.Size = new Size(96, 34);
             btn_cad.TabIndex = 2;
@@ -249,9 +249,9 @@
             btn_print_est.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             btn_print_est.FlatStyle = FlatStyle.Flat;
             btn_print_est.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_print_est.Location = new Point(605, 32);
+            btn_print_est.Location = new Point(625, 32);
             btn_print_est.Name = "btn_print_est";
-            btn_print_est.Size = new Size(59, 34);
+            btn_print_est.Size = new Size(39, 33);
             btn_print_est.TabIndex = 28;
             btn_print_est.UseVisualStyleBackColor = false;
             btn_print_est.Click += btn_print_est_Click;
@@ -259,7 +259,7 @@
             // txt_pesquisa
             // 
             txt_pesquisa.Font = new Font("Segoe UI", 9F);
-            txt_pesquisa.Location = new Point(91, 43);
+            txt_pesquisa.Location = new Point(91, 42);
             txt_pesquisa.Name = "txt_pesquisa";
             txt_pesquisa.Size = new Size(196, 23);
             txt_pesquisa.TabIndex = 29;
@@ -270,7 +270,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10F);
             label6.ForeColor = SystemColors.ActiveCaptionText;
-            label6.Location = new Point(26, 47);
+            label6.Location = new Point(26, 45);
             label6.Name = "label6";
             label6.Size = new Size(66, 19);
             label6.TabIndex = 1;
@@ -316,7 +316,7 @@
             btn_pesquisa.FlatStyle = FlatStyle.Flat;
             btn_pesquisa.Font = new Font("Segoe UI", 12F);
             btn_pesquisa.ForeColor = Color.FromArgb(31, 44, 50);
-            btn_pesquisa.Location = new Point(293, 33);
+            btn_pesquisa.Location = new Point(293, 32);
             btn_pesquisa.Name = "btn_pesquisa";
             btn_pesquisa.Size = new Size(39, 33);
             btn_pesquisa.TabIndex = 27;
@@ -332,9 +332,9 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F);
             button2.ForeColor = Color.FromArgb(31, 44, 50);
-            button2.Location = new Point(538, 32);
+            button2.Location = new Point(569, 32);
             button2.Name = "button2";
-            button2.Size = new Size(48, 34);
+            button2.Size = new Size(39, 33);
             button2.TabIndex = 3;
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
