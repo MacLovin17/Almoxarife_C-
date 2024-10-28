@@ -22,8 +22,20 @@ namespace Ykire_System
             {
                 throw new Exception("Produto é obrigatório!");
             }
+            if (string.IsNullOrEmpty(fornecedor))
+            {
+                throw new Exception("Fornecedor é obrigatório!");
+            }
+            if (string.IsNullOrEmpty(cnpj))
+            {
+                throw new Exception("CNPJ é obrigatório!");
+            }
+            if (string.IsNullOrEmpty(endereco))
+            {
+                throw new Exception("Prateleira é obrigatório!");
+            }
 
-            
+
             this.nome = nome;
             this.fornecedor = fornecedor;
             this.cnpj = cnpj;

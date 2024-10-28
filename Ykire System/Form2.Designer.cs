@@ -162,6 +162,7 @@
             lv_cad.TabIndex = 0;
             lv_cad.UseCompatibleStateImageBehavior = false;
             lv_cad.View = View.Details;
+            lv_cad.SelectedIndexChanged += lv_cad_SelectedIndexChanged;
             // 
             // codigo
             // 

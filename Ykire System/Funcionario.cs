@@ -18,9 +18,20 @@ namespace Ykire_System
         {
             if (string.IsNullOrEmpty(nome))
             {
-                throw new Exception("Produto é obrigatório!");
+                throw new Exception("Nome é obrigatório!");
             }
-
+            if (string.IsNullOrEmpty(setor))
+            {
+                throw new Exception("Setor é obrigatório!");
+            }
+            if (string.IsNullOrEmpty(matricula))
+            {
+                throw new Exception("Matrícula é obrigatório!");
+            }
+            if (string.IsNullOrEmpty(funcao))
+            {
+                throw new Exception("Função é obrigatório!");
+            }
 
             this.nome = nome;
             this.matricula = int.Parse(matricula);

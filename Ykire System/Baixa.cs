@@ -21,9 +21,17 @@ namespace Ykire_System
             {
                 throw new Exception("Código é obrigatório!");
             }
+            if (string.IsNullOrEmpty(qt))
+            {
+                throw new Exception("Quantidade é obrigatório!");
+            }
+            if (string.IsNullOrEmpty(cgo))
+            {
+                throw new Exception("CGO é obrigatório!");
+            }
 
 
-      
+
             this.codigo = int.Parse(codigo);
             this.qt = int.Parse(qt);
             this.cgo = int.Parse(cgo);

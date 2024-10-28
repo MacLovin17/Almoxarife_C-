@@ -46,6 +46,8 @@
             panel2 = new Panel();
             btn_print_epi = new Button();
             groupBox2 = new GroupBox();
+            txt_CA = new TextBox();
+            label6 = new Label();
             txt_epi_cod = new TextBox();
             btn_pesquisa_epi = new Button();
             btn_epi_save = new Button();
@@ -63,6 +65,7 @@
             matricula_epi = new ColumnHeader("(nenhum)");
             nome = new ColumnHeader();
             epi_epi = new ColumnHeader();
+            ca = new ColumnHeader();
             qt_epi = new ColumnHeader();
             data = new ColumnHeader();
             groupBox1.SuspendLayout();
@@ -102,6 +105,7 @@
             lv_func.TabIndex = 58;
             lv_func.UseCompatibleStateImageBehavior = false;
             lv_func.View = View.Details;
+            lv_func.SelectedIndexChanged += lv_func_SelectedIndexChanged;
             // 
             // matricula
             // 
@@ -223,14 +227,17 @@
             btn_print_epi.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             btn_print_epi.FlatStyle = FlatStyle.Flat;
             btn_print_epi.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_print_epi.Location = new Point(654, 44);
+            btn_print_epi.Location = new Point(786, 45);
             btn_print_epi.Name = "btn_print_epi";
             btn_print_epi.Size = new Size(39, 33);
             btn_print_epi.TabIndex = 3;
             btn_print_epi.UseVisualStyleBackColor = false;
+            btn_print_epi.Click += btn_print_epi_Click;
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(txt_CA);
+            groupBox2.Controls.Add(label6);
             groupBox2.Controls.Add(txt_epi_cod);
             groupBox2.Controls.Add(btn_print_epi);
             groupBox2.Controls.Add(btn_pesquisa_epi);
@@ -249,11 +256,29 @@
             groupBox2.Font = new Font("Segoe UI", 12F);
             groupBox2.Location = new Point(835, 40);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(718, 635);
+            groupBox2.Size = new Size(882, 635);
             groupBox2.TabIndex = 60;
             groupBox2.TabStop = false;
             groupBox2.Text = "EPI";
             groupBox2.Enter += groupBox2_Enter;
+            // 
+            // txt_CA
+            // 
+            txt_CA.Location = new Point(318, 125);
+            txt_CA.Name = "txt_CA";
+            txt_CA.Size = new Size(94, 29);
+            txt_CA.TabIndex = 78;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 15F);
+            label6.ForeColor = SystemColors.ActiveCaptionText;
+            label6.Location = new Point(271, 126);
+            label6.Name = "label6";
+            label6.Size = new Size(41, 28);
+            label6.TabIndex = 77;
+            label6.Text = "CA:";
             // 
             // txt_epi_cod
             // 
@@ -287,7 +312,7 @@
             btn_epi_save.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             btn_epi_save.FlatStyle = FlatStyle.Flat;
             btn_epi_save.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_epi_save.Location = new Point(596, 44);
+            btn_epi_save.Location = new Point(728, 45);
             btn_epi_save.Name = "btn_epi_save";
             btn_epi_save.Size = new Size(39, 33);
             btn_epi_save.TabIndex = 61;
@@ -361,7 +386,7 @@
             // 
             // data_epi
             // 
-            data_epi.Location = new Point(335, 125);
+            data_epi.Location = new Point(710, 125);
             data_epi.Name = "data_epi";
             data_epi.Size = new Size(115, 29);
             data_epi.TabIndex = 66;
@@ -372,7 +397,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
             label5.ForeColor = SystemColors.ActiveCaptionText;
-            label5.Location = new Point(284, 129);
+            label5.Location = new Point(659, 129);
             label5.Name = "label5";
             label5.Size = new Size(45, 21);
             label5.TabIndex = 64;
@@ -380,7 +405,7 @@
             // 
             // txt_data_epi
             // 
-            txt_data_epi.Location = new Point(335, 125);
+            txt_data_epi.Location = new Point(710, 125);
             txt_data_epi.Name = "txt_data_epi";
             txt_data_epi.Size = new Size(115, 29);
             txt_data_epi.TabIndex = 65;
@@ -388,15 +413,16 @@
             // 
             // lv_epi_func
             // 
-            lv_epi_func.Columns.AddRange(new ColumnHeader[] { matricula_epi, nome, epi_epi, qt_epi, data });
+            lv_epi_func.Columns.AddRange(new ColumnHeader[] { matricula_epi, nome, epi_epi, ca, qt_epi, data });
             lv_epi_func.FullRowSelect = true;
             lv_epi_func.GridLines = true;
-            lv_epi_func.Location = new Point(38, 179);
+            lv_epi_func.Location = new Point(29, 179);
             lv_epi_func.Name = "lv_epi_func";
-            lv_epi_func.Size = new Size(655, 412);
+            lv_epi_func.Size = new Size(796, 412);
             lv_epi_func.TabIndex = 63;
             lv_epi_func.UseCompatibleStateImageBehavior = false;
             lv_epi_func.View = View.Details;
+            lv_epi_func.SelectedIndexChanged += lv_epi_func_SelectedIndexChanged;
             // 
             // matricula_epi
             // 
@@ -412,11 +438,17 @@
             // 
             epi_epi.Text = "EPI";
             epi_epi.TextAlign = HorizontalAlignment.Center;
-            epi_epi.Width = 100;
+            epi_epi.Width = 180;
+            // 
+            // ca
+            // 
+            ca.Text = "CA";
+            ca.TextAlign = HorizontalAlignment.Center;
             // 
             // qt_epi
             // 
             qt_epi.Text = "Quantidade";
+            qt_epi.TextAlign = HorizontalAlignment.Center;
             qt_epi.Width = 100;
             // 
             // data
@@ -430,7 +462,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(233, 240, 245);
-            ClientSize = new Size(1580, 931);
+            ClientSize = new Size(1843, 931);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(panel2);
@@ -483,5 +515,8 @@
         private ColumnHeader qt_epi;
         private Button btn_pesquisa_epi;
         private TextBox txt_epi_cod;
+        private TextBox txt_CA;
+        private Label label6;
+        private ColumnHeader ca;
     }
 }

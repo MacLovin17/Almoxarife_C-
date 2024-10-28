@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,25 +14,41 @@ namespace Ykire_System
 {
     public partial class epi : Form
     {
+        private PrintDocument printDocument = new PrintDocument();
         public List<Funcinario> funcionarios { get; private set; } = new List<Funcinario>();
+        private bool ascendingOrder = true;
         public List<CEPI> epis { get; private set; } = new List<CEPI>();
         private EPIRepository _epiRepository;
-        
+
         public epi()
         {
             InitializeComponent();
+
             _epiRepository = new EPIRepository();
+
             obterEpis_func();
             obterEpis();
+
             data_epi.Format = DateTimePickerFormat.Custom;
             data_epi.CustomFormat = "dd/MM/yyyy";
+
+            lv_func.ColumnClick += lv_func_ColumnClick;
+
+            printDocument.PrintPage += PrintDocument_PrintPage;
+            printDocument.DefaultPageSettings.Landscape = true;
+
         }
 
         private void obterEpis()
         {
             var repository = new FuncRepository();
             funcionarios = repository.Get();
+            AtualizarListView_FUNC(funcionarios);
+        }
+        private void AtualizarListView_FUNC(List<Funcinario> funcionarios)
+        {
             lv_func.Items.Clear();
+
             foreach (var item in funcionarios)
             {
                 lv_func.Items.Add(new ListViewItem(new String[] {
@@ -59,6 +76,7 @@ namespace Ykire_System
                 item.matricula.ToString(),
                 item.nome,
                 item.epi,
+                item.ca,
                 item.qt.ToString(),
                 item.data
                 }));
@@ -124,16 +142,17 @@ namespace Ykire_System
             {
                 var matricula = Txt_mat_epi.Text;
                 var epi = txt_epi_cod.Text;
+                var ca = txt_CA.Text;
                 var qt = txt_qt_epi.Text;
                 var data = txt_data_epi.Text;
 
-                var cepi = new CEPI(matricula, epi, qt, data);
+                var cepi = new CEPI(matricula, epi, ca, qt, data);
                 epis.Add(cepi);
 
                 var repository_epi = new EPIRepository();
                 repository_epi.Add(cepi);
 
-                lv_epi_func.Items.Add(new ListViewItem(new String[] { matricula, epi, qt, data }));
+                lv_epi_func.Items.Add(new ListViewItem(new String[] { matricula, epi, ca, qt, data }));
 
             }
             catch (Exception ex)
@@ -142,6 +161,7 @@ namespace Ykire_System
 
             }
             Txt_mat_epi.Text = "";
+            txt_CA.Text = "";
             Txt_epi_epi.Text = "";
             txt_qt_epi.Text = "";
 
@@ -204,6 +224,118 @@ namespace Ykire_System
                 txt_nome_epi.Text = string.Empty;
                 btn_epi_save.Enabled = false; // Desabilita o botão se o código não for válido
             }
+        }
+        private void lv_func_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            // Verifica se o usuário clicou na segunda coluna (índice 1)
+            if (e.Column == 1)
+            {
+                // Alterna entre crescente e decrescente
+                if (ascendingOrder)
+                    funcionarios = funcionarios.OrderBy(item => item.nome).ToList();
+                else
+                    funcionarios = funcionarios.OrderByDescending(item => item.nome).ToList();
+
+                ascendingOrder = !ascendingOrder; // Alterna a ordem para o próximo clique
+                AtualizarListView_FUNC(funcionarios);
+            }
+
+        }
+        private void lv_func_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lv_epi_func_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private int itemIndex = 0; // Controla o índice do item atual entre páginas
+
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            // Fonte para o título e variáveis de formatação
+            Font titleFont = new Font("Arial", 14, FontStyle.Bold);
+            Font font = new Font("Arial", 10);
+            int yPosition = e.MarginBounds.Top;
+            int xPosition = e.MarginBounds.Left;
+            int rowHeight = 20;
+
+           
+            e.Graphics.DrawString("Relação EPI x Funcionário", titleFont, Brushes.Black, xPosition, yPosition);
+            yPosition += 40; // Ajusta a posição vertical para o próximo conteúdo, abaixo do título
+
+            // Cabeçalho da ListView (imprime uma vez por página)
+            xPosition = e.MarginBounds.Left; // Reinicializa xPosition para cada nova linha
+            for (int i = 0; i < lv_epi_func.Columns.Count; i++)
+            {
+                e.Graphics.DrawString(lv_epi_func.Columns[i].Text, font, Brushes.Black, xPosition, yPosition);
+
+                // Ajusta xPosition com base na largura de cada coluna
+                if (i == 0) // Código
+                    xPosition += 80; // 80 pixels para a coluna Código
+                else if (i == 1) // Descrição
+                    xPosition += 250; // 500 pixels para a coluna Descrição
+                else if (i == 2) // Descrição
+                    xPosition += 250; // 500 pixels para a coluna Descrição
+                else
+                    xPosition += 100; // Ajuste padrão para outras colunas
+            }
+
+            yPosition += rowHeight; // Move para a próxima linha
+
+            // Controla o espaçamento vertical, garantindo que cabe na página
+            while (itemIndex < lv_epi_func.Items.Count)
+            {
+                xPosition = e.MarginBounds.Left; // Reinicializa xPosition para cada nova linha
+                ListViewItem item = lv_epi_func.Items[itemIndex];
+
+                // Imprime o conteúdo da ListView por coluna
+                for (int i = 0; i < item.SubItems.Count; i++)
+                {
+                    e.Graphics.DrawString(item.SubItems[i].Text, font, Brushes.Black, xPosition, yPosition);
+
+                    // Ajusta xPosition com base na largura de cada coluna
+                    if (i == 0) // Código
+                        xPosition += 80; // 80 pixels para a coluna Código
+                    else if (i == 1) // Descrição
+                        xPosition += 250; // 500 pixels para a coluna Descrição
+                    else if (i == 2) // Descrição
+                        xPosition += 250; // 500 pixels para a coluna Descrição
+                    else
+                        xPosition += 100; // Ajuste padrão para outras colunas
+                }
+
+                yPosition += rowHeight; // Move para a próxima linha
+
+                // Verifica se a página está cheia
+                if (yPosition + rowHeight > e.MarginBounds.Bottom)
+                {
+                    e.HasMorePages = true; // Informa que há mais páginas
+                    itemIndex++; // Incrementa o índice do item
+                    return; // Sai do método para imprimir a próxima página
+                }
+
+                itemIndex++; // Avança para o próximo item
+            }
+
+            
+
+            yPosition += 40; // Ajusta a posição vertical para o próximo conteúdo, abaixo do título
+            // Se todos os itens foram impressos, reseta o índice e encerra
+            e.HasMorePages = false;
+            itemIndex = 0; // Reseta o índice para permitir nova impressão corretamente
+            yPosition =770;
+            xPosition = e.MarginBounds.Left;
+            e.Graphics.DrawString("\nAssinatura : ____________________________________________________________", titleFont, Brushes.Black, xPosition, yPosition);
+            
+        }
+
+        private void btn_print_epi_Click(object sender, EventArgs e)
+        {
+            PrintPreviewDialog preview = new PrintPreviewDialog();
+            preview.Document = printDocument;  // Conecta o documento ao preview
+            preview.ShowDialog();
         }
     }
 }

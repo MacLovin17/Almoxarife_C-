@@ -39,14 +39,14 @@ namespace Ykire_System
             }
             if (e.Column == 5)
             {
-                
+
                 if (ascendingOrder)
                     produtos = produtos.OrderBy(item => item.endereco).ToList();
                 else
                     produtos = produtos.OrderByDescending(item => item.endereco).ToList();
 
-                ascendingOrder = !ascendingOrder; 
-                AtualizarListView(produtos); 
+                ascendingOrder = !ascendingOrder;
+                AtualizarListView(produtos);
             }
         }
         private void obterProdutos()
@@ -118,6 +118,11 @@ namespace Ykire_System
         }
 
         private void txt_prateleira_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lv_cad_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

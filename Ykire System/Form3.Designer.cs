@@ -56,7 +56,7 @@
             panel3.Controls.Add(lv_est);
             panel3.Location = new Point(597, 25);
             panel3.Name = "panel3";
-            panel3.Size = new Size(847, 791);
+            panel3.Size = new Size(653, 791);
             panel3.TabIndex = 25;
             // 
             // label6
@@ -78,7 +78,7 @@
             lv_est.GridLines = true;
             lv_est.Location = new Point(54, 60);
             lv_est.Name = "lv_est";
-            lv_est.Size = new Size(773, 706);
+            lv_est.Size = new Size(573, 706);
             lv_est.TabIndex = 0;
             lv_est.UseCompatibleStateImageBehavior = false;
             lv_est.View = View.Details;
@@ -211,7 +211,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(233, 240, 245);
-            ClientSize = new Size(1485, 828);
+            ClientSize = new Size(1290, 828);
             Controls.Add(txt_cod_entr);
             Controls.Add(date_est);
             Controls.Add(panel3);
