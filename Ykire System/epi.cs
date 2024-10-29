@@ -15,8 +15,8 @@ namespace Ykire_System
     public partial class epi : Form
     {
         private PrintDocument printDocument = new PrintDocument();
-        public List<Funcinario> funcionarios { get; private set; } = new List<Funcinario>();
-        private bool ascendingOrder = true;
+
+
         public List<CEPI> epis { get; private set; } = new List<CEPI>();
         private EPIRepository _epiRepository;
 
@@ -25,38 +25,12 @@ namespace Ykire_System
             InitializeComponent();
 
             _epiRepository = new EPIRepository();
-
             obterEpis_func();
-            obterEpis();
-
             data_epi.Format = DateTimePickerFormat.Custom;
             data_epi.CustomFormat = "dd/MM/yyyy";
-
-            lv_func.ColumnClick += lv_func_ColumnClick;
-
             printDocument.PrintPage += PrintDocument_PrintPage;
             printDocument.DefaultPageSettings.Landscape = true;
 
-        }
-
-        private void obterEpis()
-        {
-            var repository = new FuncRepository();
-            funcionarios = repository.Get();
-            AtualizarListView_FUNC(funcionarios);
-        }
-        private void AtualizarListView_FUNC(List<Funcinario> funcionarios)
-        {
-            lv_func.Items.Clear();
-
-            foreach (var item in funcionarios)
-            {
-                lv_func.Items.Add(new ListViewItem(new String[] {
-                    item.matricula.ToString(),
-                    item.nome,
-                    item.funcao
-                }));
-            }
         }
 
         private void obterEpis_func(string pesquisa_epi = null)
@@ -96,39 +70,7 @@ namespace Ykire_System
 
         private void btn_cad_epi_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var matricula = txt_matricula.Text;
-                var nome = txt_nome_func.Text;
-                var setor = txt_setor.Text;
-                var funcao = txt_funcao_func.Text;
 
-                foreach (var item in funcionarios)
-                {
-                    if (item.nome == nome)
-                        MessageBox.Show(nome + "já está cadastrado no sistema.");
-                }
-
-                var funcionario = new Funcinario(matricula, nome, setor, funcao);
-                funcionarios.Add(funcionario);
-
-                var repository_fun = new FuncRepository();
-                repository_fun.Add(funcionario);
-
-                lv_func.Items.Add(new ListViewItem(new String[] { matricula, nome, funcao }));
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
-            txt_matricula.Text = "";
-            txt_nome_func.Text = "";
-            txt_setor.Text = "";
-            txt_funcao_func.Text = "";
-
-            MessageBox.Show("Funcionário cadastrado");
         }
 
         private void data_epi_ValueChanged(object sender, EventArgs e)
@@ -141,12 +83,13 @@ namespace Ykire_System
             try
             {
                 var matricula = Txt_mat_epi.Text;
+                var codigo = Txt_epi_epi.Text;
                 var epi = txt_epi_cod.Text;
                 var ca = txt_CA.Text;
                 var qt = txt_qt_epi.Text;
                 var data = txt_data_epi.Text;
 
-                var cepi = new CEPI(matricula, epi, ca, qt, data);
+                var cepi = new CEPI(matricula, codigo, epi, ca, qt, data);
                 epis.Add(cepi);
 
                 var repository_epi = new EPIRepository();
@@ -160,6 +103,7 @@ namespace Ykire_System
                 MessageBox.Show(ex.Message);
 
             }
+            Txt_epi_epi.Text = "";
             Txt_mat_epi.Text = "";
             txt_CA.Text = "";
             Txt_epi_epi.Text = "";
@@ -225,22 +169,7 @@ namespace Ykire_System
                 btn_epi_save.Enabled = false; // Desabilita o botão se o código não for válido
             }
         }
-        private void lv_func_ColumnClick(object sender, ColumnClickEventArgs e)
-        {
-            // Verifica se o usuário clicou na segunda coluna (índice 1)
-            if (e.Column == 1)
-            {
-                // Alterna entre crescente e decrescente
-                if (ascendingOrder)
-                    funcionarios = funcionarios.OrderBy(item => item.nome).ToList();
-                else
-                    funcionarios = funcionarios.OrderByDescending(item => item.nome).ToList();
 
-                ascendingOrder = !ascendingOrder; // Alterna a ordem para o próximo clique
-                AtualizarListView_FUNC(funcionarios);
-            }
-
-        }
         private void lv_func_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -261,7 +190,6 @@ namespace Ykire_System
             int xPosition = e.MarginBounds.Left;
             int rowHeight = 20;
 
-           
             e.Graphics.DrawString("Relação EPI x Funcionário", titleFont, Brushes.Black, xPosition, yPosition);
             yPosition += 40; // Ajusta a posição vertical para o próximo conteúdo, abaixo do título
 
@@ -319,16 +247,14 @@ namespace Ykire_System
                 itemIndex++; // Avança para o próximo item
             }
 
-            
-
             yPosition += 40; // Ajusta a posição vertical para o próximo conteúdo, abaixo do título
             // Se todos os itens foram impressos, reseta o índice e encerra
             e.HasMorePages = false;
             itemIndex = 0; // Reseta o índice para permitir nova impressão corretamente
-            yPosition =770;
+            yPosition = 770;
             xPosition = e.MarginBounds.Left;
             e.Graphics.DrawString("\nAssinatura : ____________________________________________________________", titleFont, Brushes.Black, xPosition, yPosition);
-            
+
         }
 
         private void btn_print_epi_Click(object sender, EventArgs e)
@@ -336,6 +262,12 @@ namespace Ykire_System
             PrintPreviewDialog preview = new PrintPreviewDialog();
             preview.Document = printDocument;  // Conecta o documento ao preview
             preview.ShowDialog();
+        }
+
+        private void cad_funcionario_Click(object sender, EventArgs e)
+        {
+            Form7 form7 = new Form7();
+            form7.Show();
         }
     }
 }

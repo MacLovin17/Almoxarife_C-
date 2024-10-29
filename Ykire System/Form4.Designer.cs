@@ -122,6 +122,7 @@
             // 
             // data_final
             // 
+            data_final.DropDownAlign = LeftRightAlignment.Right;
             data_final.Location = new Point(589, 61);
             data_final.Name = "data_final";
             data_final.Size = new Size(115, 23);
@@ -130,6 +131,7 @@
             // 
             // data_inicio
             // 
+            data_inicio.DropDownAlign = LeftRightAlignment.Right;
             data_inicio.Location = new Point(468, 61);
             data_inicio.Name = "data_inicio";
             data_inicio.Size = new Size(115, 23);
@@ -359,6 +361,7 @@
             // 
             // date_est_said
             // 
+            date_est_said.DropDownAlign = LeftRightAlignment.Right;
             date_est_said.Location = new Point(155, 230);
             date_est_said.Name = "date_est_said";
             date_est_said.Size = new Size(140, 23);

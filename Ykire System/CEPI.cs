@@ -10,13 +10,14 @@ namespace Ykire_System
     {
         public int matricula { get; set; }
         public string nome { get; private set; }
+        public int codigo { get; private set; }
         public string epi { get; private set; }
         public string ca { get; private set;}
         public int qt { get; private set; }
         public string data { get; private set; }
         public CEPI() { }
 
-        public CEPI(string matricula, string epi, string ca, string qt,string data)
+        public CEPI(string matricula, string codigo, string epi, string ca, string qt,string data)
         {
             if (string.IsNullOrEmpty(matricula))
             {
@@ -35,6 +36,7 @@ namespace Ykire_System
                 throw new Exception("Quantidade é obrigatório!");
             }
             this.matricula = int.Parse(matricula);
+            this.codigo = int.Parse(codigo);
             this.epi = epi;
             this.ca = ca;
             this.qt = int.Parse(qt);

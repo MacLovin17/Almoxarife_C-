@@ -26,6 +26,7 @@ namespace Ykire_System
 
         private void obterProdutos_tot(string pesquisa = null)
         {
+
             var repository = new TotalRepository();
             totais = repository.Get(pesquisa);
             AtualizarListView(totais);
@@ -60,7 +61,7 @@ namespace Ykire_System
                     totais = totais.OrderByDescending(item => item.produto).ToList();
 
                 ascendingOrder = !ascendingOrder; // Alterna a ordem para o próximo clique
-                AtualizarListView(totais); 
+                AtualizarListView(totais);
             }
             if (e.Column == 2)
             {
@@ -123,7 +124,7 @@ namespace Ykire_System
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            lv_est_tot.Items.Clear();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -219,6 +220,11 @@ namespace Ykire_System
         }
 
         private void txt_pesquisa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }

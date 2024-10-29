@@ -103,11 +103,7 @@ namespace Ykire_System
                 MessageBox.Show(ex.Message);
 
             }
-            txt_cnpj.Text = "";
-            txt_fornec.Text = "";
-            txt_obs.Text = "";
-            txt_prod.Text = "";
-            txt_prateleira.Text = "";
+            
 
             MessageBox.Show("Produto cadastrado");
         }

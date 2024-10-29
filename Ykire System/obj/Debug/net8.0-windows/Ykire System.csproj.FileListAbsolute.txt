@@ -74,3 +74,4 @@ C:\Users\tec\source\repos\Ykire System\Ykire System\bin\Debug\net8.0-windows\Mic
 C:\Users\tec\source\repos\Ykire System\Ykire System\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
 C:\Users\tec\source\repos\Ykire System\Ykire System\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire_System.epi.resources
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire_System.Form7.resources

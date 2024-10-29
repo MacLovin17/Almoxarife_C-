@@ -146,6 +146,7 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(33, 25);
             panel4.TabIndex = 28;
+            panel4.Paint += panel4_Paint;
             // 
             // btn_baixa
             // 

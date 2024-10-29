@@ -13,8 +13,8 @@ namespace Ykire_System.Infra
         {
             using var conn = new DbConnection();
             string query = @"INSERT INTO public.epi(
-                             matricula, nome, epi, ca, qt, data)
-                             VALUES (@matricula, @nome, @epi, @ca,  @qt, @data);";
+                             matricula, nome, codigo, epi, ca, qt, data)
+                             VALUES (@matricula, @nome, @codigo, @epi, @ca,  @qt, @data);";
 
             var result = conn.Connection.Execute(sql: query, param: epi);
             return result == 1;

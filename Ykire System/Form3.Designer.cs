@@ -192,6 +192,7 @@
             // 
             // date_est
             // 
+            date_est.DropDownAlign = LeftRightAlignment.Right;
             date_est.Location = new Point(151, 173);
             date_est.Name = "date_est";
             date_est.Size = new Size(161, 23);
