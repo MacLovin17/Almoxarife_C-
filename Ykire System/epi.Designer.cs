@@ -32,6 +32,7 @@
             panel2 = new Panel();
             btn_print_epi = new Button();
             groupBox2 = new GroupBox();
+            cad_funcionario = new Button();
             txt_CA = new TextBox();
             label6 = new Label();
             txt_epi_cod = new TextBox();
@@ -54,7 +55,6 @@
             ca = new ColumnHeader();
             qt_epi = new ColumnHeader();
             data = new ColumnHeader();
-            cad_funcionario = new Button();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
@@ -111,6 +111,21 @@
             groupBox2.Text = "EPI";
             groupBox2.Enter += groupBox2_Enter;
             // 
+            // cad_funcionario
+            // 
+            cad_funcionario.BackColor = Color.FromArgb(233, 240, 245);
+            cad_funcionario.BackgroundImage = (Image)resources.GetObject("cad_funcionario.BackgroundImage");
+            cad_funcionario.BackgroundImageLayout = ImageLayout.Zoom;
+            cad_funcionario.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
+            cad_funcionario.FlatStyle = FlatStyle.Flat;
+            cad_funcionario.ForeColor = Color.FromArgb(186, 200, 208);
+            cad_funcionario.Location = new Point(665, 45);
+            cad_funcionario.Name = "cad_funcionario";
+            cad_funcionario.Size = new Size(39, 34);
+            cad_funcionario.TabIndex = 79;
+            cad_funcionario.UseVisualStyleBackColor = false;
+            cad_funcionario.Click += cad_funcionario_Click;
+            // 
             // txt_CA
             // 
             txt_CA.Location = new Point(318, 125);
@@ -161,7 +176,7 @@
             btn_epi_save.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             btn_epi_save.FlatStyle = FlatStyle.Flat;
             btn_epi_save.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_epi_save.Location = new Point(728, 45);
+            btn_epi_save.Location = new Point(731, 45);
             btn_epi_save.Name = "btn_epi_save";
             btn_epi_save.Size = new Size(39, 33);
             btn_epi_save.TabIndex = 61;
@@ -305,21 +320,6 @@
             data.Text = "Data";
             data.TextAlign = HorizontalAlignment.Center;
             data.Width = 120;
-            // 
-            // cad_funcionario
-            // 
-            cad_funcionario.BackColor = Color.FromArgb(233, 240, 245);
-            cad_funcionario.BackgroundImage = (Image)resources.GetObject("cad_funcionario.BackgroundImage");
-            cad_funcionario.BackgroundImageLayout = ImageLayout.Zoom;
-            cad_funcionario.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
-            cad_funcionario.FlatStyle = FlatStyle.Flat;
-            cad_funcionario.ForeColor = Color.FromArgb(186, 200, 208);
-            cad_funcionario.Location = new Point(683, 44);
-            cad_funcionario.Name = "cad_funcionario";
-            cad_funcionario.Size = new Size(39, 33);
-            cad_funcionario.TabIndex = 79;
-            cad_funcionario.UseVisualStyleBackColor = false;
-            cad_funcionario.Click += cad_funcionario_Click;
             // 
             // epi
             // 

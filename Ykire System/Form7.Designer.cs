@@ -60,7 +60,7 @@
             groupBox1.Controls.Add(txt_nome_func);
             groupBox1.Font = new Font("Segoe UI", 12F);
             groupBox1.ForeColor = SystemColors.ActiveCaptionText;
-            groupBox1.Location = new Point(82, 12);
+            groupBox1.Location = new Point(52, 12);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(619, 634);
             groupBox1.TabIndex = 60;
@@ -189,7 +189,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnableAllowFocusChange;
             BackColor = Color.FromArgb(233, 240, 245);
-            ClientSize = new Size(818, 658);
+            ClientSize = new Size(746, 656);
             Controls.Add(groupBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form7";

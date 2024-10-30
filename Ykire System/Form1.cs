@@ -76,8 +76,6 @@ namespace Ykire_System
             }
         }
 
-
-
         private void btn_cad_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
