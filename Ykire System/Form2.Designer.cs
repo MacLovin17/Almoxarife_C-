@@ -158,7 +158,7 @@
             lv_cad.GridLines = true;
             lv_cad.Location = new Point(26, 50);
             lv_cad.Name = "lv_cad";
-            lv_cad.Size = new Size(828, 733);
+            lv_cad.Size = new Size(984, 733);
             lv_cad.TabIndex = 0;
             lv_cad.UseCompatibleStateImageBehavior = false;
             lv_cad.View = View.Details;
@@ -172,12 +172,12 @@
             // produto
             // 
             produto.Text = "Descrição";
-            produto.Width = 200;
+            produto.Width = 300;
             // 
             // fornecedor
             // 
             fornecedor.Text = "Fornecedor";
-            fornecedor.Width = 150;
+            fornecedor.Width = 200;
             // 
             // cnpj
             // 
@@ -203,7 +203,7 @@
             panel3.Controls.Add(lv_cad);
             panel3.Location = new Point(586, 26);
             panel3.Name = "panel3";
-            panel3.Size = new Size(857, 795);
+            panel3.Size = new Size(1040, 795);
             panel3.TabIndex = 15;
             // 
             // label6
@@ -241,7 +241,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(233, 240, 245);
-            ClientSize = new Size(1455, 821);
+            ClientSize = new Size(1858, 821);
             Controls.Add(txt_prateleira);
             Controls.Add(label2);
             Controls.Add(panel3);

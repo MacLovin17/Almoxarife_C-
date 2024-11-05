@@ -19,7 +19,7 @@ namespace Ykire_System
         private PrintDocument printDocument = new PrintDocument();
         public List<Baixa> baixas { get; private set; } = new List<Baixa>();
         private BaixaRepository _baixaRepository;
-        private bool ascendingOrder = true; // Controla a ordem da ordenação
+        private bool ascendingOrder = true; // Controla a ordem em alfabetico
         public Form4()
         {
             InitializeComponent();
