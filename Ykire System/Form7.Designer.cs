@@ -78,6 +78,7 @@
             lv_func.TabIndex = 58;
             lv_func.UseCompatibleStateImageBehavior = false;
             lv_func.View = View.Details;
+            lv_func.SelectedIndexChanged += lv_func_SelectedIndexChanged;
             // 
             // matricula
             // 

@@ -98,5 +98,10 @@ namespace Ykire_System
 
             MessageBox.Show("Funcionário cadastrado");
         }
+
+        private void lv_func_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace Ykire_System
         {
             InitializeComponent();
         }
+
+        private void ssma_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

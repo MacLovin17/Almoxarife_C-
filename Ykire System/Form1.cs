@@ -117,7 +117,8 @@ namespace Ykire_System
 
         private void btn_ger_Click(object sender, EventArgs e)
         {
-
+            Form10 form10 = new Form10();
+            form10.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
