@@ -269,5 +269,10 @@ namespace Ykire_System
             Form7 form7 = new Form7();
             form7.Show();
         }
+
+        private void txt_nome_epi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

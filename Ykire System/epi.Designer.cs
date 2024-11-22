@@ -208,6 +208,7 @@
             txt_nome_epi.Name = "txt_nome_epi";
             txt_nome_epi.Size = new Size(191, 29);
             txt_nome_epi.TabIndex = 72;
+            txt_nome_epi.TextChanged += txt_nome_epi_TextChanged;
             // 
             // Txt_epi_epi
             // 

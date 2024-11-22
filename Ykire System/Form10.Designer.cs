@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form10));
             groupBox2 = new GroupBox();
+            txt_km = new TextBox();
+            label1 = new Label();
+            Cbox_combustivel = new ComboBox();
             cad_veiculo = new Button();
             txt_Lt = new TextBox();
             label6 = new Label();
@@ -52,9 +55,6 @@
             combustivel = new ColumnHeader();
             litro = new ColumnHeader();
             valor = new ColumnHeader();
-            Cbox_combustivel = new ComboBox();
-            txt_km = new TextBox();
-            label1 = new Label();
             data = new ColumnHeader();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -88,6 +88,36 @@
             groupBox2.TabIndex = 61;
             groupBox2.TabStop = false;
             groupBox2.Text = "Combustível";
+            // 
+            // txt_km
+            // 
+            txt_km.Location = new Point(138, 179);
+            txt_km.Name = "txt_km";
+            txt_km.Size = new Size(94, 29);
+            txt_km.TabIndex = 82;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15F);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.Location = new Point(81, 180);
+            label1.Name = "label1";
+            label1.Size = new Size(51, 28);
+            label1.TabIndex = 81;
+            label1.Text = "KM :";
+            // 
+            // Cbox_combustivel
+            // 
+            Cbox_combustivel.DropDownStyle = ComboBoxStyle.DropDownList;
+            Cbox_combustivel.FormattingEnabled = true;
+            Cbox_combustivel.ImeMode = ImeMode.NoControl;
+            Cbox_combustivel.Items.AddRange(new object[] { "Gasolina", "Etanol", "Diesel" });
+            Cbox_combustivel.Location = new Point(138, 129);
+            Cbox_combustivel.Name = "Cbox_combustivel";
+            Cbox_combustivel.Size = new Size(121, 29);
+            Cbox_combustivel.TabIndex = 80;
+            Cbox_combustivel.UseWaitCursor = true;
             // 
             // cad_veiculo
             // 
@@ -216,6 +246,7 @@
             Txt_mat_frota.Name = "Txt_mat_frota";
             Txt_mat_frota.Size = new Size(115, 29);
             Txt_mat_frota.TabIndex = 68;
+            Txt_mat_frota.TextChanged += Txt_mat_frota_TextChanged;
             // 
             // label7
             // 
@@ -295,36 +326,6 @@
             valor.Text = "Valor";
             valor.TextAlign = HorizontalAlignment.Center;
             valor.Width = 100;
-            // 
-            // Cbox_combustivel
-            // 
-            Cbox_combustivel.DropDownStyle = ComboBoxStyle.DropDownList;
-            Cbox_combustivel.FormattingEnabled = true;
-            Cbox_combustivel.ImeMode = ImeMode.NoControl;
-            Cbox_combustivel.Items.AddRange(new object[] { "Gasolina", "Etanol", "Diesel" });
-            Cbox_combustivel.Location = new Point(138, 129);
-            Cbox_combustivel.Name = "Cbox_combustivel";
-            Cbox_combustivel.Size = new Size(121, 29);
-            Cbox_combustivel.TabIndex = 80;
-            Cbox_combustivel.UseWaitCursor = true;
-            // 
-            // txt_km
-            // 
-            txt_km.Location = new Point(138, 179);
-            txt_km.Name = "txt_km";
-            txt_km.Size = new Size(94, 29);
-            txt_km.TabIndex = 82;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F);
-            label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(81, 180);
-            label1.Name = "label1";
-            label1.Size = new Size(51, 28);
-            label1.TabIndex = 81;
-            label1.Text = "KM :";
             // 
             // data
             // 
