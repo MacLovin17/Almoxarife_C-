@@ -180,6 +180,7 @@
             // lv_cars
             // 
             lv_cars.Columns.AddRange(new ColumnHeader[] { codigo, tag, descricao, placa, ano, crlv, chassi, renavam });
+            lv_cars.Font = new Font("Segoe UI", 10F);
             lv_cars.FullRowSelect = true;
             lv_cars.GridLines = true;
             lv_cars.Location = new Point(6, 179);
@@ -318,6 +319,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form12";
             Text = "Veículos";
+            Load += Form12_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

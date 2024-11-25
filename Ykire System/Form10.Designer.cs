@@ -30,13 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form10));
             groupBox2 = new GroupBox();
+            txt_custo = new TextBox();
+            label2 = new Label();
+            Cbox_cidade = new ComboBox();
+            city = new Label();
             txt_km = new TextBox();
             label1 = new Label();
             Cbox_combustivel = new ComboBox();
             cad_veiculo = new Button();
             txt_Lt = new TextBox();
             label6 = new Label();
-            txt_epi_cod = new TextBox();
+            txt_veiculo_gas = new TextBox();
             btn_print_frota = new Button();
             btn_pesquisa_epi = new Button();
             btn_frota = new Button();
@@ -54,20 +58,24 @@
             tag = new ColumnHeader();
             combustivel = new ColumnHeader();
             litro = new ColumnHeader();
-            valor = new ColumnHeader();
             data = new ColumnHeader();
+            cidade = new ColumnHeader();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(txt_custo);
+            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(Cbox_cidade);
+            groupBox2.Controls.Add(city);
             groupBox2.Controls.Add(txt_km);
             groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(Cbox_combustivel);
             groupBox2.Controls.Add(cad_veiculo);
             groupBox2.Controls.Add(txt_Lt);
             groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(txt_epi_cod);
+            groupBox2.Controls.Add(txt_veiculo_gas);
             groupBox2.Controls.Add(btn_print_frota);
             groupBox2.Controls.Add(btn_pesquisa_epi);
             groupBox2.Controls.Add(btn_frota);
@@ -84,14 +92,55 @@
             groupBox2.Font = new Font("Segoe UI", 12F);
             groupBox2.Location = new Point(152, 33);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(882, 679);
+            groupBox2.Size = new Size(973, 679);
             groupBox2.TabIndex = 61;
             groupBox2.TabStop = false;
             groupBox2.Text = "Combustível";
             // 
+            // txt_custo
+            // 
+            txt_custo.Location = new Point(567, 129);
+            txt_custo.Name = "txt_custo";
+            txt_custo.Size = new Size(94, 29);
+            txt_custo.TabIndex = 86;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15F);
+            label2.ForeColor = SystemColors.ActiveCaptionText;
+            label2.Location = new Point(490, 129);
+            label2.Name = "label2";
+            label2.Size = new Size(71, 28);
+            label2.TabIndex = 85;
+            label2.Text = "Custo :";
+            // 
+            // Cbox_cidade
+            // 
+            Cbox_cidade.DropDownStyle = ComboBoxStyle.DropDownList;
+            Cbox_cidade.FormattingEnabled = true;
+            Cbox_cidade.ImeMode = ImeMode.NoControl;
+            Cbox_cidade.Items.AddRange(new object[] { "Paracatu-MG", "Brumadinho-MG", "Conceição Mato Dentro-MG" });
+            Cbox_cidade.Location = new Point(138, 172);
+            Cbox_cidade.Name = "Cbox_cidade";
+            Cbox_cidade.Size = new Size(121, 29);
+            Cbox_cidade.TabIndex = 84;
+            Cbox_cidade.UseWaitCursor = true;
+            // 
+            // city
+            // 
+            city.AutoSize = true;
+            city.Font = new Font("Segoe UI", 15F);
+            city.ForeColor = SystemColors.ActiveCaptionText;
+            city.Location = new Point(49, 173);
+            city.Name = "city";
+            city.Size = new Size(82, 28);
+            city.TabIndex = 83;
+            city.Text = "Cidade :";
+            // 
             // txt_km
             // 
-            txt_km.Location = new Point(138, 179);
+            txt_km.Location = new Point(375, 172);
             txt_km.Name = "txt_km";
             txt_km.Size = new Size(94, 29);
             txt_km.TabIndex = 82;
@@ -101,7 +150,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15F);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(81, 180);
+            label1.Location = new Point(318, 172);
             label1.Name = "label1";
             label1.Size = new Size(51, 28);
             label1.TabIndex = 81;
@@ -127,7 +176,7 @@
             cad_veiculo.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             cad_veiculo.FlatStyle = FlatStyle.Flat;
             cad_veiculo.ForeColor = Color.FromArgb(186, 200, 208);
-            cad_veiculo.Location = new Point(665, 45);
+            cad_veiculo.Location = new Point(781, 39);
             cad_veiculo.Name = "cad_veiculo";
             cad_veiculo.Size = new Size(39, 34);
             cad_veiculo.TabIndex = 79;
@@ -152,13 +201,13 @@
             label6.TabIndex = 77;
             label6.Text = "Litragem :";
             // 
-            // txt_epi_cod
+            // txt_veiculo_gas
             // 
-            txt_epi_cod.Enabled = false;
-            txt_epi_cod.Location = new Point(259, 85);
-            txt_epi_cod.Name = "txt_epi_cod";
-            txt_epi_cod.Size = new Size(191, 29);
-            txt_epi_cod.TabIndex = 76;
+            txt_veiculo_gas.Enabled = false;
+            txt_veiculo_gas.Location = new Point(259, 85);
+            txt_veiculo_gas.Name = "txt_veiculo_gas";
+            txt_veiculo_gas.Size = new Size(191, 29);
+            txt_veiculo_gas.TabIndex = 76;
             // 
             // btn_print_frota
             // 
@@ -168,7 +217,7 @@
             btn_print_frota.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             btn_print_frota.FlatStyle = FlatStyle.Flat;
             btn_print_frota.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_print_frota.Location = new Point(786, 45);
+            btn_print_frota.Location = new Point(902, 39);
             btn_print_frota.Name = "btn_print_frota";
             btn_print_frota.Size = new Size(39, 33);
             btn_print_frota.TabIndex = 3;
@@ -188,6 +237,7 @@
             btn_pesquisa_epi.Size = new Size(39, 33);
             btn_pesquisa_epi.TabIndex = 75;
             btn_pesquisa_epi.UseVisualStyleBackColor = false;
+            btn_pesquisa_epi.Click += btn_pesquisa_epi_Click;
             // 
             // btn_frota
             // 
@@ -197,11 +247,12 @@
             btn_frota.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             btn_frota.FlatStyle = FlatStyle.Flat;
             btn_frota.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_frota.Location = new Point(731, 45);
+            btn_frota.Location = new Point(847, 39);
             btn_frota.Name = "btn_frota";
             btn_frota.Size = new Size(39, 33);
             btn_frota.TabIndex = 61;
             btn_frota.UseVisualStyleBackColor = false;
+            btn_frota.Click += btn_frota_Click;
             // 
             // label9
             // 
@@ -228,6 +279,7 @@
             Txt_cod_veiculo.Name = "Txt_cod_veiculo";
             Txt_cod_veiculo.Size = new Size(115, 29);
             Txt_cod_veiculo.TabIndex = 70;
+            Txt_cod_veiculo.TextChanged += Txt_cod_veiculo_TextChanged;
             // 
             // label8
             // 
@@ -262,17 +314,18 @@
             // 
             // data_frota
             // 
-            data_frota.Location = new Point(710, 125);
+            data_frota.Location = new Point(831, 216);
             data_frota.Name = "data_frota";
             data_frota.Size = new Size(115, 29);
             data_frota.TabIndex = 66;
+            data_frota.ValueChanged += data_frota_ValueChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
             label5.ForeColor = SystemColors.ActiveCaptionText;
-            label5.Location = new Point(659, 129);
+            label5.Location = new Point(780, 220);
             label5.Name = "label5";
             label5.Size = new Size(45, 21);
             label5.TabIndex = 64;
@@ -280,7 +333,7 @@
             // 
             // txt_data_frota
             // 
-            txt_data_frota.Location = new Point(710, 125);
+            txt_data_frota.Location = new Point(831, 216);
             txt_data_frota.Name = "txt_data_frota";
             txt_data_frota.Size = new Size(115, 29);
             txt_data_frota.TabIndex = 65;
@@ -288,12 +341,13 @@
             // 
             // lv_gasolina
             // 
-            lv_gasolina.Columns.AddRange(new ColumnHeader[] { codigo, tag, combustivel, litro, valor, data });
+            lv_gasolina.Columns.AddRange(new ColumnHeader[] { codigo, tag, combustivel, litro, data, cidade });
+            lv_gasolina.Font = new Font("Segoe UI", 10F);
             lv_gasolina.FullRowSelect = true;
             lv_gasolina.GridLines = true;
             lv_gasolina.Location = new Point(29, 261);
             lv_gasolina.Name = "lv_gasolina";
-            lv_gasolina.Size = new Size(816, 412);
+            lv_gasolina.Size = new Size(917, 412);
             lv_gasolina.TabIndex = 63;
             lv_gasolina.UseCompatibleStateImageBehavior = false;
             lv_gasolina.View = View.Details;
@@ -307,7 +361,7 @@
             // 
             tag.Text = "TAG";
             tag.TextAlign = HorizontalAlignment.Center;
-            tag.Width = 250;
+            tag.Width = 180;
             // 
             // combustivel
             // 
@@ -319,30 +373,30 @@
             // 
             litro.Text = "Litros";
             litro.TextAlign = HorizontalAlignment.Center;
-            litro.Width = 100;
-            // 
-            // valor
-            // 
-            valor.Text = "Valor";
-            valor.TextAlign = HorizontalAlignment.Center;
-            valor.Width = 100;
+            litro.Width = 120;
             // 
             // data
             // 
             data.Text = "Data";
             data.TextAlign = HorizontalAlignment.Center;
-            data.Width = 100;
+            data.Width = 150;
+            // 
+            // cidade
+            // 
+            cidade.Text = "Cidade";
+            cidade.TextAlign = HorizontalAlignment.Center;
+            cidade.Width = 200;
             // 
             // Form10
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(233, 240, 245);
-            ClientSize = new Size(1198, 724);
+            ClientSize = new Size(1295, 724);
             Controls.Add(groupBox2);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form10";
-            Text = "Logistica";
+            Text = "Frota";
             Load += Form10_Load;
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
@@ -355,7 +409,7 @@
         private Button cad_veiculo;
         private TextBox txt_Lt;
         private Label label6;
-        private TextBox txt_epi_cod;
+        private TextBox txt_veiculo_gas;
         private Button btn_print_frota;
         private Button btn_pesquisa_epi;
         private Button btn_frota;
@@ -378,5 +432,10 @@
         private TextBox txt_km;
         private Label label1;
         private ColumnHeader data;
+        private TextBox txt_custo;
+        private Label label2;
+        private ComboBox Cbox_cidade;
+        private Label city;
+        private ColumnHeader cidade;
     }
 }

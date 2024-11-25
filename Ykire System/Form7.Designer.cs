@@ -70,6 +70,7 @@
             // lv_func
             // 
             lv_func.Columns.AddRange(new ColumnHeader[] { matricula, nome_epi, funcao });
+            lv_func.Font = new Font("Segoe UI", 10F);
             lv_func.FullRowSelect = true;
             lv_func.GridLines = true;
             lv_func.Location = new Point(6, 179);

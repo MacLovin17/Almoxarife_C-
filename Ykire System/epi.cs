@@ -274,5 +274,10 @@ namespace Ykire_System
         {
 
         }
+
+        private void txt_data_epi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

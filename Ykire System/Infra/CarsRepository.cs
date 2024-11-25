@@ -34,5 +34,11 @@ namespace Ykire_System.Infra
             return cars.ToList();
 
         }
+        public string ObterNomeProdutoPorCodigo_Cars(int codigo)
+        {
+            using var conn = new DbConnection();
+            string query = @"SELECT tag FROM cars WHERE codigo = @codigo;";
+            return conn.Connection.QuerySingleOrDefault<string>(query, new { codigo });
+        }
     }
 }

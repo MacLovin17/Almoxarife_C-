@@ -49,7 +49,7 @@ namespace Ykire_System
         private void lv_cars_ColumnClick(object sender, ColumnClickEventArgs e)
         {
             // Verifica se o usuário clicou na segunda coluna (índice 1)
-            if (e.Column == 1)
+            if (e.Column == 4)
             {
                 // Alterna entre crescente e decrescente
                 if (ascendingOrder)
@@ -83,7 +83,7 @@ namespace Ykire_System
 
                 var car = new Cars(codigo, tag, descricao, placa, ano, crlv, chassi, renavam);
                 cars.Add(car);
-                
+
                 var repository_cars = new CarsRepository();
                 repository_cars.Add(car);
 
@@ -97,14 +97,14 @@ namespace Ykire_System
             }
             txt_matricula.Text = "";
             txt_tag.Text = "";
-            txt_desc_frota.Text ="";
+            txt_desc_frota.Text = "";
             txt_placa.Text = "";
             txt_ano_frota.Text = "";
             txt_crlv.Text = "";
             txt_chassi.Text = "";
             txt_renavam.Text = "";
 
-            MessageBox.Show("Funcionário cadastrado");
+            MessageBox.Show("Veículo cadastrado");
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -118,6 +118,11 @@ namespace Ykire_System
         }
 
         private void lv_func_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form12_Load(object sender, EventArgs e)
         {
 
         }

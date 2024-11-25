@@ -186,7 +186,7 @@
             btn_ger.Name = "btn_ger";
             btn_ger.Size = new Size(96, 34);
             btn_ger.TabIndex = 3;
-            btn_ger.Text = "HelpDesk";
+            btn_ger.Text = "Frota      ";
             btn_ger.TextAlign = ContentAlignment.MiddleRight;
             btn_ger.UseVisualStyleBackColor = false;
             btn_ger.Click += btn_ger_Click;

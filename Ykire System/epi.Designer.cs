@@ -279,6 +279,7 @@
             // lv_epi_func
             // 
             lv_epi_func.Columns.AddRange(new ColumnHeader[] { matricula_epi, nome, epi_epi, ca, qt_epi, data });
+            lv_epi_func.Font = new Font("Segoe UI", 10F);
             lv_epi_func.FullRowSelect = true;
             lv_epi_func.GridLines = true;
             lv_epi_func.Location = new Point(29, 179);
