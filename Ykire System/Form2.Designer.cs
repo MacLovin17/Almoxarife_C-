@@ -82,44 +82,44 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F);
+            label1.Font = new Font("Segoe UI", 10F);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(140, 29);
+            label1.Location = new Point(140, 35);
             label1.Name = "label1";
-            label1.Size = new Size(84, 28);
+            label1.Size = new Size(59, 19);
             label1.TabIndex = 6;
             label1.Text = "Produto";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 15F);
+            label3.Font = new Font("Segoe UI", 10F);
             label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(140, 86);
+            label3.Location = new Point(140, 95);
             label3.Name = "label3";
-            label3.Size = new Size(112, 28);
+            label3.Size = new Size(78, 19);
             label3.TabIndex = 7;
             label3.Text = "Fornecedor";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 15F);
+            label4.Font = new Font("Segoe UI", 10F);
             label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(140, 143);
+            label4.Location = new Point(140, 152);
             label4.Name = "label4";
-            label4.Size = new Size(56, 28);
+            label4.Size = new Size(40, 19);
             label4.TabIndex = 8;
             label4.Text = "CNPJ";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 15F);
+            label5.Font = new Font("Segoe UI", 10F);
             label5.ForeColor = SystemColors.ActiveCaptionText;
-            label5.Location = new Point(140, 200);
+            label5.Location = new Point(140, 209);
             label5.Name = "label5";
-            label5.Size = new Size(47, 28);
+            label5.Size = new Size(34, 19);
             label5.TabIndex = 9;
             label5.Text = "Obs";
             // 
@@ -228,11 +228,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15F);
+            label2.Font = new Font("Segoe UI", 10F);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(140, 257);
+            label2.Location = new Point(140, 266);
             label2.Name = "label2";
-            label2.Size = new Size(94, 28);
+            label2.Size = new Size(66, 19);
             label2.TabIndex = 16;
             label2.Text = "Prateleira";
             // 

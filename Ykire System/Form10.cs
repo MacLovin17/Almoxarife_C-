@@ -160,7 +160,7 @@ namespace Ykire_System
                 var km = txt_km.Text;
                 var data = txt_data_frota.Text;
 
-                
+
                 var frotar = new Frota(matricula, nome, cod_veiculo, tag, combustivel, cidade, litragem, custo, km, data);
                 frota.Add(frotar);
                 var repository_frota = new FrotaRepository();
@@ -190,6 +190,12 @@ namespace Ykire_System
         private void data_frota_ValueChanged(object sender, EventArgs e)
         {
             txt_data_frota.Text = data_frota.Text;
+        }
+
+        private void btn_rel_frota_Click(object sender, EventArgs e)
+        {
+            Form14 form14 = new Form14();
+            form14.Show();
         }
     }
 }

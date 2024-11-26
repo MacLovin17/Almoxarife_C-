@@ -128,7 +128,7 @@
             // 
             // txt_CA
             // 
-            txt_CA.Location = new Point(318, 125);
+            txt_CA.Location = new Point(287, 130);
             txt_CA.Name = "txt_CA";
             txt_CA.Size = new Size(94, 29);
             txt_CA.TabIndex = 78;
@@ -136,18 +136,18 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 15F);
+            label6.Font = new Font("Segoe UI", 11F);
             label6.ForeColor = SystemColors.ActiveCaptionText;
-            label6.Location = new Point(271, 126);
+            label6.Location = new Point(250, 139);
             label6.Name = "label6";
-            label6.Size = new Size(41, 28);
+            label6.Size = new Size(31, 20);
             label6.TabIndex = 77;
             label6.Text = "CA:";
             // 
             // txt_epi_cod
             // 
             txt_epi_cod.Enabled = false;
-            txt_epi_cod.Location = new Point(259, 85);
+            txt_epi_cod.Location = new Point(228, 90);
             txt_epi_cod.Name = "txt_epi_cod";
             txt_epi_cod.Size = new Size(191, 29);
             txt_epi_cod.TabIndex = 76;
@@ -161,7 +161,7 @@
             btn_pesquisa_epi.FlatStyle = FlatStyle.Flat;
             btn_pesquisa_epi.Font = new Font("Segoe UI", 12F);
             btn_pesquisa_epi.ForeColor = Color.FromArgb(31, 44, 50);
-            btn_pesquisa_epi.Location = new Point(456, 44);
+            btn_pesquisa_epi.Location = new Point(425, 49);
             btn_pesquisa_epi.Name = "btn_pesquisa_epi";
             btn_pesquisa_epi.Size = new Size(39, 33);
             btn_pesquisa_epi.TabIndex = 75;
@@ -185,7 +185,7 @@
             // 
             // txt_qt_epi
             // 
-            txt_qt_epi.Location = new Point(159, 125);
+            txt_qt_epi.Location = new Point(128, 130);
             txt_qt_epi.Name = "txt_qt_epi";
             txt_qt_epi.Size = new Size(94, 29);
             txt_qt_epi.TabIndex = 74;
@@ -193,18 +193,18 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 15F);
+            label9.Font = new Font("Segoe UI", 11F);
             label9.ForeColor = SystemColors.ActiveCaptionText;
-            label9.Location = new Point(29, 126);
+            label9.Location = new Point(28, 139);
             label9.Name = "label9";
-            label9.Size = new Size(124, 28);
+            label9.Size = new Size(94, 20);
             label9.TabIndex = 73;
             label9.Text = "Quantidade :";
             // 
             // txt_nome_epi
             // 
             txt_nome_epi.Enabled = false;
-            txt_nome_epi.Location = new Point(259, 45);
+            txt_nome_epi.Location = new Point(228, 50);
             txt_nome_epi.Name = "txt_nome_epi";
             txt_nome_epi.Size = new Size(191, 29);
             txt_nome_epi.TabIndex = 72;
@@ -212,7 +212,7 @@
             // 
             // Txt_epi_epi
             // 
-            Txt_epi_epi.Location = new Point(138, 85);
+            Txt_epi_epi.Location = new Point(107, 90);
             Txt_epi_epi.Name = "Txt_epi_epi";
             Txt_epi_epi.Size = new Size(115, 29);
             Txt_epi_epi.TabIndex = 70;
@@ -221,18 +221,18 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 15F);
+            label8.Font = new Font("Segoe UI", 11F);
             label8.ForeColor = SystemColors.ActiveCaptionText;
-            label8.Location = new Point(90, 85);
+            label8.Location = new Point(69, 99);
             label8.Name = "label8";
-            label8.Size = new Size(42, 28);
+            label8.Size = new Size(32, 20);
             label8.TabIndex = 69;
             label8.Text = "EPI:";
             label8.Click += label8_Click;
             // 
             // Txt_mat_epi
             // 
-            Txt_mat_epi.Location = new Point(138, 45);
+            Txt_mat_epi.Location = new Point(107, 50);
             Txt_mat_epi.Name = "Txt_mat_epi";
             Txt_mat_epi.Size = new Size(115, 29);
             Txt_mat_epi.TabIndex = 68;
@@ -241,11 +241,11 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 15F);
+            label7.Font = new Font("Segoe UI", 11F);
             label7.ForeColor = SystemColors.ActiveCaptionText;
-            label7.Location = new Point(29, 44);
+            label7.Location = new Point(23, 59);
             label7.Name = "label7";
-            label7.Size = new Size(103, 28);
+            label7.Size = new Size(78, 20);
             label7.TabIndex = 67;
             label7.Text = "Matrícula :";
             // 

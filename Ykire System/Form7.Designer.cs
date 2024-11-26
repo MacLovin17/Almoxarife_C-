@@ -122,11 +122,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 15F);
+            label4.Font = new Font("Segoe UI", 11F);
             label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(161, 101);
+            label4.Location = new Point(161, 109);
             label4.Name = "label4";
-            label4.Size = new Size(75, 28);
+            label4.Size = new Size(56, 20);
             label4.TabIndex = 56;
             label4.Text = "Função";
             // 
@@ -147,33 +147,33 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F);
+            label1.Font = new Font("Segoe UI", 11F);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(6, 36);
+            label1.Location = new Point(6, 44);
             label1.Name = "label1";
-            label1.Size = new Size(94, 28);
+            label1.Size = new Size(71, 20);
             label1.TabIndex = 43;
             label1.Text = "Matrícula";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15F);
+            label2.Font = new Font("Segoe UI", 11F);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(6, 101);
+            label2.Location = new Point(6, 109);
             label2.Name = "label2";
-            label2.Size = new Size(59, 28);
+            label2.Size = new Size(44, 20);
             label2.TabIndex = 54;
             label2.Text = "Setor";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 15F);
+            label3.Font = new Font("Segoe UI", 11F);
             label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(161, 36);
+            label3.Location = new Point(161, 44);
             label3.Name = "label3";
-            label3.Size = new Size(66, 28);
+            label3.Size = new Size(50, 20);
             label3.TabIndex = 44;
             label3.Text = "Nome";
             // 
