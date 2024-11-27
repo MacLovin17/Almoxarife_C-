@@ -14,12 +14,13 @@ namespace Ykire_System
         public DateTime data_inicio { get; private set; }
         public DateTime data_fim { get; private set; }
         public decimal combust_km { get; private set; }
+        public decimal km_por_dia { get; private set; }
 
 
         public Combustivel() { }
 
 
-        public Combustivel(string cod_veiculo, string tag, string combustivel, string litragem_total, string custo_total, string km_total, string data_inicio, string data_fim, string combust_km)
+        public Combustivel(string cod_veiculo, string tag, string combustivel, string litragem_total, string custo_total, string km_total, string data_inicio, string data_fim, string combust_km, string km_por_dia)
         {
             this.cod_veiculo = int.Parse(cod_veiculo);
             this.tag = tag;
@@ -30,6 +31,7 @@ namespace Ykire_System
             this.data_inicio = DateTime.Parse(data_inicio);
             this.data_fim = DateTime.Parse(data_fim);
             this.combust_km = decimal.Parse(combust_km);
+            this.km_por_dia = decimal.Parse(km_por_dia);
         }
     }
 }

@@ -197,5 +197,10 @@ namespace Ykire_System
             Form14 form14 = new Form14();
             form14.Show();
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -34,7 +34,7 @@ namespace Ykire_System.Infra
         {
             using var conn = new DbConnection();
 
-            string query = @"SELECT * FROM veiculo_resumo('01/11/2024', '25/11/2024');";  // Caso precise de dados sem filtro de data
+            string query = @"SELECT * FROM veiculo_resumo('01/01/2024', '30/12/2024');";  // Caso precise de dados sem filtro de data
 
             var combustivel = conn.Connection.Query<Combustivel>(sql: query).ToList();
 

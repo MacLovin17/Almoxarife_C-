@@ -98,6 +98,7 @@
             groupBox2.TabIndex = 61;
             groupBox2.TabStop = false;
             groupBox2.Text = "Combustível";
+            groupBox2.Enter += groupBox2_Enter;
             // 
             // btn_rel_frota
             // 

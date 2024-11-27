@@ -49,13 +49,13 @@ namespace Ykire_System
         private void lv_cars_ColumnClick(object sender, ColumnClickEventArgs e)
         {
             // Verifica se o usuário clicou na segunda coluna (índice 1)
-            if (e.Column == 4)
+            if (e.Column == 2)
             {
                 // Alterna entre crescente e decrescente
                 if (ascendingOrder)
-                    cars = cars.OrderBy(item => item.tag).ToList();
+                    cars = cars.OrderBy(item => item.descricao).ToList();
                 else
-                    cars = cars.OrderByDescending(item => item.tag).ToList();
+                    cars = cars.OrderByDescending(item => item.descricao).ToList();
 
                 ascendingOrder = !ascendingOrder; // Alterna a ordem para o próximo clique
                 AtualizarListView_Cars(cars);
