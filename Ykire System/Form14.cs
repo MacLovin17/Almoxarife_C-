@@ -68,9 +68,28 @@ namespace Ykire_System
                 DateTime dataInicio = DateTime.Parse(txt_data_inicio_frota.Text);
                 DateTime dataFim = DateTime.Parse(txt_data_final_frota.Text);
 
+                // Verificando se o campo do código do veículo está vazio
+                int? codVeiculo = null;
+                if (!string.IsNullOrWhiteSpace(txt_cod_veic.Text)) // Se o campo não estiver vazio
+                {
+                    // Tenta converter para inteiro
+                    if (int.TryParse(txt_cod_veic.Text, out int parsedCodVeiculo))
+                    {
+                        codVeiculo = parsedCodVeiculo;
+                    }
+                    else
+                    {
+                        // Exibe mensagem de erro se o valor não for numérico
+                        MessageBox.Show("O código do veículo deve ser um número.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
                 // Criando a instância do repositório para obter os dados
                 var repository_combustivel = new CombustivelRepository();
-                gasolina = repository_combustivel.GetResumo(dataInicio, dataFim); // Passando as datas para obter os dados
+
+                // Busca os dados com ou sem o filtro do código do veículo
+                gasolina = repository_combustivel.GetResumo(dataInicio, dataFim, codVeiculo);
 
                 // Atualizando a ListView com os dados obtidos
                 AtualizarListView_Combustivel(gasolina);
@@ -173,12 +192,15 @@ namespace Ykire_System
             }
 
             yPosition += 40; // Ajusta a posição vertical para o próximo conteúdo, abaixo do título
-            // Se todos os itens foram impressos, reseta o índice e encerra
+                             // Se todos os itens foram impressos, reseta o índice e encerra
             e.HasMorePages = false;
             itemIndex = 0; // Reseta o índice para permitir nova impressão corretamente
             yPosition = 770;
             xPosition = e.MarginBounds.Left;
-            e.Graphics.DrawString("\nAssinatura : ____________________________________________________________", titleFont, Brushes.Black, xPosition, yPosition);
+
+            // Substituir a assinatura pela data atual
+            string dataAtual = $"Relatório emitido no dia {DateTime.Now:dd/MM/yyyy}";
+            e.Graphics.DrawString(dataAtual, titleFont, Brushes.Black, xPosition, yPosition);
 
         }
     }

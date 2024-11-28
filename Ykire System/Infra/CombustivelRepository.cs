@@ -10,24 +10,28 @@ namespace Ykire_System.Infra
     public class CombustivelRepository
     {
         // Função para chamar a função veiculo_resumo com as datas e obter dados
-        public List<Combustivel> GetResumo(DateTime dataInicio, DateTime dataFim)
+        public List<Combustivel> GetResumo(DateTime dataInicio, DateTime dataFim, int? codVeiculo = null)
         {
-            using var conn = new DbConnection();  // Criando a conexão com o banco de dados
+            using var conn = new DbConnection();
 
-            // Formatando as datas para o formato dd/MM/yyyy que é esperado na consulta SQL
-            string query = $@"
-                            SELECT * 
-                            FROM veiculo_resumo('{dataInicio:dd/MM/yyyy}', '{dataFim:dd/MM/yyyy}');
-                        ";
+            string query = @"
+                                SELECT * 
+                                FROM veiculo_resumo(@data_inicio, @data_fim)
+                                WHERE @cod_veiculo IS NULL OR cod_veiculo = @cod_veiculo;
+                            ";
 
-            // Exibindo o query para depuração (se necessário)
-            Console.WriteLine(query);  // Use para depuração
+            var combustivel = conn.Connection.Query<Combustivel>(
+                sql: query,
+                param: new
+                {
+                    data_inicio = dataInicio.ToString("dd/MM/yyyy"),
+                    data_fim = dataFim.ToString("dd/MM/yyyy"),
+                    cod_veiculo = codVeiculo
+                }).ToList();
 
-            // Executando a consulta e mapeando para a lista de combustíveis
-            var combustivel = conn.Connection.Query<Combustivel>(sql: query).ToList();
-
-            return combustivel;  // Retorna a lista de combustíveis obtidos
+            return combustivel;
         }
+
 
         // Função para obter todos os dados sem filtro de data (caso necessário)
         public List<Combustivel> Get()

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(epi));
-            panel2 = new Panel();
             btn_print_epi = new Button();
             groupBox2 = new GroupBox();
             cad_funcionario = new Button();
@@ -55,17 +54,9 @@
             ca = new ColumnHeader();
             qt_epi = new ColumnHeader();
             data = new ColumnHeader();
+            panel2 = new Panel();
             groupBox2.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(31, 44, 50);
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(116, 931);
-            panel2.TabIndex = 57;
             // 
             // btn_print_epi
             // 
@@ -323,6 +314,15 @@
             data.TextAlign = HorizontalAlignment.Center;
             data.Width = 120;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(31, 44, 50);
+            panel2.Dock = DockStyle.Left;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(116, 931);
+            panel2.TabIndex = 57;
+            // 
             // epi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -341,7 +341,6 @@
         }
 
         #endregion
-        private Panel panel2;
         private Button btn_print_epi;
         private GroupBox groupBox2;
         private TextBox txt_qt_epi;
@@ -367,5 +366,6 @@
         private Label label6;
         private ColumnHeader ca;
         private Button cad_funcionario;
+        private Panel panel2;
     }
 }

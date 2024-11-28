@@ -31,6 +31,8 @@
             ColumnHeader produto;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel2 = new Panel();
+            panel9 = new Panel();
+            btn_manutencao = new Button();
             panel8 = new Panel();
             panel7 = new Panel();
             btn_epi = new Button();
@@ -67,6 +69,8 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(31, 44, 50);
+            panel2.Controls.Add(panel9);
+            panel2.Controls.Add(btn_manutencao);
             panel2.Controls.Add(panel8);
             panel2.Controls.Add(panel7);
             panel2.Controls.Add(btn_epi);
@@ -82,6 +86,30 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(123, 961);
             panel2.TabIndex = 1;
+            // 
+            // panel9
+            // 
+            panel9.BackgroundImage = (Image)resources.GetObject("panel9.BackgroundImage");
+            panel9.BackgroundImageLayout = ImageLayout.Zoom;
+            panel9.Enabled = false;
+            panel9.Location = new Point(14, 233);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(33, 25);
+            panel9.TabIndex = 35;
+            // 
+            // btn_manutencao
+            // 
+            btn_manutencao.BackColor = Color.FromArgb(31, 44, 50);
+            btn_manutencao.FlatStyle = FlatStyle.Flat;
+            btn_manutencao.ForeColor = Color.FromArgb(186, 200, 208);
+            btn_manutencao.Location = new Point(12, 229);
+            btn_manutencao.Name = "btn_manutencao";
+            btn_manutencao.Size = new Size(96, 34);
+            btn_manutencao.TabIndex = 34;
+            btn_manutencao.Text = "Mecânica";
+            btn_manutencao.TextAlign = ContentAlignment.MiddleRight;
+            btn_manutencao.UseVisualStyleBackColor = false;
+            btn_manutencao.Click += btn_manutencao_Click;
             // 
             // panel8
             // 
@@ -384,5 +412,7 @@
         private Button btn_print_est;
         private Panel panel8;
         private Button btn_epi;
+        private Panel panel9;
+        private Button btn_manutencao;
     }
 }

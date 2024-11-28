@@ -61,6 +61,7 @@
             litro = new ColumnHeader();
             data = new ColumnHeader();
             cidade = new ColumnHeader();
+            panel2 = new Panel();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
@@ -405,12 +406,22 @@
             cidade.TextAlign = HorizontalAlignment.Center;
             cidade.Width = 200;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(31, 44, 50);
+            panel2.Dock = DockStyle.Left;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(116, 724);
+            panel2.TabIndex = 62;
+            // 
             // Form10
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(233, 240, 245);
             ClientSize = new Size(1295, 724);
+            Controls.Add(panel2);
             Controls.Add(groupBox2);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form10";
@@ -456,5 +467,6 @@
         private Label city;
         private ColumnHeader cidade;
         private Button btn_rel_frota;
+        private Panel panel2;
     }
 }

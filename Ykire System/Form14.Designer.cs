@@ -46,11 +46,15 @@
             km_total = new ColumnHeader();
             combust_km = new ColumnHeader();
             km_por_dia = new ColumnHeader();
+            txt_cod_veic = new TextBox();
+            label1 = new Label();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(txt_cod_veic);
+            groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(btn_pesquisa_gasolina);
             groupBox2.Controls.Add(data_final);
             groupBox2.Controls.Add(data_inicio);
@@ -205,6 +209,24 @@
             km_por_dia.TextAlign = HorizontalAlignment.Center;
             km_por_dia.Width = 150;
             // 
+            // txt_cod_veic
+            // 
+            txt_cod_veic.Location = new Point(133, 61);
+            txt_cod_veic.Name = "txt_cod_veic";
+            txt_cod_veic.Size = new Size(107, 29);
+            txt_cod_veic.TabIndex = 70;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.Location = new Point(29, 67);
+            label1.Name = "label1";
+            label1.Size = new Size(98, 20);
+            label1.TabIndex = 69;
+            label1.Text = "Cod. Veículo :";
+            // 
             // Form14
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -240,5 +262,7 @@
         private TextBox txt_data_inicio_frota;
         private ColumnHeader km_total;
         private ColumnHeader km_por_dia;
+        private TextBox txt_cod_veic;
+        private Label label1;
     }
 }
