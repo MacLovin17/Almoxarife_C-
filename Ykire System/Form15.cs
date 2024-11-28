@@ -44,5 +44,11 @@ namespace Ykire_System
             txt_data_manut.Text = data_manut.Text;
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form16cs form16 = new Form16cs();
+            form16.Show();
+        }
     }
 }

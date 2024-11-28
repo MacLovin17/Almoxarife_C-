@@ -180,6 +180,7 @@
             button1.Size = new Size(39, 34);
             button1.TabIndex = 91;
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // txt_forn_manut
             // 
