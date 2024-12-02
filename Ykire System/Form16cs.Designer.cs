@@ -127,9 +127,10 @@
             // 
             // txt_ramo
             // 
-            txt_ramo.Location = new Point(160, 131);
+            txt_ramo.Font = new Font("Segoe UI", 9F);
+            txt_ramo.Location = new Point(274, 131);
             txt_ramo.Name = "txt_ramo";
-            txt_ramo.Size = new Size(253, 29);
+            txt_ramo.Size = new Size(253, 23);
             txt_ramo.TabIndex = 57;
             // 
             // label4
@@ -137,7 +138,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F);
             label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(161, 108);
+            label4.Location = new Point(275, 108);
             label4.Name = "label4";
             label4.Size = new Size(48, 20);
             label4.TabIndex = 56;
@@ -145,9 +146,10 @@
             // 
             // txt_cnpj
             // 
+            txt_cnpj.Font = new Font("Segoe UI", 11F);
             txt_cnpj.Location = new Point(5, 131);
             txt_cnpj.Name = "txt_cnpj";
-            txt_cnpj.Size = new Size(115, 29);
+            txt_cnpj.Size = new Size(254, 27);
             txt_cnpj.TabIndex = 55;
             // 
             // label2
@@ -174,9 +176,10 @@
             // 
             // txt_nome_forn
             // 
+            txt_nome_forn.Font = new Font("Segoe UI", 11F);
             txt_nome_forn.Location = new Point(6, 67);
             txt_nome_forn.Name = "txt_nome_forn";
-            txt_nome_forn.Size = new Size(253, 29);
+            txt_nome_forn.Size = new Size(253, 27);
             txt_nome_forn.TabIndex = 53;
             // 
             // Form16cs

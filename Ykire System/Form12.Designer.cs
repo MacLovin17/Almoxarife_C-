@@ -79,7 +79,7 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(txt_tag);
-            groupBox1.Font = new Font("Segoe UI", 12F);
+            groupBox1.Font = new Font("Segoe UI", 9F);
             groupBox1.ForeColor = SystemColors.ActiveCaptionText;
             groupBox1.Location = new Point(48, 16);
             groupBox1.Name = "groupBox1";
@@ -91,9 +91,10 @@
             // 
             // txt_renavam
             // 
+            txt_renavam.Font = new Font("Segoe UI", 9F);
             txt_renavam.Location = new Point(521, 132);
             txt_renavam.Name = "txt_renavam";
-            txt_renavam.Size = new Size(192, 29);
+            txt_renavam.Size = new Size(192, 23);
             txt_renavam.TabIndex = 88;
             // 
             // label7
@@ -109,9 +110,10 @@
             // 
             // txt_chassi
             // 
+            txt_chassi.Font = new Font("Segoe UI", 9F);
             txt_chassi.Location = new Point(359, 132);
             txt_chassi.Name = "txt_chassi";
-            txt_chassi.Size = new Size(142, 29);
+            txt_chassi.Size = new Size(142, 23);
             txt_chassi.TabIndex = 86;
             // 
             // label8
@@ -128,9 +130,10 @@
             // 
             // txt_placa
             // 
+            txt_placa.Font = new Font("Segoe UI", 9F);
             txt_placa.Location = new Point(305, 67);
             txt_placa.Name = "txt_placa";
-            txt_placa.Size = new Size(115, 29);
+            txt_placa.Size = new Size(115, 23);
             txt_placa.TabIndex = 83;
             // 
             // label5
@@ -157,9 +160,10 @@
             // 
             // txt_desc_frota
             // 
+            txt_desc_frota.Font = new Font("Segoe UI", 9F);
             txt_desc_frota.Location = new Point(460, 67);
             txt_desc_frota.Name = "txt_desc_frota";
-            txt_desc_frota.Size = new Size(253, 29);
+            txt_desc_frota.Size = new Size(253, 23);
             txt_desc_frota.TabIndex = 84;
             // 
             // btnc_cad_veiculo
@@ -239,9 +243,10 @@
             // 
             // txt_crlv
             // 
+            txt_crlv.Font = new Font("Segoe UI", 9F);
             txt_crlv.Location = new Point(139, 132);
             txt_crlv.Name = "txt_crlv";
-            txt_crlv.Size = new Size(203, 29);
+            txt_crlv.Size = new Size(203, 23);
             txt_crlv.TabIndex = 57;
             // 
             // label4
@@ -257,16 +262,18 @@
             // 
             // txt_matricula
             // 
+            txt_matricula.Font = new Font("Segoe UI", 9F);
             txt_matricula.Location = new Point(5, 67);
             txt_matricula.Name = "txt_matricula";
-            txt_matricula.Size = new Size(107, 29);
+            txt_matricula.Size = new Size(107, 23);
             txt_matricula.TabIndex = 52;
             // 
             // txt_ano_frota
             // 
+            txt_ano_frota.Font = new Font("Segoe UI", 9F);
             txt_ano_frota.Location = new Point(5, 132);
             txt_ano_frota.Name = "txt_ano_frota";
-            txt_ano_frota.Size = new Size(107, 29);
+            txt_ano_frota.Size = new Size(107, 23);
             txt_ano_frota.TabIndex = 55;
             // 
             // label1
@@ -304,9 +311,10 @@
             // 
             // txt_tag
             // 
+            txt_tag.Font = new Font("Segoe UI", 9F);
             txt_tag.Location = new Point(139, 67);
             txt_tag.Name = "txt_tag";
-            txt_tag.Size = new Size(144, 29);
+            txt_tag.Size = new Size(144, 23);
             txt_tag.TabIndex = 53;
             // 
             // Form12

@@ -119,9 +119,10 @@
             // 
             // txt_CA
             // 
+            txt_CA.Font = new Font("Segoe UI", 9F);
             txt_CA.Location = new Point(287, 130);
             txt_CA.Name = "txt_CA";
-            txt_CA.Size = new Size(94, 29);
+            txt_CA.Size = new Size(94, 23);
             txt_CA.TabIndex = 78;
             // 
             // label6
@@ -138,9 +139,10 @@
             // txt_epi_cod
             // 
             txt_epi_cod.Enabled = false;
+            txt_epi_cod.Font = new Font("Segoe UI", 9F);
             txt_epi_cod.Location = new Point(228, 90);
             txt_epi_cod.Name = "txt_epi_cod";
-            txt_epi_cod.Size = new Size(191, 29);
+            txt_epi_cod.Size = new Size(191, 23);
             txt_epi_cod.TabIndex = 76;
             // 
             // btn_pesquisa_epi
@@ -176,9 +178,10 @@
             // 
             // txt_qt_epi
             // 
+            txt_qt_epi.Font = new Font("Segoe UI", 9F);
             txt_qt_epi.Location = new Point(128, 130);
             txt_qt_epi.Name = "txt_qt_epi";
-            txt_qt_epi.Size = new Size(94, 29);
+            txt_qt_epi.Size = new Size(94, 23);
             txt_qt_epi.TabIndex = 74;
             // 
             // label9
@@ -195,17 +198,19 @@
             // txt_nome_epi
             // 
             txt_nome_epi.Enabled = false;
+            txt_nome_epi.Font = new Font("Segoe UI", 9F);
             txt_nome_epi.Location = new Point(228, 50);
             txt_nome_epi.Name = "txt_nome_epi";
-            txt_nome_epi.Size = new Size(191, 29);
+            txt_nome_epi.Size = new Size(191, 23);
             txt_nome_epi.TabIndex = 72;
             txt_nome_epi.TextChanged += txt_nome_epi_TextChanged;
             // 
             // Txt_epi_epi
             // 
+            Txt_epi_epi.Font = new Font("Segoe UI", 9F);
             Txt_epi_epi.Location = new Point(107, 90);
             Txt_epi_epi.Name = "Txt_epi_epi";
-            Txt_epi_epi.Size = new Size(115, 29);
+            Txt_epi_epi.Size = new Size(115, 23);
             Txt_epi_epi.TabIndex = 70;
             Txt_epi_epi.TextChanged += Txt_epi_epi_TextChanged;
             // 
@@ -223,9 +228,10 @@
             // 
             // Txt_mat_epi
             // 
+            Txt_mat_epi.Font = new Font("Segoe UI", 9F);
             Txt_mat_epi.Location = new Point(107, 50);
             Txt_mat_epi.Name = "Txt_mat_epi";
-            Txt_mat_epi.Size = new Size(115, 29);
+            Txt_mat_epi.Size = new Size(115, 23);
             Txt_mat_epi.TabIndex = 68;
             Txt_mat_epi.TextChanged += Txt_mat_epi_TextChanged;
             // 

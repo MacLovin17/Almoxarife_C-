@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form15));
             groupBox2 = new GroupBox();
+            txt_forn_manut = new TextBox();
             data_manut = new DateTimePicker();
             btn_manut_save = new Button();
             cbox_servico = new ComboBox();
@@ -37,7 +39,6 @@
             txt_custo_manut = new TextBox();
             label2 = new Label();
             button1 = new Button();
-            txt_forn_manut = new TextBox();
             txt_cod_forn_manut = new TextBox();
             label1 = new Label();
             btn_rel_frota = new Button();
@@ -56,19 +57,22 @@
             label7 = new Label();
             label5 = new Label();
             txt_data_manut = new TextBox();
-            lv_gasolina = new ListView();
-            codigo = new ColumnHeader("(nenhum)");
-            tag = new ColumnHeader();
+            lv_manutencao = new ListView();
+            cod_veiculo = new ColumnHeader("(nenhum)");
+            cod_fornecedor = new ColumnHeader();
+            cidade = new ColumnHeader();
             tipo = new ColumnHeader();
             servico = new ColumnHeader();
             valor = new ColumnHeader();
             data = new ColumnHeader();
             panel2 = new Panel();
+            imageList1 = new ImageList(components);
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(txt_forn_manut);
             groupBox2.Controls.Add(data_manut);
             groupBox2.Controls.Add(btn_manut_save);
             groupBox2.Controls.Add(cbox_servico);
@@ -76,7 +80,6 @@
             groupBox2.Controls.Add(txt_custo_manut);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(button1);
-            groupBox2.Controls.Add(txt_forn_manut);
             groupBox2.Controls.Add(txt_cod_forn_manut);
             groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(btn_rel_frota);
@@ -95,7 +98,7 @@
             groupBox2.Controls.Add(label7);
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(txt_data_manut);
-            groupBox2.Controls.Add(lv_gasolina);
+            groupBox2.Controls.Add(lv_manutencao);
             groupBox2.Font = new Font("Segoe UI", 12F);
             groupBox2.Location = new Point(165, 20);
             groupBox2.Name = "groupBox2";
@@ -103,6 +106,16 @@
             groupBox2.TabIndex = 62;
             groupBox2.TabStop = false;
             groupBox2.Text = "Manutenção";
+            groupBox2.Enter += groupBox2_Enter;
+            // 
+            // txt_forn_manut
+            // 
+            txt_forn_manut.Enabled = false;
+            txt_forn_manut.Font = new Font("Segoe UI", 9F);
+            txt_forn_manut.Location = new Point(259, 149);
+            txt_forn_manut.Name = "txt_forn_manut";
+            txt_forn_manut.Size = new Size(311, 23);
+            txt_forn_manut.TabIndex = 98;
             // 
             // data_manut
             // 
@@ -125,16 +138,18 @@
             btn_manut_save.Size = new Size(39, 33);
             btn_manut_save.TabIndex = 96;
             btn_manut_save.UseVisualStyleBackColor = false;
+            btn_manut_save.Click += btn_manut_save_Click;
             // 
             // cbox_servico
             // 
             cbox_servico.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbox_servico.Font = new Font("Segoe UI", 9F);
             cbox_servico.FormattingEnabled = true;
             cbox_servico.ImeMode = ImeMode.NoControl;
             cbox_servico.Items.AddRange(new object[] { "Troca de óleo", "Troca de filtro de ar", "Troca de filtro de combustível", "Troca de filtro de cabine", "Revisão dos freios (pastilhas e discos)", "Alinhamento e balanceamento", "Rodízio de pneus", "Revisão do sistema de suspensão", "Troca de velas de ignição", "Revisão do sistema elétrico", "Revisão do sistema de ar-condicionado", "Troca de fluido de freio", "Troca de fluido da direção hidráulica", "Troca de fluido do radiador", "Troca de correia dentada", "Substituição de bateria", "Limpeza de bicos injetores", "Verificação e substituição de luzes", "Polimento e enceramento", "Higienização interna" });
-            cbox_servico.Location = new Point(576, 201);
+            cbox_servico.Location = new Point(540, 202);
             cbox_servico.Name = "cbox_servico";
-            cbox_servico.Size = new Size(235, 29);
+            cbox_servico.Size = new Size(235, 23);
             cbox_servico.TabIndex = 95;
             cbox_servico.UseWaitCursor = true;
             // 
@@ -143,7 +158,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 11.25F);
             label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(504, 212);
+            label3.Location = new Point(468, 213);
             label3.Name = "label3";
             label3.Size = new Size(66, 18);
             label3.TabIndex = 94;
@@ -151,9 +166,10 @@
             // 
             // txt_custo_manut
             // 
-            txt_custo_manut.Location = new Point(576, 149);
+            txt_custo_manut.Font = new Font("Segoe UI", 9F);
+            txt_custo_manut.Location = new Point(696, 149);
             txt_custo_manut.Name = "txt_custo_manut";
-            txt_custo_manut.Size = new Size(115, 29);
+            txt_custo_manut.Size = new Size(115, 23);
             txt_custo_manut.TabIndex = 93;
             // 
             // label2
@@ -161,7 +177,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 11.25F);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(520, 160);
+            label2.Location = new Point(640, 160);
             label2.Name = "label2";
             label2.Size = new Size(50, 18);
             label2.TabIndex = 92;
@@ -175,27 +191,21 @@
             button1.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.FromArgb(186, 200, 208);
-            button1.Location = new Point(456, 144);
+            button1.Location = new Point(576, 144);
             button1.Name = "button1";
             button1.Size = new Size(39, 34);
             button1.TabIndex = 91;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // txt_forn_manut
-            // 
-            txt_forn_manut.Enabled = false;
-            txt_forn_manut.Location = new Point(259, 149);
-            txt_forn_manut.Name = "txt_forn_manut";
-            txt_forn_manut.Size = new Size(191, 29);
-            txt_forn_manut.TabIndex = 90;
-            // 
             // txt_cod_forn_manut
             // 
+            txt_cod_forn_manut.Font = new Font("Segoe UI", 9F);
             txt_cod_forn_manut.Location = new Point(138, 149);
             txt_cod_forn_manut.Name = "txt_cod_forn_manut";
-            txt_cod_forn_manut.Size = new Size(115, 29);
+            txt_cod_forn_manut.Size = new Size(115, 23);
             txt_cod_forn_manut.TabIndex = 89;
+            txt_cod_forn_manut.TextChanged += txt_cod_forn_manut_TextChanged;
             // 
             // label1
             // 
@@ -225,12 +235,13 @@
             // Cbox_cidade_manut
             // 
             Cbox_cidade_manut.DropDownStyle = ComboBoxStyle.DropDownList;
+            Cbox_cidade_manut.Font = new Font("Segoe UI", 9F);
             Cbox_cidade_manut.FormattingEnabled = true;
             Cbox_cidade_manut.ImeMode = ImeMode.NoControl;
             Cbox_cidade_manut.Items.AddRange(new object[] { "Paracatu-MG", "Brumadinho-MG", "Conceição Mato Dentro-MG" });
             Cbox_cidade_manut.Location = new Point(138, 202);
             Cbox_cidade_manut.Name = "Cbox_cidade_manut";
-            Cbox_cidade_manut.Size = new Size(121, 29);
+            Cbox_cidade_manut.Size = new Size(121, 23);
             Cbox_cidade_manut.TabIndex = 84;
             Cbox_cidade_manut.UseWaitCursor = true;
             // 
@@ -248,12 +259,13 @@
             // Cbox_tipo_manut
             // 
             Cbox_tipo_manut.DropDownStyle = ComboBoxStyle.DropDownList;
+            Cbox_tipo_manut.Font = new Font("Segoe UI", 9F);
             Cbox_tipo_manut.FormattingEnabled = true;
             Cbox_tipo_manut.ImeMode = ImeMode.NoControl;
             Cbox_tipo_manut.Items.AddRange(new object[] { "Preventiva", "Corretiva", "Preditiva", "Detectiva" });
             Cbox_tipo_manut.Location = new Point(329, 202);
             Cbox_tipo_manut.Name = "Cbox_tipo_manut";
-            Cbox_tipo_manut.Size = new Size(121, 29);
+            Cbox_tipo_manut.Size = new Size(121, 23);
             Cbox_tipo_manut.TabIndex = 80;
             Cbox_tipo_manut.UseWaitCursor = true;
             // 
@@ -265,7 +277,7 @@
             cad_veiculo.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             cad_veiculo.FlatStyle = FlatStyle.Flat;
             cad_veiculo.ForeColor = Color.FromArgb(186, 200, 208);
-            cad_veiculo.Location = new Point(456, 100);
+            cad_veiculo.Location = new Point(576, 100);
             cad_veiculo.Name = "cad_veiculo";
             cad_veiculo.Size = new Size(39, 34);
             cad_veiculo.TabIndex = 79;
@@ -275,9 +287,10 @@
             // txt_veiculo_manut
             // 
             txt_veiculo_manut.Enabled = false;
+            txt_veiculo_manut.Font = new Font("Segoe UI", 9F);
             txt_veiculo_manut.Location = new Point(259, 104);
             txt_veiculo_manut.Name = "txt_veiculo_manut";
-            txt_veiculo_manut.Size = new Size(191, 29);
+            txt_veiculo_manut.Size = new Size(311, 23);
             txt_veiculo_manut.TabIndex = 76;
             // 
             // btn_print_frota
@@ -303,7 +316,7 @@
             btn_pesquisa_epi.FlatStyle = FlatStyle.Flat;
             btn_pesquisa_epi.Font = new Font("Segoe UI", 12F);
             btn_pesquisa_epi.ForeColor = Color.FromArgb(31, 44, 50);
-            btn_pesquisa_epi.Location = new Point(456, 50);
+            btn_pesquisa_epi.Location = new Point(576, 50);
             btn_pesquisa_epi.Name = "btn_pesquisa_epi";
             btn_pesquisa_epi.Size = new Size(39, 33);
             btn_pesquisa_epi.TabIndex = 75;
@@ -324,17 +337,20 @@
             // txt_nome_manut
             // 
             txt_nome_manut.Enabled = false;
+            txt_nome_manut.Font = new Font("Segoe UI", 9F);
             txt_nome_manut.Location = new Point(259, 56);
             txt_nome_manut.Name = "txt_nome_manut";
-            txt_nome_manut.Size = new Size(191, 29);
+            txt_nome_manut.Size = new Size(311, 23);
             txt_nome_manut.TabIndex = 72;
             // 
             // Txt_cod_veiculo_manut
             // 
+            Txt_cod_veiculo_manut.Font = new Font("Segoe UI", 9F);
             Txt_cod_veiculo_manut.Location = new Point(138, 104);
             Txt_cod_veiculo_manut.Name = "Txt_cod_veiculo_manut";
-            Txt_cod_veiculo_manut.Size = new Size(115, 29);
+            Txt_cod_veiculo_manut.Size = new Size(115, 23);
             Txt_cod_veiculo_manut.TabIndex = 70;
+            Txt_cod_veiculo_manut.TextChanged += Txt_cod_veiculo_manut_TextChanged;
             // 
             // label8
             // 
@@ -349,10 +365,12 @@
             // 
             // Txt_mat_manut
             // 
+            Txt_mat_manut.Font = new Font("Segoe UI", 9F);
             Txt_mat_manut.Location = new Point(138, 56);
             Txt_mat_manut.Name = "Txt_mat_manut";
-            Txt_mat_manut.Size = new Size(115, 29);
+            Txt_mat_manut.Size = new Size(115, 23);
             Txt_mat_manut.TabIndex = 68;
+            Txt_mat_manut.TextChanged += Txt_mat_manut_TextChanged;
             // 
             // label7
             // 
@@ -384,47 +402,53 @@
             txt_data_manut.TabIndex = 65;
             txt_data_manut.TextAlign = HorizontalAlignment.Center;
             // 
-            // lv_gasolina
+            // lv_manutencao
             // 
-            lv_gasolina.Columns.AddRange(new ColumnHeader[] { codigo, tag, tipo, servico, valor, data });
-            lv_gasolina.Font = new Font("Segoe UI", 10F);
-            lv_gasolina.FullRowSelect = true;
-            lv_gasolina.GridLines = true;
-            lv_gasolina.Location = new Point(41, 263);
-            lv_gasolina.Name = "lv_gasolina";
-            lv_gasolina.Size = new Size(1150, 412);
-            lv_gasolina.TabIndex = 63;
-            lv_gasolina.UseCompatibleStateImageBehavior = false;
-            lv_gasolina.View = View.Details;
+            lv_manutencao.Columns.AddRange(new ColumnHeader[] { cod_veiculo, cod_fornecedor, cidade, tipo, servico, valor, data });
+            lv_manutencao.Font = new Font("Segoe UI", 10F);
+            lv_manutencao.FullRowSelect = true;
+            lv_manutencao.GridLines = true;
+            lv_manutencao.Location = new Point(41, 263);
+            lv_manutencao.Name = "lv_manutencao";
+            lv_manutencao.Size = new Size(1150, 412);
+            lv_manutencao.TabIndex = 63;
+            lv_manutencao.UseCompatibleStateImageBehavior = false;
+            lv_manutencao.View = View.Details;
             // 
-            // codigo
+            // cod_veiculo
             // 
-            codigo.Text = "Código";
-            codigo.Width = 80;
+            cod_veiculo.Text = "Veículo";
+            cod_veiculo.Width = 120;
             // 
-            // tag
+            // cod_fornecedor
             // 
-            tag.Text = "TAG";
-            tag.TextAlign = HorizontalAlignment.Center;
-            tag.Width = 180;
+            cod_fornecedor.Text = "Fornecedor";
+            cod_fornecedor.TextAlign = HorizontalAlignment.Center;
+            cod_fornecedor.Width = 180;
+            // 
+            // cidade
+            // 
+            cidade.Text = "Cidade";
+            cidade.TextAlign = HorizontalAlignment.Center;
+            cidade.Width = 180;
             // 
             // tipo
             // 
             tipo.Text = "Tipo";
             tipo.TextAlign = HorizontalAlignment.Center;
-            tipo.Width = 180;
+            tipo.Width = 120;
             // 
             // servico
             // 
             servico.Text = "Serviço";
             servico.TextAlign = HorizontalAlignment.Center;
-            servico.Width = 400;
+            servico.Width = 300;
             // 
             // valor
             // 
             valor.Text = "Custo";
             valor.TextAlign = HorizontalAlignment.Center;
-            valor.Width = 150;
+            valor.Width = 80;
             // 
             // data
             // 
@@ -440,6 +464,13 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(116, 711);
             panel2.TabIndex = 63;
+            // 
+            // imageList1
+            // 
+            imageList1.ColorDepth = ColorDepth.Depth32Bit;
+            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
+            imageList1.TransparentColor = Color.Black;
+            imageList1.Images.SetKeyName(0, "formato-de-arquivo-pdf.png");
             // 
             // Form15
             // 
@@ -479,16 +510,15 @@
         private DateTimePicker data_frota;
         private Label label5;
         private TextBox txt_data_manut;
-        private ListView lv_gasolina;
-        private ColumnHeader codigo;
-        private ColumnHeader tag;
+        private ListView lv_manutencao;
+        private ColumnHeader cod_veiculo;
+        private ColumnHeader cod_fornecedor;
+        private ColumnHeader cidade;
         private ColumnHeader tipo;
         private ColumnHeader servico;
-        private ColumnHeader valor;
         private ColumnHeader data;
         private Panel panel2;
         private Button button1;
-        private TextBox txt_forn_manut;
         private TextBox txt_cod_forn_manut;
         private Label label1;
         private Label label3;
@@ -497,5 +527,8 @@
         private ComboBox cbox_servico;
         private Button btn_manut_save;
         private DateTimePicker data_manut;
+        private ColumnHeader valor;
+        private ImageList imageList1;
+        private TextBox txt_forn_manut;
     }
 }

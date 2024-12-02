@@ -35,5 +35,11 @@ namespace Ykire_System.Infra
             var fornecedores = conn.Connection.Query<Fornecedor>(query, new { Pesquisa = pesquisa });
             return fornecedores.ToList();
         }
+        public string ObterNomeProdutoPorCodigo_Fornc(int codigo)
+        {
+            using var conn = new DbConnection();
+            string query = @"SELECT nome FROM fornecedor WHERE codigo = @codigo;";
+            return conn.Connection.QuerySingleOrDefault<string>(query, new { codigo });
+        }
     }
 }

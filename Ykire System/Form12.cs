@@ -60,6 +60,17 @@ namespace Ykire_System
                 ascendingOrder = !ascendingOrder; // Alterna a ordem para o próximo clique
                 AtualizarListView_Cars(cars);
             }
+            if (e.Column == 1)
+            {
+                // Alterna entre crescente e decrescente
+                if (ascendingOrder)
+                    cars = cars.OrderBy(item => item.tag).ToList();
+                else
+                    cars = cars.OrderByDescending(item => item.tag).ToList();
+
+                ascendingOrder = !ascendingOrder; // Alterna a ordem para o próximo clique
+                AtualizarListView_Cars(cars);
+            }
 
         }
         private void btnc_cad_veiculo_Click(object sender, EventArgs e)

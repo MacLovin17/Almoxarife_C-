@@ -118,9 +118,10 @@
             // 
             // txt_custo
             // 
+            txt_custo.Font = new Font("Segoe UI", 9F);
             txt_custo.Location = new Point(511, 151);
             txt_custo.Name = "txt_custo";
-            txt_custo.Size = new Size(94, 29);
+            txt_custo.Size = new Size(94, 23);
             txt_custo.TabIndex = 86;
             // 
             // label2
@@ -137,12 +138,13 @@
             // Cbox_cidade
             // 
             Cbox_cidade.DropDownStyle = ComboBoxStyle.DropDownList;
+            Cbox_cidade.Font = new Font("Segoe UI", 9F);
             Cbox_cidade.FormattingEnabled = true;
             Cbox_cidade.ImeMode = ImeMode.NoControl;
             Cbox_cidade.Items.AddRange(new object[] { "Paracatu-MG", "Brumadinho-MG", "Conceição Mato Dentro-MG" });
             Cbox_cidade.Location = new Point(115, 200);
             Cbox_cidade.Name = "Cbox_cidade";
-            Cbox_cidade.Size = new Size(121, 29);
+            Cbox_cidade.Size = new Size(121, 23);
             Cbox_cidade.TabIndex = 84;
             Cbox_cidade.UseWaitCursor = true;
             // 
@@ -159,9 +161,10 @@
             // 
             // txt_km
             // 
+            txt_km.Font = new Font("Segoe UI", 9F);
             txt_km.Location = new Point(343, 200);
             txt_km.Name = "txt_km";
-            txt_km.Size = new Size(94, 29);
+            txt_km.Size = new Size(94, 23);
             txt_km.TabIndex = 82;
             // 
             // label1
@@ -178,12 +181,13 @@
             // Cbox_combustivel
             // 
             Cbox_combustivel.DropDownStyle = ComboBoxStyle.DropDownList;
+            Cbox_combustivel.Font = new Font("Segoe UI", 9F);
             Cbox_combustivel.FormattingEnabled = true;
             Cbox_combustivel.ImeMode = ImeMode.NoControl;
             Cbox_combustivel.Items.AddRange(new object[] { "Gasolina", "Etanol", "Diesel" });
             Cbox_combustivel.Location = new Point(115, 151);
             Cbox_combustivel.Name = "Cbox_combustivel";
-            Cbox_combustivel.Size = new Size(121, 29);
+            Cbox_combustivel.Size = new Size(121, 23);
             Cbox_combustivel.TabIndex = 80;
             Cbox_combustivel.UseWaitCursor = true;
             // 
@@ -204,9 +208,10 @@
             // 
             // txt_Lt
             // 
+            txt_Lt.Font = new Font("Segoe UI", 9F);
             txt_Lt.Location = new Point(343, 151);
             txt_Lt.Name = "txt_Lt";
-            txt_Lt.Size = new Size(94, 29);
+            txt_Lt.Size = new Size(94, 23);
             txt_Lt.TabIndex = 78;
             // 
             // label6
@@ -223,9 +228,10 @@
             // txt_veiculo_gas
             // 
             txt_veiculo_gas.Enabled = false;
+            txt_veiculo_gas.Font = new Font("Segoe UI", 9F);
             txt_veiculo_gas.Location = new Point(236, 102);
             txt_veiculo_gas.Name = "txt_veiculo_gas";
-            txt_veiculo_gas.Size = new Size(191, 29);
+            txt_veiculo_gas.Size = new Size(191, 23);
             txt_veiculo_gas.TabIndex = 76;
             // 
             // btn_print_frota
@@ -287,16 +293,18 @@
             // txt_nome_epi
             // 
             txt_nome_epi.Enabled = false;
+            txt_nome_epi.Font = new Font("Segoe UI", 9F);
             txt_nome_epi.Location = new Point(236, 54);
             txt_nome_epi.Name = "txt_nome_epi";
-            txt_nome_epi.Size = new Size(191, 29);
+            txt_nome_epi.Size = new Size(191, 23);
             txt_nome_epi.TabIndex = 72;
             // 
             // Txt_cod_veiculo
             // 
+            Txt_cod_veiculo.Font = new Font("Segoe UI", 9F);
             Txt_cod_veiculo.Location = new Point(115, 102);
             Txt_cod_veiculo.Name = "Txt_cod_veiculo";
-            Txt_cod_veiculo.Size = new Size(115, 29);
+            Txt_cod_veiculo.Size = new Size(115, 23);
             Txt_cod_veiculo.TabIndex = 70;
             Txt_cod_veiculo.TextChanged += Txt_cod_veiculo_TextChanged;
             // 
@@ -313,9 +321,10 @@
             // 
             // Txt_mat_frota
             // 
+            Txt_mat_frota.Font = new Font("Segoe UI", 9F);
             Txt_mat_frota.Location = new Point(115, 54);
             Txt_mat_frota.Name = "Txt_mat_frota";
-            Txt_mat_frota.Size = new Size(115, 29);
+            Txt_mat_frota.Size = new Size(115, 23);
             Txt_mat_frota.TabIndex = 68;
             Txt_mat_frota.TextChanged += Txt_mat_frota_TextChanged;
             // 

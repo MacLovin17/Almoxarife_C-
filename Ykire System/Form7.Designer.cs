@@ -114,9 +114,10 @@
             // 
             // txt_funcao_func
             // 
+            txt_funcao_func.Font = new Font("Segoe UI", 9F);
             txt_funcao_func.Location = new Point(160, 132);
             txt_funcao_func.Name = "txt_funcao_func";
-            txt_funcao_func.Size = new Size(253, 29);
+            txt_funcao_func.Size = new Size(253, 23);
             txt_funcao_func.TabIndex = 57;
             // 
             // label4
@@ -132,16 +133,18 @@
             // 
             // txt_matricula
             // 
+            txt_matricula.Font = new Font("Segoe UI", 9F);
             txt_matricula.Location = new Point(5, 67);
             txt_matricula.Name = "txt_matricula";
-            txt_matricula.Size = new Size(115, 29);
+            txt_matricula.Size = new Size(115, 23);
             txt_matricula.TabIndex = 52;
             // 
             // txt_setor
             // 
+            txt_setor.Font = new Font("Segoe UI", 9F);
             txt_setor.Location = new Point(5, 132);
             txt_setor.Name = "txt_setor";
-            txt_setor.Size = new Size(115, 29);
+            txt_setor.Size = new Size(115, 23);
             txt_setor.TabIndex = 55;
             // 
             // label1
@@ -179,9 +182,10 @@
             // 
             // txt_nome_func
             // 
+            txt_nome_func.Font = new Font("Segoe UI", 9F);
             txt_nome_func.Location = new Point(160, 67);
             txt_nome_func.Name = "txt_nome_func";
-            txt_nome_func.Size = new Size(253, 29);
+            txt_nome_func.Size = new Size(253, 23);
             txt_nome_func.TabIndex = 53;
             // 
             // Form7

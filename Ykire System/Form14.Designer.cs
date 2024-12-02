@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form14));
             groupBox2 = new GroupBox();
+            txt_cod_veic = new TextBox();
+            label1 = new Label();
             btn_pesquisa_gasolina = new Button();
             data_final = new DateTimePicker();
             data_inicio = new DateTimePicker();
@@ -46,8 +48,6 @@
             km_total = new ColumnHeader();
             combust_km = new ColumnHeader();
             km_por_dia = new ColumnHeader();
-            txt_cod_veic = new TextBox();
-            label1 = new Label();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
@@ -70,6 +70,25 @@
             groupBox2.TabIndex = 62;
             groupBox2.TabStop = false;
             groupBox2.Text = "Combustível";
+            // 
+            // txt_cod_veic
+            // 
+            txt_cod_veic.Font = new Font("Segoe UI", 9F);
+            txt_cod_veic.Location = new Point(133, 61);
+            txt_cod_veic.Name = "txt_cod_veic";
+            txt_cod_veic.Size = new Size(107, 23);
+            txt_cod_veic.TabIndex = 70;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.Location = new Point(29, 67);
+            label1.Name = "label1";
+            label1.Size = new Size(98, 20);
+            label1.TabIndex = 69;
+            label1.Text = "Cod. Veículo :";
             // 
             // btn_pesquisa_gasolina
             // 
@@ -208,24 +227,6 @@
             km_por_dia.Text = "Km/dia";
             km_por_dia.TextAlign = HorizontalAlignment.Center;
             km_por_dia.Width = 150;
-            // 
-            // txt_cod_veic
-            // 
-            txt_cod_veic.Location = new Point(133, 61);
-            txt_cod_veic.Name = "txt_cod_veic";
-            txt_cod_veic.Size = new Size(107, 29);
-            txt_cod_veic.TabIndex = 70;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F);
-            label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(29, 67);
-            label1.Name = "label1";
-            label1.Size = new Size(98, 20);
-            label1.TabIndex = 69;
-            label1.Text = "Cod. Veículo :";
             // 
             // Form14
             // 
