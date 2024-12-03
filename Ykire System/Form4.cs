@@ -281,21 +281,7 @@ namespace Ykire_System
         {
 
         }
-        private void lv_est_said_ColumnClick(object sender, ColumnClickEventArgs e)
-        {
-            // Verifica se o usuário clicou na segunda coluna (índice 1)
-            if (e.Column == 1)
-            {
-                // Alterna entre crescente e decrescente
-                if (ascendingOrder)
-                    baixas = baixas.OrderBy(item => item.nome).ToList();
-                else
-                    baixas = baixas.OrderByDescending(item => item.nome).ToList();
-
-                ascendingOrder = !ascendingOrder; // Alterna a ordem para o próximo clique
-                obterProdutos_est_said(); // Atualiza a ListView com a lista ordenada
-            }
-        }
+       
 
         private void date_est_said_ValueChanged_1(object sender, EventArgs e)
         {
@@ -441,6 +427,12 @@ namespace Ykire_System
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            obterProdutos_est_said();
 
         }
     }

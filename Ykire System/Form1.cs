@@ -96,7 +96,7 @@ namespace Ykire_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            obterProdutos_tot();
+            lv_est_tot.Items.Clear();
         }
 
         private void btn_pesquisa_Click_1(object sender, EventArgs e)

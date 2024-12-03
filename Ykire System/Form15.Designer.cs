@@ -142,7 +142,6 @@
             // 
             // cbox_servico
             // 
-            cbox_servico.DropDownStyle = ComboBoxStyle.DropDownList;
             cbox_servico.Font = new Font("Segoe UI", 9F);
             cbox_servico.FormattingEnabled = true;
             cbox_servico.ImeMode = ImeMode.NoControl;

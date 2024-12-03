@@ -63,12 +63,14 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             PrintDialog1 = new PrintDialog();
             pd1 = new System.Drawing.Printing.PrintDocument();
+            button1 = new Button();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel3
             // 
+            panel3.Controls.Add(button1);
             panel3.Controls.Add(txt_pesquisa_saida);
             panel3.Controls.Add(label7);
             panel3.Controls.Add(button2);
@@ -378,6 +380,22 @@
             // 
             PrintDialog1.UseEXDialog = true;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(233, 240, 245);
+            button1.BackgroundImage = Properties.Resources.atualizar;
+            button1.BackgroundImageLayout = ImageLayout.Zoom;
+            button1.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 12F);
+            button1.ForeColor = Color.FromArgb(31, 44, 50);
+            button1.Location = new Point(244, 55);
+            button1.Name = "button1";
+            button1.Size = new Size(39, 33);
+            button1.TabIndex = 42;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -442,5 +460,6 @@
         private System.Drawing.Printing.PrintDocument pd1;
         private TextBox txt_pesquisa_saida;
         private Label label7;
+        private Button button1;
     }
 }
