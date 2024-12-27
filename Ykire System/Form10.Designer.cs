@@ -112,7 +112,7 @@
             btn_rel_frota.Location = new Point(885, 28);
             btn_rel_frota.Name = "btn_rel_frota";
             btn_rel_frota.Size = new Size(39, 33);
-            btn_rel_frota.TabIndex = 87;
+            btn_rel_frota.TabIndex = 79;
             btn_rel_frota.UseVisualStyleBackColor = false;
             btn_rel_frota.Click += btn_rel_frota_Click;
             // 
@@ -122,7 +122,7 @@
             txt_custo.Location = new Point(511, 151);
             txt_custo.Name = "txt_custo";
             txt_custo.Size = new Size(94, 23);
-            txt_custo.TabIndex = 86;
+            txt_custo.TabIndex = 74;
             // 
             // label2
             // 
@@ -145,7 +145,7 @@
             Cbox_cidade.Location = new Point(115, 200);
             Cbox_cidade.Name = "Cbox_cidade";
             Cbox_cidade.Size = new Size(121, 23);
-            Cbox_cidade.TabIndex = 84;
+            Cbox_cidade.TabIndex = 75;
             Cbox_cidade.UseWaitCursor = true;
             // 
             // city
@@ -165,7 +165,7 @@
             txt_km.Location = new Point(343, 200);
             txt_km.Name = "txt_km";
             txt_km.Size = new Size(94, 23);
-            txt_km.TabIndex = 82;
+            txt_km.TabIndex = 76;
             // 
             // label1
             // 
@@ -188,7 +188,7 @@
             Cbox_combustivel.Location = new Point(115, 151);
             Cbox_combustivel.Name = "Cbox_combustivel";
             Cbox_combustivel.Size = new Size(121, 23);
-            Cbox_combustivel.TabIndex = 80;
+            Cbox_combustivel.TabIndex = 72;
             Cbox_combustivel.UseWaitCursor = true;
             // 
             // cad_veiculo
@@ -202,7 +202,7 @@
             cad_veiculo.Location = new Point(433, 98);
             cad_veiculo.Name = "cad_veiculo";
             cad_veiculo.Size = new Size(39, 34);
-            cad_veiculo.TabIndex = 79;
+            cad_veiculo.TabIndex = 71;
             cad_veiculo.UseVisualStyleBackColor = false;
             cad_veiculo.Click += cad_veiculo_Click;
             // 
@@ -212,7 +212,7 @@
             txt_Lt.Location = new Point(343, 151);
             txt_Lt.Name = "txt_Lt";
             txt_Lt.Size = new Size(94, 23);
-            txt_Lt.TabIndex = 78;
+            txt_Lt.TabIndex = 73;
             // 
             // label6
             // 
@@ -245,7 +245,7 @@
             btn_print_frota.Location = new Point(826, 28);
             btn_print_frota.Name = "btn_print_frota";
             btn_print_frota.Size = new Size(39, 33);
-            btn_print_frota.TabIndex = 3;
+            btn_print_frota.TabIndex = 78;
             btn_print_frota.UseVisualStyleBackColor = false;
             // 
             // btn_pesquisa_epi
@@ -260,7 +260,7 @@
             btn_pesquisa_epi.Location = new Point(433, 48);
             btn_pesquisa_epi.Name = "btn_pesquisa_epi";
             btn_pesquisa_epi.Size = new Size(39, 33);
-            btn_pesquisa_epi.TabIndex = 75;
+            btn_pesquisa_epi.TabIndex = 69;
             btn_pesquisa_epi.UseVisualStyleBackColor = false;
             btn_pesquisa_epi.Click += btn_pesquisa_epi_Click;
             // 
@@ -275,7 +275,7 @@
             btn_frota.Location = new Point(771, 28);
             btn_frota.Name = "btn_frota";
             btn_frota.Size = new Size(39, 33);
-            btn_frota.TabIndex = 61;
+            btn_frota.TabIndex = 77;
             btn_frota.UseVisualStyleBackColor = false;
             btn_frota.Click += btn_frota_Click;
             // 

@@ -90,11 +90,11 @@ namespace Ykire_System
             {
                 lv_est_said.Items.Add(new ListViewItem(new String[]
                 {
-            item.codigo.ToString(),
-            item.nome,
-            item.qt.ToString(),
-            item.cgo.ToString(),
-            item.data
+                    item.codigo.ToString(),
+                    item.nome,
+                    item.qt.ToString(),
+                    item.cgo.ToString(),
+                    item.data
                 }));
             }
         }
@@ -281,7 +281,7 @@ namespace Ykire_System
         {
 
         }
-       
+
 
         private void date_est_said_ValueChanged_1(object sender, EventArgs e)
         {
@@ -433,6 +433,11 @@ namespace Ykire_System
         private void button1_Click(object sender, EventArgs e)
         {
             obterProdutos_est_said();
+
+        }
+
+        private void txt_pesquisa_saida_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

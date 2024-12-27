@@ -23,17 +23,20 @@ namespace Ykire_System.Infra
             return result == 1;
         }
 
-        public List<Cars> Get()
+        public List<Cars> Get(string pesquisa = null)
         {
             using var conn = new DbConnection();
+            string query = @"SELECT * FROM cars";
 
-            string query = @"SELECT * FROM cars;";
+            if (!string.IsNullOrWhiteSpace(pesquisa))
+            {
+                query += " WHERE LOWER(placa) LIKE @Pesquisa";
+                pesquisa = $"%{pesquisa.ToLower()}%"; // Adiciona os símbolos de busca parcial
+            }
 
-            var cars = conn.Connection.Query<Cars>(sql: query);
-
-            return cars.ToList();
-
+            return conn.Connection.Query<Cars>(query, new { Pesquisa = pesquisa }).ToList();
         }
+
         public string ObterNomeProdutoPorCodigo_Cars(int codigo)
         {
             using var conn = new DbConnection();

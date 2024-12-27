@@ -281,7 +281,7 @@
             btn_print_est.Location = new Point(625, 32);
             btn_print_est.Name = "btn_print_est";
             btn_print_est.Size = new Size(39, 33);
-            btn_print_est.TabIndex = 28;
+            btn_print_est.TabIndex = 27;
             btn_print_est.UseVisualStyleBackColor = false;
             btn_print_est.Click += btn_print_est_Click;
             // 
@@ -291,7 +291,7 @@
             txt_pesquisa.Location = new Point(91, 42);
             txt_pesquisa.Name = "txt_pesquisa";
             txt_pesquisa.Size = new Size(196, 23);
-            txt_pesquisa.TabIndex = 29;
+            txt_pesquisa.TabIndex = 1;
             txt_pesquisa.TextChanged += txt_pesquisa_TextChanged;
             // 
             // label6
@@ -348,7 +348,7 @@
             btn_pesquisa.Location = new Point(293, 32);
             btn_pesquisa.Name = "btn_pesquisa";
             btn_pesquisa.Size = new Size(39, 33);
-            btn_pesquisa.TabIndex = 27;
+            btn_pesquisa.TabIndex = 2;
             btn_pesquisa.UseVisualStyleBackColor = false;
             btn_pesquisa.Click += btn_pesquisa_Click_1;
             // 

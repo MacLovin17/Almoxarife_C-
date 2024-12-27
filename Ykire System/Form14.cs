@@ -131,78 +131,81 @@ namespace Ykire_System
 
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
-            // Fonte para o título e variáveis de formatação
+            // Fontes e configurações iniciais
             Font titleFont = new Font("Arial", 14, FontStyle.Bold);
-            Font font = new Font("Arial", 10);
+            Font subtitleFont = new Font("Arial", 10);
+            Font contentFont = new Font("Arial", 8);
             int yPosition = e.MarginBounds.Top;
             int xPosition = e.MarginBounds.Left;
             int rowHeight = 20;
 
-            // Título "Movimentação de Estoque"
-            e.Graphics.DrawString("Controle de Abastecimento", titleFont, Brushes.Black, xPosition, yPosition);
-            yPosition += 40; // Ajusta a posição vertical para o próximo conteúdo, abaixo do título
+            // Obtém as datas das TextBox
+            string dataInicial = txt_data_inicio_frota.Text;
+            string dataFinal = txt_data_final_frota.Text;
 
-            // Cabeçalho da ListView (imprime uma vez por página)
-            xPosition = e.MarginBounds.Left; // Reinicializa xPosition para cada nova linha
+            // Cabeçalho do relatório
+            e.Graphics.DrawString("Controle de Abastecimento", titleFont, Brushes.Black, xPosition, yPosition);
+            yPosition += 30; // Move abaixo do título
+            e.Graphics.DrawString($"Período: {dataInicial} à {dataFinal}", subtitleFont, Brushes.Black, xPosition, yPosition);
+            yPosition += 30; // Move para a próxima linha
+
+            // Cabeçalho das colunas
+            xPosition = e.MarginBounds.Left; // Reinicializa a posição horizontal
             for (int i = 0; i < lv_rel_comb.Columns.Count; i++)
             {
-                e.Graphics.DrawString(lv_rel_comb.Columns[i].Text, font, Brushes.Black, xPosition, yPosition);
+                e.Graphics.DrawString(lv_rel_comb.Columns[i].Text, contentFont, Brushes.Black, xPosition, yPosition);
 
-                // Ajusta xPosition com base na largura de cada coluna
+                // Ajuste horizontal baseado na largura de cada coluna
                 if (i == 0) // Código
-                    xPosition += 120; // 80 pixels para a coluna Código
+                    xPosition += 120;
                 else if (i == 1) // Descrição
-                    xPosition += 150; // 500 pixels para a coluna Descrição
+                    xPosition += 150;
                 else
-                    xPosition += 130; // Ajuste padrão para outras colunas
+                    xPosition += 130;
             }
 
-            yPosition += rowHeight; // Move para a próxima linha
+            yPosition += rowHeight; // Avança para a próxima linha
 
-            // Controla o espaçamento vertical, garantindo que cabe na página
+            // Impressão dos dados da ListView
             while (itemIndex < lv_rel_comb.Items.Count)
             {
-                xPosition = e.MarginBounds.Left; // Reinicializa xPosition para cada nova linha
+                xPosition = e.MarginBounds.Left; // Reinicia a posição horizontal para cada linha
                 ListViewItem item = lv_rel_comb.Items[itemIndex];
 
-                // Imprime o conteúdo da ListView por coluna
                 for (int i = 0; i < item.SubItems.Count; i++)
                 {
-                    e.Graphics.DrawString(item.SubItems[i].Text, font, Brushes.Black, xPosition, yPosition);
+                    e.Graphics.DrawString(item.SubItems[i].Text, contentFont, Brushes.Black, xPosition, yPosition);
 
-                    // Ajusta xPosition com base na largura de cada coluna
-                    if (i == 0) // Código
-                        xPosition += 120; // 80 pixels para a coluna Código
-                    else if (i == 1) // Descrição
-                        xPosition += 150; // 500 pixels para a coluna Descrição
+                    // Ajuste horizontal baseado na largura de cada coluna
+                    if (i == 0)
+                        xPosition += 120;
+                    else if (i == 1)
+                        xPosition += 150;
                     else
-                        xPosition += 130; // Ajuste padrão para outras colunas
+                        xPosition += 130;
                 }
 
-                yPosition += rowHeight; // Move para a próxima linha
+                yPosition += rowHeight; // Avança para a próxima linha
 
                 // Verifica se a página está cheia
                 if (yPosition + rowHeight > e.MarginBounds.Bottom)
                 {
-                    e.HasMorePages = true; // Informa que há mais páginas
-                    itemIndex++; // Incrementa o índice do item
-                    return; // Sai do método para imprimir a próxima página
+                    e.HasMorePages = true; // Indica que há mais páginas a serem impressas
+                    itemIndex++; // Incrementa o índice do item atual
+                    return; // Sai para processar a próxima página
                 }
 
                 itemIndex++; // Avança para o próximo item
             }
 
-            yPosition += 40; // Ajusta a posição vertical para o próximo conteúdo, abaixo do título
-                             // Se todos os itens foram impressos, reseta o índice e encerra
-            e.HasMorePages = false;
+            // Adiciona o rodapé com a data de emissão
+            yPosition += 40; // Ajusta para o rodapé
+            e.Graphics.DrawString($"Relatório emitido em: {DateTime.Now:dd/MM/yyyy}", subtitleFont, Brushes.Black, e.MarginBounds.Left, yPosition);
+
+            // Finaliza o relatório
+            e.HasMorePages = false; // Indica que não há mais páginas
             itemIndex = 0; // Reseta o índice para permitir nova impressão corretamente
-            yPosition = 770;
-            xPosition = e.MarginBounds.Left;
-
-            // Substituir a assinatura pela data atual
-            string dataAtual = $"Relatório emitido no dia {DateTime.Now:dd/MM/yyyy}";
-            e.Graphics.DrawString(dataAtual, titleFont, Brushes.Black, xPosition, yPosition);
-
         }
+
     }
 }

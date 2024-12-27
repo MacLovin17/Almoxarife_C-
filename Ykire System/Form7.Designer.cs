@@ -108,7 +108,7 @@
             btn_cad_epi.Location = new Point(448, 95);
             btn_cad_epi.Name = "btn_cad_epi";
             btn_cad_epi.Size = new Size(39, 33);
-            btn_cad_epi.TabIndex = 2;
+            btn_cad_epi.TabIndex = 54;
             btn_cad_epi.UseVisualStyleBackColor = false;
             btn_cad_epi.Click += btn_cad_epi_Click;
             // 
@@ -145,7 +145,7 @@
             txt_setor.Location = new Point(5, 132);
             txt_setor.Name = "txt_setor";
             txt_setor.Size = new Size(115, 23);
-            txt_setor.TabIndex = 55;
+            txt_setor.TabIndex = 53;
             // 
             // label1
             // 

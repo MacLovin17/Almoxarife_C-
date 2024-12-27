@@ -102,7 +102,7 @@
             btn_pesquisa_gasolina.Location = new Point(987, 56);
             btn_pesquisa_gasolina.Name = "btn_pesquisa_gasolina";
             btn_pesquisa_gasolina.Size = new Size(74, 34);
-            btn_pesquisa_gasolina.TabIndex = 67;
+            btn_pesquisa_gasolina.TabIndex = 71;
             btn_pesquisa_gasolina.UseVisualStyleBackColor = false;
             btn_pesquisa_gasolina.Click += btn_pesquisa_gasolina_Click;
             // 
@@ -163,7 +163,7 @@
             btn_print_frota.Location = new Point(1076, 56);
             btn_print_frota.Name = "btn_print_frota";
             btn_print_frota.Size = new Size(39, 33);
-            btn_print_frota.TabIndex = 3;
+            btn_print_frota.TabIndex = 72;
             btn_print_frota.UseVisualStyleBackColor = false;
             btn_print_frota.Click += btn_print_frota_Click;
             // 

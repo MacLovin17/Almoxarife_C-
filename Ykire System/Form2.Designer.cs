@@ -75,7 +75,7 @@
             btn_salva_cad.Location = new Point(31, 25);
             btn_salva_cad.Name = "btn_salva_cad";
             btn_salva_cad.Size = new Size(39, 33);
-            btn_salva_cad.TabIndex = 2;
+            btn_salva_cad.TabIndex = 16;
             btn_salva_cad.UseVisualStyleBackColor = false;
             btn_salva_cad.Click += btn_salva_cad_Click;
             // 
@@ -222,7 +222,7 @@
             txt_prateleira.Location = new Point(140, 288);
             txt_prateleira.Name = "txt_prateleira";
             txt_prateleira.Size = new Size(403, 23);
-            txt_prateleira.TabIndex = 17;
+            txt_prateleira.TabIndex = 15;
             txt_prateleira.TextChanged += txt_prateleira_TextChanged;
             // 
             // label2

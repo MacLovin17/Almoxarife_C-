@@ -136,7 +136,7 @@
             btn_manut_save.Location = new Point(1027, 30);
             btn_manut_save.Name = "btn_manut_save";
             btn_manut_save.Size = new Size(39, 33);
-            btn_manut_save.TabIndex = 96;
+            btn_manut_save.TabIndex = 78;
             btn_manut_save.UseVisualStyleBackColor = false;
             btn_manut_save.Click += btn_manut_save_Click;
             // 
@@ -149,7 +149,7 @@
             cbox_servico.Location = new Point(540, 202);
             cbox_servico.Name = "cbox_servico";
             cbox_servico.Size = new Size(235, 23);
-            cbox_servico.TabIndex = 95;
+            cbox_servico.TabIndex = 77;
             cbox_servico.UseWaitCursor = true;
             // 
             // label3
@@ -169,7 +169,7 @@
             txt_custo_manut.Location = new Point(696, 149);
             txt_custo_manut.Name = "txt_custo_manut";
             txt_custo_manut.Size = new Size(115, 23);
-            txt_custo_manut.TabIndex = 93;
+            txt_custo_manut.TabIndex = 74;
             // 
             // label2
             // 
@@ -193,7 +193,7 @@
             button1.Location = new Point(576, 144);
             button1.Name = "button1";
             button1.Size = new Size(39, 34);
-            button1.TabIndex = 91;
+            button1.TabIndex = 73;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -203,7 +203,7 @@
             txt_cod_forn_manut.Location = new Point(138, 149);
             txt_cod_forn_manut.Name = "txt_cod_forn_manut";
             txt_cod_forn_manut.Size = new Size(115, 23);
-            txt_cod_forn_manut.TabIndex = 89;
+            txt_cod_forn_manut.TabIndex = 72;
             txt_cod_forn_manut.TextChanged += txt_cod_forn_manut_TextChanged;
             // 
             // label1
@@ -228,7 +228,7 @@
             btn_rel_frota.Location = new Point(1135, 30);
             btn_rel_frota.Name = "btn_rel_frota";
             btn_rel_frota.Size = new Size(39, 33);
-            btn_rel_frota.TabIndex = 87;
+            btn_rel_frota.TabIndex = 80;
             btn_rel_frota.UseVisualStyleBackColor = false;
             // 
             // Cbox_cidade_manut
@@ -241,7 +241,7 @@
             Cbox_cidade_manut.Location = new Point(138, 202);
             Cbox_cidade_manut.Name = "Cbox_cidade_manut";
             Cbox_cidade_manut.Size = new Size(121, 23);
-            Cbox_cidade_manut.TabIndex = 84;
+            Cbox_cidade_manut.TabIndex = 75;
             Cbox_cidade_manut.UseWaitCursor = true;
             // 
             // city
@@ -265,7 +265,7 @@
             Cbox_tipo_manut.Location = new Point(329, 202);
             Cbox_tipo_manut.Name = "Cbox_tipo_manut";
             Cbox_tipo_manut.Size = new Size(121, 23);
-            Cbox_tipo_manut.TabIndex = 80;
+            Cbox_tipo_manut.TabIndex = 76;
             Cbox_tipo_manut.UseWaitCursor = true;
             // 
             // cad_veiculo
@@ -279,7 +279,7 @@
             cad_veiculo.Location = new Point(576, 100);
             cad_veiculo.Name = "cad_veiculo";
             cad_veiculo.Size = new Size(39, 34);
-            cad_veiculo.TabIndex = 79;
+            cad_veiculo.TabIndex = 71;
             cad_veiculo.UseVisualStyleBackColor = false;
             cad_veiculo.Click += cad_veiculo_Click;
             // 
@@ -303,7 +303,7 @@
             btn_print_frota.Location = new Point(1076, 30);
             btn_print_frota.Name = "btn_print_frota";
             btn_print_frota.Size = new Size(39, 33);
-            btn_print_frota.TabIndex = 3;
+            btn_print_frota.TabIndex = 79;
             btn_print_frota.UseVisualStyleBackColor = false;
             // 
             // btn_pesquisa_epi
@@ -318,7 +318,7 @@
             btn_pesquisa_epi.Location = new Point(576, 50);
             btn_pesquisa_epi.Name = "btn_pesquisa_epi";
             btn_pesquisa_epi.Size = new Size(39, 33);
-            btn_pesquisa_epi.TabIndex = 75;
+            btn_pesquisa_epi.TabIndex = 69;
             btn_pesquisa_epi.UseVisualStyleBackColor = false;
             btn_pesquisa_epi.Click += btn_pesquisa_epi_Click;
             // 

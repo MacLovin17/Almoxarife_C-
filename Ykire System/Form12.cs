@@ -14,19 +14,38 @@ namespace Ykire_System
     public partial class Form12 : Form
     {
         public List<Cars> cars { get; private set; } = new List<Cars>();
+        private CarsRepository _carsRepository;
         private bool ascendingOrder = true;
         public Form12()
         {
             InitializeComponent();
-            obterCars();
             lv_cars.ColumnClick += lv_cars_ColumnClick;
+            _carsRepository = new CarsRepository();
+            obterCars();
         }
-        private void obterCars()
+        private void obterCars(string pesquisa = null)
         {
+            cars = _carsRepository.Get(pesquisa);
+
             lv_cars.Items.Clear();
-            var repository = new CarsRepository();
-            cars = repository.Get();
-            AtualizarListView_Cars(cars);
+            foreach (var item in cars)
+            {
+                lv_cars.Items.Add(new ListViewItem(new String[] {
+                    item.codigo.ToString(),
+                    item.tag,
+                    item.descricao,
+                    item.placa,
+                    item.ano,
+                    item.crlv,
+                    item.chassi,
+                    item.renavam
+                }));
+            }
+
+            if (cars.Count == 0)
+            {
+                MessageBox.Show("Nenhum registro encontrado.");
+            }
         }
         private void AtualizarListView_Cars(List<Cars> cars)
         {
@@ -136,6 +155,18 @@ namespace Ykire_System
         private void Form12_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_pesquisa_Click(object sender, EventArgs e)
+        {
+            string textoPesquisa = txt_pesquisa_cars.Text.Trim();
+            obterCars(textoPesquisa);
+        }
+
+        private void btn_pesquisa_Click_1(object sender, EventArgs e)
+        {
+            string textoPesquisa = txt_pesquisa_cars.Text.Trim();
+            obterCars(textoPesquisa);
         }
     }
 }

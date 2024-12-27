@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form12));
             groupBox1 = new GroupBox();
+            label9 = new Label();
+            txt_pesquisa_cars = new TextBox();
+            btn_pesquisa = new Button();
             txt_renavam = new TextBox();
             label7 = new Label();
             txt_chassi = new TextBox();
@@ -61,6 +64,9 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label9);
+            groupBox1.Controls.Add(txt_pesquisa_cars);
+            groupBox1.Controls.Add(btn_pesquisa);
             groupBox1.Controls.Add(txt_renavam);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(txt_chassi);
@@ -89,13 +95,48 @@
             groupBox1.Text = "Cadastro de Veículos";
             groupBox1.Enter += groupBox1_Enter;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 11F);
+            label9.ForeColor = SystemColors.ActiveCaptionText;
+            label9.Location = new Point(1088, 156);
+            label9.Name = "label9";
+            label9.Size = new Size(44, 20);
+            label9.TabIndex = 90;
+            label9.Text = "Placa";
+            // 
+            // txt_pesquisa_cars
+            // 
+            txt_pesquisa_cars.Font = new Font("Segoe UI", 9F);
+            txt_pesquisa_cars.Location = new Point(1138, 150);
+            txt_pesquisa_cars.Name = "txt_pesquisa_cars";
+            txt_pesquisa_cars.Size = new Size(196, 23);
+            txt_pesquisa_cars.TabIndex = 88;
+            // 
+            // btn_pesquisa
+            // 
+            btn_pesquisa.BackColor = Color.FromArgb(233, 240, 245);
+            btn_pesquisa.BackgroundImage = (Image)resources.GetObject("btn_pesquisa.BackgroundImage");
+            btn_pesquisa.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_pesquisa.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
+            btn_pesquisa.FlatStyle = FlatStyle.Flat;
+            btn_pesquisa.Font = new Font("Segoe UI", 12F);
+            btn_pesquisa.ForeColor = Color.FromArgb(31, 44, 50);
+            btn_pesquisa.Location = new Point(1340, 140);
+            btn_pesquisa.Name = "btn_pesquisa";
+            btn_pesquisa.Size = new Size(39, 33);
+            btn_pesquisa.TabIndex = 89;
+            btn_pesquisa.UseVisualStyleBackColor = false;
+            btn_pesquisa.Click += btn_pesquisa_Click_1;
+            // 
             // txt_renavam
             // 
             txt_renavam.Font = new Font("Segoe UI", 9F);
             txt_renavam.Location = new Point(521, 132);
             txt_renavam.Name = "txt_renavam";
             txt_renavam.Size = new Size(192, 23);
-            txt_renavam.TabIndex = 88;
+            txt_renavam.TabIndex = 59;
             // 
             // label7
             // 
@@ -114,7 +155,7 @@
             txt_chassi.Location = new Point(359, 132);
             txt_chassi.Name = "txt_chassi";
             txt_chassi.Size = new Size(142, 23);
-            txt_chassi.TabIndex = 86;
+            txt_chassi.TabIndex = 58;
             // 
             // label8
             // 
@@ -134,7 +175,7 @@
             txt_placa.Location = new Point(305, 67);
             txt_placa.Name = "txt_placa";
             txt_placa.Size = new Size(115, 23);
-            txt_placa.TabIndex = 83;
+            txt_placa.TabIndex = 54;
             // 
             // label5
             // 
@@ -164,7 +205,7 @@
             txt_desc_frota.Location = new Point(460, 67);
             txt_desc_frota.Name = "txt_desc_frota";
             txt_desc_frota.Size = new Size(253, 23);
-            txt_desc_frota.TabIndex = 84;
+            txt_desc_frota.TabIndex = 55;
             // 
             // btnc_cad_veiculo
             // 
@@ -177,7 +218,7 @@
             btnc_cad_veiculo.Location = new Point(824, 67);
             btnc_cad_veiculo.Name = "btnc_cad_veiculo";
             btnc_cad_veiculo.Size = new Size(39, 34);
-            btnc_cad_veiculo.TabIndex = 80;
+            btnc_cad_veiculo.TabIndex = 60;
             btnc_cad_veiculo.UseVisualStyleBackColor = false;
             btnc_cad_veiculo.Click += btnc_cad_veiculo_Click;
             // 
@@ -274,7 +315,7 @@
             txt_ano_frota.Location = new Point(5, 132);
             txt_ano_frota.Name = "txt_ano_frota";
             txt_ano_frota.Size = new Size(107, 23);
-            txt_ano_frota.TabIndex = 55;
+            txt_ano_frota.TabIndex = 56;
             // 
             // label1
             // 
@@ -362,5 +403,8 @@
         private ColumnHeader crlv;
         private ColumnHeader chassi;
         private ColumnHeader renavam;
+        private Label label9;
+        private TextBox txt_pesquisa_cars;
+        private Button btn_pesquisa;
     }
 }

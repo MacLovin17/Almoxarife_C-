@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             panel3 = new Panel();
+            button1 = new Button();
             txt_pesquisa_saida = new TextBox();
             label7 = new Label();
             button2 = new Button();
@@ -63,7 +64,6 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             PrintDialog1 = new PrintDialog();
             pd1 = new System.Drawing.Printing.PrintDocument();
-            button1 = new Button();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -87,13 +87,30 @@
             panel3.TabIndex = 34;
             panel3.Paint += panel3_Paint;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(233, 240, 245);
+            button1.BackgroundImage = Properties.Resources.atualizar;
+            button1.BackgroundImageLayout = ImageLayout.Zoom;
+            button1.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 12F);
+            button1.ForeColor = Color.FromArgb(31, 44, 50);
+            button1.Location = new Point(244, 55);
+            button1.Name = "button1";
+            button1.Size = new Size(39, 33);
+            button1.TabIndex = 81;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // txt_pesquisa_saida
             // 
             txt_pesquisa_saida.Font = new Font("Segoe UI", 9F);
             txt_pesquisa_saida.Location = new Point(138, 62);
             txt_pesquisa_saida.Name = "txt_pesquisa_saida";
             txt_pesquisa_saida.Size = new Size(100, 23);
-            txt_pesquisa_saida.TabIndex = 49;
+            txt_pesquisa_saida.TabIndex = 80;
+            txt_pesquisa_saida.TextChanged += txt_pesquisa_saida_TextChanged;
             // 
             // label7
             // 
@@ -119,7 +136,7 @@
             button2.Location = new Point(710, 50);
             button2.Name = "button2";
             button2.Size = new Size(74, 34);
-            button2.TabIndex = 46;
+            button2.TabIndex = 82;
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
@@ -299,7 +316,7 @@
             btn_salva_est_said.Location = new Point(31, 25);
             btn_salva_est_said.Name = "btn_salva_est_said";
             btn_salva_est_said.Size = new Size(39, 33);
-            btn_salva_est_said.TabIndex = 2;
+            btn_salva_est_said.TabIndex = 42;
             btn_salva_est_said.UseVisualStyleBackColor = false;
             btn_salva_est_said.Click += btn_salva_est_said_Click;
             // 
@@ -311,7 +328,7 @@
             Cbox_said.Location = new Point(156, 173);
             Cbox_said.Name = "Cbox_said";
             Cbox_said.Size = new Size(121, 23);
-            Cbox_said.TabIndex = 35;
+            Cbox_said.TabIndex = 41;
             Cbox_said.UseWaitCursor = true;
             Cbox_said.SelectedIndexChanged += Cbox_said_SelectedIndexChanged;
             // 
@@ -368,7 +385,7 @@
             date_est_said.Location = new Point(155, 230);
             date_est_said.Name = "date_est_said";
             date_est_said.Size = new Size(140, 23);
-            date_est_said.TabIndex = 41;
+            date_est_said.TabIndex = 50;
             date_est_said.ValueChanged += date_est_said_ValueChanged_1;
             // 
             // contextMenuStrip1
@@ -379,22 +396,6 @@
             // PrintDialog1
             // 
             PrintDialog1.UseEXDialog = true;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(233, 240, 245);
-            button1.BackgroundImage = Properties.Resources.atualizar;
-            button1.BackgroundImageLayout = ImageLayout.Zoom;
-            button1.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F);
-            button1.ForeColor = Color.FromArgb(31, 44, 50);
-            button1.Location = new Point(244, 55);
-            button1.Name = "button1";
-            button1.Size = new Size(39, 33);
-            button1.TabIndex = 42;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
             // Form4
             // 

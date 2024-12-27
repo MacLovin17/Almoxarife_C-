@@ -77,7 +77,7 @@
             btn_pesquisa_forn.Location = new Point(274, 63);
             btn_pesquisa_forn.Name = "btn_pesquisa_forn";
             btn_pesquisa_forn.Size = new Size(39, 33);
-            btn_pesquisa_forn.TabIndex = 93;
+            btn_pesquisa_forn.TabIndex = 54;
             btn_pesquisa_forn.UseVisualStyleBackColor = false;
             btn_pesquisa_forn.Click += btn_pesquisa_forn_Click;
             // 
@@ -92,7 +92,7 @@
             button1.Location = new Point(559, 44);
             button1.Name = "button1";
             button1.Size = new Size(39, 34);
-            button1.TabIndex = 92;
+            button1.TabIndex = 57;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -131,7 +131,7 @@
             txt_ramo.Location = new Point(274, 131);
             txt_ramo.Name = "txt_ramo";
             txt_ramo.Size = new Size(253, 23);
-            txt_ramo.TabIndex = 57;
+            txt_ramo.TabIndex = 56;
             // 
             // label4
             // 

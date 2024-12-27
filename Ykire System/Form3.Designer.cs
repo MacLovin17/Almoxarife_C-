@@ -186,7 +186,7 @@
             btn_salva_est.Location = new Point(31, 25);
             btn_salva_est.Name = "btn_salva_est";
             btn_salva_est.Size = new Size(39, 33);
-            btn_salva_est.TabIndex = 2;
+            btn_salva_est.TabIndex = 23;
             btn_salva_est.UseVisualStyleBackColor = false;
             btn_salva_est.Click += btn_salva_est_Click;
             // 

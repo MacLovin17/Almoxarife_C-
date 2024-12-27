@@ -113,7 +113,7 @@
             cad_funcionario.Location = new Point(665, 45);
             cad_funcionario.Name = "cad_funcionario";
             cad_funcionario.Size = new Size(39, 34);
-            cad_funcionario.TabIndex = 79;
+            cad_funcionario.TabIndex = 72;
             cad_funcionario.UseVisualStyleBackColor = false;
             cad_funcionario.Click += cad_funcionario_Click;
             // 
@@ -123,7 +123,7 @@
             txt_CA.Location = new Point(287, 130);
             txt_CA.Name = "txt_CA";
             txt_CA.Size = new Size(94, 23);
-            txt_CA.TabIndex = 78;
+            txt_CA.TabIndex = 71;
             // 
             // label6
             // 
@@ -157,7 +157,7 @@
             btn_pesquisa_epi.Location = new Point(425, 49);
             btn_pesquisa_epi.Name = "btn_pesquisa_epi";
             btn_pesquisa_epi.Size = new Size(39, 33);
-            btn_pesquisa_epi.TabIndex = 75;
+            btn_pesquisa_epi.TabIndex = 68;
             btn_pesquisa_epi.UseVisualStyleBackColor = false;
             btn_pesquisa_epi.Click += btn_pesquisa_epi_Click;
             // 
@@ -182,7 +182,7 @@
             txt_qt_epi.Location = new Point(128, 130);
             txt_qt_epi.Name = "txt_qt_epi";
             txt_qt_epi.Size = new Size(94, 23);
-            txt_qt_epi.TabIndex = 74;
+            txt_qt_epi.TabIndex = 70;
             // 
             // label9
             // 
@@ -211,7 +211,7 @@
             Txt_epi_epi.Location = new Point(107, 90);
             Txt_epi_epi.Name = "Txt_epi_epi";
             Txt_epi_epi.Size = new Size(115, 23);
-            Txt_epi_epi.TabIndex = 70;
+            Txt_epi_epi.TabIndex = 69;
             Txt_epi_epi.TextChanged += Txt_epi_epi_TextChanged;
             // 
             // label8
@@ -232,7 +232,7 @@
             Txt_mat_epi.Location = new Point(107, 50);
             Txt_mat_epi.Name = "Txt_mat_epi";
             Txt_mat_epi.Size = new Size(115, 23);
-            Txt_mat_epi.TabIndex = 68;
+            Txt_mat_epi.TabIndex = 67;
             Txt_mat_epi.TextChanged += Txt_mat_epi_TextChanged;
             // 
             // label7
