@@ -20,6 +20,8 @@ namespace Ykire_System
         private bool ascendingOrder = true;
         public List<CEPI> epis { get; private set; } = new List<CEPI>();
         private EPIRepository _epiRepository;
+        public List<Fornecedor> fornecedores { get; private set; } = new List<Fornecedor>();
+        private FornecedorRepository _fornecedorRepository;
         public List<Cars> cars { get; private set; } = new List<Cars>();
         private CarsRepository _carsRepository;
         public Form10()
@@ -28,6 +30,7 @@ namespace Ykire_System
             txt_data_frota.Text = data_frota.Text;
             _carsRepository = new CarsRepository();
             _epiRepository = new EPIRepository();
+            _fornecedorRepository = new FornecedorRepository();
             obterFrota();
             lv_gasolina.ColumnClick += lv_gasolina_ColumnClick;
             data_frota.Format = DateTimePickerFormat.Custom;
@@ -51,6 +54,7 @@ namespace Ykire_System
                     item.tag,
                     item.combustivel,
                     item.litragem.ToString(),
+                    item.posto,
                     item.data,
                     item.cidade,
                 }));
@@ -159,9 +163,9 @@ namespace Ykire_System
                 var cidade = Cbox_cidade.Text;
                 var km = txt_km.Text;
                 var data = txt_data_frota.Text;
+                var posto = Txt_fornecedor.Text;
 
-
-                var frotar = new Frota(matricula, nome, cod_veiculo, tag, combustivel, cidade, litragem, custo, km, data);
+                var frotar = new Frota(matricula, nome, cod_veiculo, tag, combustivel, cidade, litragem, posto, custo, km, data);
                 frota.Add(frotar);
                 var repository_frota = new FrotaRepository();
                 repository_frota.Add(frotar);
@@ -183,6 +187,7 @@ namespace Ykire_System
             Cbox_cidade.Text = "";
             txt_km.Text = "";
             txt_data_frota.Text = data_frota.Text;
+            Txt_fornecedor.Text = "";
 
             MessageBox.Show("Registro cadastrado");
         }
@@ -201,6 +206,42 @@ namespace Ykire_System
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_nome_epi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_CNPJ_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txt_CNPJ.Text, out int codigo))
+            {
+                // Busca o nome do produto pelo código
+                string codigoF = _fornecedorRepository.ObterNomeFornecedor(codigo);
+
+                // Exibe o nome do produto no campo de texto
+                Txt_fornecedor.Text = codigoF ?? "Fornecedor não encontrado";
+
+                // Habilita ou desabilita o botão baseado na existência do produto
+                btn_frota.Enabled = codigoF != null;
+            }
+            else
+            {
+                Txt_fornecedor.Text = string.Empty;
+                btn_frota.Enabled = false; // Desabilita o botão se o código não for válido
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form16cs form16 = new Form16cs();
+            form16.Show();
         }
     }
 }

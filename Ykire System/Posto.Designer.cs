@@ -1,6 +1,6 @@
 ﻿namespace Ykire_System
 {
-    partial class Form10
+    partial class Posto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form10));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Posto));
+            panel2 = new Panel();
             groupBox2 = new GroupBox();
-            button1 = new Button();
-            Txt_fornecedor = new TextBox();
-            txt_CNPJ = new TextBox();
-            label3 = new Label();
             btn_rel_frota = new Button();
             txt_custo = new TextBox();
             label2 = new Label();
@@ -63,19 +60,22 @@
             tag = new ColumnHeader();
             combustivel = new ColumnHeader();
             litro = new ColumnHeader();
-            posto = new ColumnHeader();
             data = new ColumnHeader();
             cidade = new ColumnHeader();
-            panel2 = new Panel();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(31, 44, 50);
+            panel2.Dock = DockStyle.Left;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(116, 716);
+            panel2.TabIndex = 63;
+            // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(button1);
-            groupBox2.Controls.Add(Txt_fornecedor);
-            groupBox2.Controls.Add(txt_CNPJ);
-            groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(btn_rel_frota);
             groupBox2.Controls.Add(txt_custo);
             groupBox2.Controls.Add(label2);
@@ -102,57 +102,13 @@
             groupBox2.Controls.Add(txt_data_frota);
             groupBox2.Controls.Add(lv_gasolina);
             groupBox2.Font = new Font("Segoe UI", 12F);
-            groupBox2.Location = new Point(152, 33);
+            groupBox2.Location = new Point(139, 28);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1118, 679);
-            groupBox2.TabIndex = 61;
+            groupBox2.Size = new Size(973, 679);
+            groupBox2.TabIndex = 64;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Combustível";
+            groupBox2.Text = "Consumíveis";
             groupBox2.Enter += groupBox2_Enter;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(233, 240, 245);
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Zoom;
-            button1.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.FromArgb(186, 200, 208);
-            button1.Location = new Point(433, 133);
-            button1.Name = "button1";
-            button1.Size = new Size(39, 34);
-            button1.TabIndex = 89;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // Txt_fornecedor
-            // 
-            Txt_fornecedor.Enabled = false;
-            Txt_fornecedor.Font = new Font("Segoe UI", 9F);
-            Txt_fornecedor.Location = new Point(236, 142);
-            Txt_fornecedor.Name = "Txt_fornecedor";
-            Txt_fornecedor.Size = new Size(191, 23);
-            Txt_fornecedor.TabIndex = 88;
-            // 
-            // txt_CNPJ
-            // 
-            txt_CNPJ.Font = new Font("Segoe UI", 9F);
-            txt_CNPJ.Location = new Point(115, 142);
-            txt_CNPJ.Name = "txt_CNPJ";
-            txt_CNPJ.Size = new Size(115, 23);
-            txt_CNPJ.TabIndex = 87;
-            txt_CNPJ.TextChanged += txt_CNPJ_TextChanged;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 11.25F);
-            label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(47, 147);
-            label3.Name = "label3";
-            label3.Size = new Size(56, 18);
-            label3.TabIndex = 86;
-            label3.Text = "CNPJ :";
             // 
             // btn_rel_frota
             // 
@@ -167,12 +123,11 @@
             btn_rel_frota.Size = new Size(39, 33);
             btn_rel_frota.TabIndex = 79;
             btn_rel_frota.UseVisualStyleBackColor = false;
-            btn_rel_frota.Click += btn_rel_frota_Click;
             // 
             // txt_custo
             // 
             txt_custo.Font = new Font("Segoe UI", 9F);
-            txt_custo.Location = new Point(283, 239);
+            txt_custo.Location = new Point(511, 151);
             txt_custo.Name = "txt_custo";
             txt_custo.Size = new Size(94, 23);
             txt_custo.TabIndex = 74;
@@ -182,7 +137,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 11.25F);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(223, 246);
+            label2.Location = new Point(451, 158);
             label2.Name = "label2";
             label2.Size = new Size(56, 18);
             label2.TabIndex = 85;
@@ -195,7 +150,7 @@
             Cbox_cidade.FormattingEnabled = true;
             Cbox_cidade.ImeMode = ImeMode.NoControl;
             Cbox_cidade.Items.AddRange(new object[] { "Paracatu-MG", "Brumadinho-MG", "Conceição Mato Dentro-MG" });
-            Cbox_cidade.Location = new Point(115, 192);
+            Cbox_cidade.Location = new Point(115, 200);
             Cbox_cidade.Name = "Cbox_cidade";
             Cbox_cidade.Size = new Size(121, 23);
             Cbox_cidade.TabIndex = 75;
@@ -206,7 +161,7 @@
             city.AutoSize = true;
             city.Font = new Font("Microsoft Sans Serif", 11.25F);
             city.ForeColor = SystemColors.ActiveCaptionText;
-            city.Location = new Point(47, 202);
+            city.Location = new Point(47, 210);
             city.Name = "city";
             city.Size = new Size(62, 18);
             city.TabIndex = 83;
@@ -215,7 +170,7 @@
             // txt_km
             // 
             txt_km.Font = new Font("Segoe UI", 9F);
-            txt_km.Location = new Point(435, 239);
+            txt_km.Location = new Point(343, 200);
             txt_km.Name = "txt_km";
             txt_km.Size = new Size(94, 23);
             txt_km.TabIndex = 76;
@@ -225,7 +180,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 11.25F);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(390, 244);
+            label1.Location = new Point(303, 210);
             label1.Name = "label1";
             label1.Size = new Size(39, 18);
             label1.TabIndex = 81;
@@ -237,8 +192,8 @@
             Cbox_combustivel.Font = new Font("Segoe UI", 9F);
             Cbox_combustivel.FormattingEnabled = true;
             Cbox_combustivel.ImeMode = ImeMode.NoControl;
-            Cbox_combustivel.Items.AddRange(new object[] { "Gasolina", "Etanol", "Diesel" });
-            Cbox_combustivel.Location = new Point(351, 192);
+            Cbox_combustivel.Items.AddRange(new object[] { "Aditivo", "Óleo" });
+            Cbox_combustivel.Location = new Point(115, 151);
             Cbox_combustivel.Name = "Cbox_combustivel";
             Cbox_combustivel.Size = new Size(121, 23);
             Cbox_combustivel.TabIndex = 72;
@@ -257,12 +212,11 @@
             cad_veiculo.Size = new Size(39, 34);
             cad_veiculo.TabIndex = 71;
             cad_veiculo.UseVisualStyleBackColor = false;
-            cad_veiculo.Click += cad_veiculo_Click;
             // 
             // txt_Lt
             // 
             txt_Lt.Font = new Font("Segoe UI", 9F);
-            txt_Lt.Location = new Point(115, 239);
+            txt_Lt.Location = new Point(343, 151);
             txt_Lt.Name = "txt_Lt";
             txt_Lt.Size = new Size(94, 23);
             txt_Lt.TabIndex = 73;
@@ -272,7 +226,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 11.25F);
             label6.ForeColor = SystemColors.ActiveCaptionText;
-            label6.Location = new Point(36, 244);
+            label6.Location = new Point(264, 158);
             label6.Name = "label6";
             label6.Size = new Size(73, 18);
             label6.TabIndex = 77;
@@ -315,7 +269,6 @@
             btn_pesquisa_epi.Size = new Size(39, 33);
             btn_pesquisa_epi.TabIndex = 69;
             btn_pesquisa_epi.UseVisualStyleBackColor = false;
-            btn_pesquisa_epi.Click += btn_pesquisa_epi_Click;
             // 
             // btn_frota
             // 
@@ -330,19 +283,17 @@
             btn_frota.Size = new Size(39, 33);
             btn_frota.TabIndex = 77;
             btn_frota.UseVisualStyleBackColor = false;
-            btn_frota.Click += btn_frota_Click;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Microsoft Sans Serif", 11.25F);
             label9.ForeColor = SystemColors.ActiveCaptionText;
-            label9.Location = new Point(247, 199);
+            label9.Location = new Point(33, 158);
             label9.Name = "label9";
-            label9.Size = new Size(98, 18);
+            label9.Size = new Size(69, 18);
             label9.TabIndex = 73;
-            label9.Text = "Combustível :";
-            label9.Click += label9_Click;
+            label9.Text = "Produto :";
             // 
             // txt_nome_epi
             // 
@@ -352,7 +303,6 @@
             txt_nome_epi.Name = "txt_nome_epi";
             txt_nome_epi.Size = new Size(191, 23);
             txt_nome_epi.TabIndex = 72;
-            txt_nome_epi.TextChanged += txt_nome_epi_TextChanged;
             // 
             // Txt_cod_veiculo
             // 
@@ -361,7 +311,6 @@
             Txt_cod_veiculo.Name = "Txt_cod_veiculo";
             Txt_cod_veiculo.Size = new Size(115, 23);
             Txt_cod_veiculo.TabIndex = 70;
-            Txt_cod_veiculo.TextChanged += Txt_cod_veiculo_TextChanged;
             // 
             // label8
             // 
@@ -381,7 +330,6 @@
             Txt_mat_frota.Name = "Txt_mat_frota";
             Txt_mat_frota.Size = new Size(115, 23);
             Txt_mat_frota.TabIndex = 68;
-            Txt_mat_frota.TextChanged += Txt_mat_frota_TextChanged;
             // 
             // label7
             // 
@@ -393,22 +341,20 @@
             label7.Size = new Size(76, 18);
             label7.TabIndex = 67;
             label7.Text = "Matrícula :";
-            label7.Click += label7_Click;
             // 
             // data_frota
             // 
-            data_frota.Location = new Point(828, 239);
+            data_frota.Location = new Point(826, 226);
             data_frota.Name = "data_frota";
             data_frota.Size = new Size(115, 29);
             data_frota.TabIndex = 66;
-            data_frota.ValueChanged += data_frota_ValueChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 11.25F);
             label5.ForeColor = SystemColors.ActiveCaptionText;
-            label5.Location = new Point(779, 250);
+            label5.Location = new Point(777, 237);
             label5.Name = "label5";
             label5.Size = new Size(43, 18);
             label5.TabIndex = 64;
@@ -416,7 +362,7 @@
             // 
             // txt_data_frota
             // 
-            txt_data_frota.Location = new Point(828, 239);
+            txt_data_frota.Location = new Point(826, 226);
             txt_data_frota.Name = "txt_data_frota";
             txt_data_frota.Size = new Size(115, 29);
             txt_data_frota.TabIndex = 65;
@@ -424,13 +370,13 @@
             // 
             // lv_gasolina
             // 
-            lv_gasolina.Columns.AddRange(new ColumnHeader[] { codigo, tag, combustivel, litro, posto, data, cidade });
+            lv_gasolina.Columns.AddRange(new ColumnHeader[] { codigo, tag, combustivel, litro, data, cidade });
             lv_gasolina.Font = new Font("Segoe UI", 10F);
             lv_gasolina.FullRowSelect = true;
             lv_gasolina.GridLines = true;
-            lv_gasolina.Location = new Point(29, 289);
+            lv_gasolina.Location = new Point(29, 261);
             lv_gasolina.Name = "lv_gasolina";
-            lv_gasolina.Size = new Size(1063, 384);
+            lv_gasolina.Size = new Size(917, 412);
             lv_gasolina.TabIndex = 63;
             lv_gasolina.UseCompatibleStateImageBehavior = false;
             lv_gasolina.View = View.Details;
@@ -458,12 +404,6 @@
             litro.TextAlign = HorizontalAlignment.Center;
             litro.Width = 120;
             // 
-            // posto
-            // 
-            posto.Text = "Posto";
-            posto.TextAlign = HorizontalAlignment.Center;
-            posto.Width = 150;
-            // 
             // data
             // 
             data.Text = "Data";
@@ -476,27 +416,17 @@
             cidade.TextAlign = HorizontalAlignment.Center;
             cidade.Width = 200;
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(31, 44, 50);
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(116, 724);
-            panel2.TabIndex = 62;
-            // 
-            // Form10
+            // Posto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(233, 240, 245);
-            ClientSize = new Size(1385, 724);
-            Controls.Add(panel2);
+            ClientSize = new Size(1273, 716);
             Controls.Add(groupBox2);
+            Controls.Add(panel2);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form10";
-            Text = "Frota";
-            Load += Form10_Load;
+            Name = "Posto";
+            Text = "Posto";
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ResumeLayout(false);
@@ -504,7 +434,16 @@
 
         #endregion
 
+        private Panel panel2;
         private GroupBox groupBox2;
+        private Button btn_rel_frota;
+        private TextBox txt_custo;
+        private Label label2;
+        private ComboBox Cbox_cidade;
+        private Label city;
+        private TextBox txt_km;
+        private Label label1;
+        private ComboBox Cbox_combustivel;
         private Button cad_veiculo;
         private TextBox txt_Lt;
         private Label label6;
@@ -526,22 +465,7 @@
         private ColumnHeader tag;
         private ColumnHeader combustivel;
         private ColumnHeader litro;
-        private ColumnHeader valor;
-        private ComboBox Cbox_combustivel;
-        private TextBox txt_km;
-        private Label label1;
         private ColumnHeader data;
-        private TextBox txt_custo;
-        private Label label2;
-        private ComboBox Cbox_cidade;
-        private Label city;
         private ColumnHeader cidade;
-        private Button btn_rel_frota;
-        private Panel panel2;
-        private TextBox Txt_fornecedor;
-        private TextBox txt_CNPJ;
-        private Label label3;
-        private Button button1;
-        private ColumnHeader posto;
     }
 }

@@ -41,5 +41,11 @@ namespace Ykire_System.Infra
             string query = @"SELECT nome FROM fornecedor WHERE codigo = @codigo;";
             return conn.Connection.QuerySingleOrDefault<string>(query, new { codigo });
         }
+        public string ObterNomeFornecedor(int codigo)
+        {
+            using var conn = new DbConnection();
+            string query = @"SELECT nome FROM fornecedor WHERE codigo = @codigo;";
+            return conn.Connection.QuerySingleOrDefault<string>(query, new { codigo });
+        }
     }
 }

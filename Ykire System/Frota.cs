@@ -18,12 +18,13 @@ namespace Ykire_System
         public string combustivel { get; private set; }
         public string cidade { get; private set; }
         public float litragem { get; private set; }
+        public string posto { get ; private set; }
         public float custo { get; private set; }
         public float km { get; private set; }
         public string data { get; private set; }
         public Frota() { }
 
-        public Frota(string matricula, string nome, string cod_veiculo, string tag, string combustivel, string cidade, string litragem, string custo, string km, string data)
+        public Frota(string matricula, string nome, string cod_veiculo, string tag, string combustivel, string cidade, string litragem, string posto, string custo, string km, string data)
         {
             if (string.IsNullOrEmpty(matricula))
             {
@@ -60,6 +61,7 @@ namespace Ykire_System
             this.custo = float.Parse(custo);
             this.km = float.Parse(km);
             this.data = data;
+            this.posto = posto;
         }
     }
 }

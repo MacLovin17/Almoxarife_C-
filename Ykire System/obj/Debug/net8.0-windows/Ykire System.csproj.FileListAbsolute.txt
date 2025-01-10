@@ -81,3 +81,4 @@ C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Yki
 C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire_System.Form14.resources
 C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire_System.Form15.resources
 C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire_System.Form16cs.resources
+C:\Users\tec\source\repos\Ykire System\Ykire System\obj\Debug\net8.0-windows\Ykire_System.Posto.resources

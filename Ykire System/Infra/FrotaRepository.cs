@@ -13,8 +13,8 @@ namespace Ykire_System.Infra
         {
             using var conn = new DbConnection();
             string query = @"INSERT INTO public.frota(
-                             matricula, nome, cod_veiculo, tag, combustivel, cidade, litragem, custo, km, data)
-                             VALUES (@matricula, @nome, @cod_veiculo, @tag, @combustivel, @cidade, @litragem, @custo, @km, @data);";
+                             matricula, nome, cod_veiculo, tag, combustivel, cidade, litragem, posto, custo, km, data)
+                             VALUES (@matricula, @nome, @cod_veiculo, @tag, @combustivel, @cidade, @litragem, @posto, @custo, @km, @data);";
 
             var result = conn.Connection.Execute(sql: query, param: frota);
             return result == 1;
@@ -30,6 +30,12 @@ namespace Ykire_System.Infra
 
             return frota.ToList();
 
+        }
+        public string ObterNomeFornecedor(int cnpj)
+        {
+            using var conn = new DbConnection();
+            string query = @"SELECT nome FROM frota WHERE matricula = @cnpj;";
+            return conn.Connection.QuerySingleOrDefault<string>(query, new { cnpj });
         }
     }
 }

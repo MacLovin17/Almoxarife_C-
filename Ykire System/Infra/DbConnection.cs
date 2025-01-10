@@ -10,7 +10,7 @@ namespace Ykire_System.Infra
 
         public DbConnection()
         {
-            Connection = new NpgsqlConnection("Server=192.168.1.126; port=5432; Database=postgres; User ID=postgres; Password=@tec.;");
+            Connection = new NpgsqlConnection("Server=192.168.1.148; port=5432; Database=postgres; User ID=postgres; Password=@tec.;");
             Connection.Open();
         }
 
