@@ -89,7 +89,9 @@ namespace Ykire_System
         }
         private void Form10_Load(object sender, EventArgs e)
         {
+            lv_gasolina.Items.Clear();
             txt_data_frota.Text = data_frota.Text;
+
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -177,6 +179,7 @@ namespace Ykire_System
                 MessageBox.Show(ex.Message);
 
             }
+            txt_CNPJ.Text = "";
             Txt_mat_frota.Text = "";
             txt_nome_epi.Text = "";
             Txt_cod_veiculo.Text = "";
@@ -190,6 +193,7 @@ namespace Ykire_System
             Txt_fornecedor.Text = "";
 
             MessageBox.Show("Registro cadastrado");
+            AtualizarListView_Frota(frota);
         }
 
         private void data_frota_ValueChanged(object sender, EventArgs e)
@@ -242,6 +246,26 @@ namespace Ykire_System
         {
             Form16cs form16 = new Form16cs();
             form16.Show();
+        }
+
+        private void btn_print_frota_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_fornecedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_veiculo_gas_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lv_gasolina_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

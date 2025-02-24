@@ -56,7 +56,7 @@
             panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
             panel3.BackgroundImageLayout = ImageLayout.Zoom;
-            panel3.Location = new Point(185, 3);
+            panel3.Location = new Point(185, -7);
             panel3.Name = "panel3";
             panel3.Size = new Size(189, 90);
             panel3.TabIndex = 2;

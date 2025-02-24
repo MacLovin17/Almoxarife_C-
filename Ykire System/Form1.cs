@@ -42,7 +42,7 @@ namespace Ykire_System
                     item.codigo.ToString(),
                     item.produto,
                     item.total_estoque.ToString(),
-                    item.obs
+                    item.endereco
 
 
                 }));
@@ -70,6 +70,17 @@ namespace Ykire_System
                     totais = totais.OrderBy(item => Convert.ToInt32(item.total_estoque)).ToList();
                 else
                     totais = totais.OrderByDescending(item => Convert.ToInt32(item.total_estoque)).ToList();
+
+                ascendingOrder = !ascendingOrder;
+                AtualizarListView(totais);
+            }
+            if (e.Column == 3)
+            {
+
+                if (ascendingOrder)
+                    totais = totais.OrderBy(item => item.endereco).ToList();
+                else
+                    totais = totais.OrderByDescending(item => item.endereco).ToList();
 
                 ascendingOrder = !ascendingOrder;
                 AtualizarListView(totais);
@@ -136,6 +147,7 @@ namespace Ykire_System
         {
             // Fonte para o título e variáveis de formatação
             Font titleFont = new Font("Arial", 14, FontStyle.Bold);
+            Font subtitleFont = new Font("Arial", 10);
             Font font = new Font("Arial", 10);
             int yPosition = e.MarginBounds.Top;
             int xPosition = e.MarginBounds.Left;
@@ -195,8 +207,11 @@ namespace Ykire_System
                 itemIndex++; // Avança para o próximo item
             }
 
-            // Se todos os itens foram impressos, reseta o índice e encerra
-            e.HasMorePages = false;
+            yPosition += 40; // Ajusta para o rodapé
+            e.Graphics.DrawString($"Relatório emitido em: {DateTime.Now:dd/MM/yyyy}", subtitleFont, Brushes.Black, e.MarginBounds.Left, yPosition);
+
+            // Finaliza o relatório
+            e.HasMorePages = false; // Indica que não há mais páginas
             itemIndex = 0; // Reseta o índice para permitir nova impressão corretamente
         }
 
@@ -232,6 +247,24 @@ namespace Ykire_System
         {
             Form15 form15 = new Form15();
             form15.Show();
+        }
+
+        private void btn_pesquisa_Click(object sender, EventArgs e)
+        {
+            string textoPesquisa = txt_pesquisa.Text.Trim();
+            obterProdutos_tot(textoPesquisa);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            lv_est_tot.Items.Clear();
+        }
+
+        private void btn_print_est_Click_1(object sender, EventArgs e)
+        {
+            PrintPreviewDialog preview = new PrintPreviewDialog();
+            preview.Document = printDocument;  // Conecta o documento ao preview
+            preview.ShowDialog();
         }
     }
 }

@@ -48,9 +48,8 @@ namespace Ykire_System
                     item.combustivel,
                     item.litragem_total.ToString("N2"),
                     item.custo_total.ToString("N2"),
-                    item.km_total.ToString("N2"),
-                    item.combust_km.ToString("N2"),
-                    item.km_por_dia.ToString("N2")
+                    item.abastecimentos,
+                    item.posto,
                 }));
             }
         }
@@ -85,12 +84,18 @@ namespace Ykire_System
                         return;
                     }
                 }
+                string? posto = null;
+                if (!string.IsNullOrWhiteSpace(txt_posto.Text)) // Se o campo não estiver vazio
+                {
+                    posto = txt_posto.Text;
+                   
+                }
 
                 // Criando a instância do repositório para obter os dados
                 var repository_combustivel = new CombustivelRepository();
 
                 // Busca os dados com ou sem o filtro do código do veículo
-                gasolina = repository_combustivel.GetResumo(dataInicio, dataFim, codVeiculo);
+                gasolina = repository_combustivel.GetResumo(dataInicio, dataFim, codVeiculo, posto);
 
                 // Atualizando a ListView com os dados obtidos
                 AtualizarListView_Combustivel(gasolina);
@@ -100,9 +105,6 @@ namespace Ykire_System
                 // Tratar erros (como formato de data inválido)
                 MessageBox.Show("Erro ao obter dados: " + ex.Message);
             }
-
-
-
         }
 
         private void lv_rel_comb_SelectedIndexChanged(object sender, EventArgs e)
@@ -157,11 +159,11 @@ namespace Ykire_System
 
                 // Ajuste horizontal baseado na largura de cada coluna
                 if (i == 0) // Código
-                    xPosition += 120;
+                    xPosition += 100;
                 else if (i == 1) // Descrição
-                    xPosition += 150;
+                    xPosition += 120;
                 else
-                    xPosition += 130;
+                    xPosition += 120;
             }
 
             yPosition += rowHeight; // Avança para a próxima linha
@@ -178,11 +180,11 @@ namespace Ykire_System
 
                     // Ajuste horizontal baseado na largura de cada coluna
                     if (i == 0)
-                        xPosition += 120;
+                        xPosition += 100;
                     else if (i == 1)
-                        xPosition += 150;
+                        xPosition += 120;
                     else
-                        xPosition += 130;
+                        xPosition += 120;
                 }
 
                 yPosition += rowHeight; // Avança para a próxima linha
@@ -207,5 +209,9 @@ namespace Ykire_System
             itemIndex = 0; // Reseta o índice para permitir nova impressão corretamente
         }
 
+        private void txt_cod_veic_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

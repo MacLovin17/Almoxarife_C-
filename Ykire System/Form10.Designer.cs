@@ -104,7 +104,7 @@
             groupBox2.Font = new Font("Segoe UI", 12F);
             groupBox2.Location = new Point(152, 33);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1118, 679);
+            groupBox2.Size = new Size(1309, 856);
             groupBox2.TabIndex = 61;
             groupBox2.TabStop = false;
             groupBox2.Text = "Combustível";
@@ -118,7 +118,7 @@
             button1.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.FromArgb(186, 200, 208);
-            button1.Location = new Point(433, 133);
+            button1.Location = new Point(433, 132);
             button1.Name = "button1";
             button1.Size = new Size(39, 34);
             button1.TabIndex = 89;
@@ -129,15 +129,16 @@
             // 
             Txt_fornecedor.Enabled = false;
             Txt_fornecedor.Font = new Font("Segoe UI", 9F);
-            Txt_fornecedor.Location = new Point(236, 142);
+            Txt_fornecedor.Location = new Point(236, 141);
             Txt_fornecedor.Name = "Txt_fornecedor";
             Txt_fornecedor.Size = new Size(191, 23);
             Txt_fornecedor.TabIndex = 88;
+            Txt_fornecedor.TextChanged += Txt_fornecedor_TextChanged;
             // 
             // txt_CNPJ
             // 
             txt_CNPJ.Font = new Font("Segoe UI", 9F);
-            txt_CNPJ.Location = new Point(115, 142);
+            txt_CNPJ.Location = new Point(115, 141);
             txt_CNPJ.Name = "txt_CNPJ";
             txt_CNPJ.Size = new Size(115, 23);
             txt_CNPJ.TabIndex = 87;
@@ -148,7 +149,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 11.25F);
             label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(47, 147);
+            label3.Location = new Point(47, 146);
             label3.Name = "label3";
             label3.Size = new Size(56, 18);
             label3.TabIndex = 86;
@@ -162,7 +163,7 @@
             btn_rel_frota.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             btn_rel_frota.FlatStyle = FlatStyle.Flat;
             btn_rel_frota.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_rel_frota.Location = new Point(885, 28);
+            btn_rel_frota.Location = new Point(1264, 28);
             btn_rel_frota.Name = "btn_rel_frota";
             btn_rel_frota.Size = new Size(39, 33);
             btn_rel_frota.TabIndex = 79;
@@ -172,7 +173,7 @@
             // txt_custo
             // 
             txt_custo.Font = new Font("Segoe UI", 9F);
-            txt_custo.Location = new Point(283, 239);
+            txt_custo.Location = new Point(281, 251);
             txt_custo.Name = "txt_custo";
             txt_custo.Size = new Size(94, 23);
             txt_custo.TabIndex = 74;
@@ -182,7 +183,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 11.25F);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(223, 246);
+            label2.Location = new Point(221, 258);
             label2.Name = "label2";
             label2.Size = new Size(56, 18);
             label2.TabIndex = 85;
@@ -194,8 +195,8 @@
             Cbox_cidade.Font = new Font("Segoe UI", 9F);
             Cbox_cidade.FormattingEnabled = true;
             Cbox_cidade.ImeMode = ImeMode.NoControl;
-            Cbox_cidade.Items.AddRange(new object[] { "Paracatu-MG", "Brumadinho-MG", "Conceição Mato Dentro-MG" });
-            Cbox_cidade.Location = new Point(115, 192);
+            Cbox_cidade.Items.AddRange(new object[] { "Paracatu-MG", "Brumadinho-MG", "Conceição Mato Dentro-MG", "Araçuaí-MG" });
+            Cbox_cidade.Location = new Point(115, 200);
             Cbox_cidade.Name = "Cbox_cidade";
             Cbox_cidade.Size = new Size(121, 23);
             Cbox_cidade.TabIndex = 75;
@@ -206,7 +207,7 @@
             city.AutoSize = true;
             city.Font = new Font("Microsoft Sans Serif", 11.25F);
             city.ForeColor = SystemColors.ActiveCaptionText;
-            city.Location = new Point(47, 202);
+            city.Location = new Point(47, 210);
             city.Name = "city";
             city.Size = new Size(62, 18);
             city.TabIndex = 83;
@@ -215,7 +216,7 @@
             // txt_km
             // 
             txt_km.Font = new Font("Segoe UI", 9F);
-            txt_km.Location = new Point(435, 239);
+            txt_km.Location = new Point(433, 251);
             txt_km.Name = "txt_km";
             txt_km.Size = new Size(94, 23);
             txt_km.TabIndex = 76;
@@ -225,7 +226,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 11.25F);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(390, 244);
+            label1.Location = new Point(388, 256);
             label1.Name = "label1";
             label1.Size = new Size(39, 18);
             label1.TabIndex = 81;
@@ -238,7 +239,7 @@
             Cbox_combustivel.FormattingEnabled = true;
             Cbox_combustivel.ImeMode = ImeMode.NoControl;
             Cbox_combustivel.Items.AddRange(new object[] { "Gasolina", "Etanol", "Diesel" });
-            Cbox_combustivel.Location = new Point(351, 192);
+            Cbox_combustivel.Location = new Point(351, 200);
             Cbox_combustivel.Name = "Cbox_combustivel";
             Cbox_combustivel.Size = new Size(121, 23);
             Cbox_combustivel.TabIndex = 72;
@@ -252,7 +253,7 @@
             cad_veiculo.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             cad_veiculo.FlatStyle = FlatStyle.Flat;
             cad_veiculo.ForeColor = Color.FromArgb(186, 200, 208);
-            cad_veiculo.Location = new Point(433, 98);
+            cad_veiculo.Location = new Point(433, 92);
             cad_veiculo.Name = "cad_veiculo";
             cad_veiculo.Size = new Size(39, 34);
             cad_veiculo.TabIndex = 71;
@@ -262,7 +263,7 @@
             // txt_Lt
             // 
             txt_Lt.Font = new Font("Segoe UI", 9F);
-            txt_Lt.Location = new Point(115, 239);
+            txt_Lt.Location = new Point(115, 252);
             txt_Lt.Name = "txt_Lt";
             txt_Lt.Size = new Size(94, 23);
             txt_Lt.TabIndex = 73;
@@ -272,7 +273,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 11.25F);
             label6.ForeColor = SystemColors.ActiveCaptionText;
-            label6.Location = new Point(36, 244);
+            label6.Location = new Point(33, 256);
             label6.Name = "label6";
             label6.Size = new Size(73, 18);
             label6.TabIndex = 77;
@@ -282,10 +283,11 @@
             // 
             txt_veiculo_gas.Enabled = false;
             txt_veiculo_gas.Font = new Font("Segoe UI", 9F);
-            txt_veiculo_gas.Location = new Point(236, 102);
+            txt_veiculo_gas.Location = new Point(236, 96);
             txt_veiculo_gas.Name = "txt_veiculo_gas";
             txt_veiculo_gas.Size = new Size(191, 23);
             txt_veiculo_gas.TabIndex = 76;
+            txt_veiculo_gas.TextChanged += txt_veiculo_gas_TextChanged;
             // 
             // btn_print_frota
             // 
@@ -295,11 +297,12 @@
             btn_print_frota.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             btn_print_frota.FlatStyle = FlatStyle.Flat;
             btn_print_frota.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_print_frota.Location = new Point(826, 28);
+            btn_print_frota.Location = new Point(1205, 28);
             btn_print_frota.Name = "btn_print_frota";
             btn_print_frota.Size = new Size(39, 33);
             btn_print_frota.TabIndex = 78;
             btn_print_frota.UseVisualStyleBackColor = false;
+            btn_print_frota.Click += btn_print_frota_Click;
             // 
             // btn_pesquisa_epi
             // 
@@ -325,7 +328,7 @@
             btn_frota.FlatAppearance.BorderColor = Color.FromArgb(233, 240, 245);
             btn_frota.FlatStyle = FlatStyle.Flat;
             btn_frota.ForeColor = Color.FromArgb(186, 200, 208);
-            btn_frota.Location = new Point(771, 28);
+            btn_frota.Location = new Point(1150, 28);
             btn_frota.Name = "btn_frota";
             btn_frota.Size = new Size(39, 33);
             btn_frota.TabIndex = 77;
@@ -337,7 +340,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Microsoft Sans Serif", 11.25F);
             label9.ForeColor = SystemColors.ActiveCaptionText;
-            label9.Location = new Point(247, 199);
+            label9.Location = new Point(247, 207);
             label9.Name = "label9";
             label9.Size = new Size(98, 18);
             label9.TabIndex = 73;
@@ -357,7 +360,7 @@
             // Txt_cod_veiculo
             // 
             Txt_cod_veiculo.Font = new Font("Segoe UI", 9F);
-            Txt_cod_veiculo.Location = new Point(115, 102);
+            Txt_cod_veiculo.Location = new Point(115, 96);
             Txt_cod_veiculo.Name = "Txt_cod_veiculo";
             Txt_cod_veiculo.Size = new Size(115, 23);
             Txt_cod_veiculo.TabIndex = 70;
@@ -368,7 +371,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Microsoft Sans Serif", 11.25F);
             label8.ForeColor = SystemColors.ActiveCaptionText;
-            label8.Location = new Point(10, 113);
+            label8.Location = new Point(10, 107);
             label8.Name = "label8";
             label8.Size = new Size(96, 18);
             label8.TabIndex = 69;
@@ -397,7 +400,7 @@
             // 
             // data_frota
             // 
-            data_frota.Location = new Point(828, 239);
+            data_frota.Location = new Point(1188, 246);
             data_frota.Name = "data_frota";
             data_frota.Size = new Size(115, 29);
             data_frota.TabIndex = 66;
@@ -408,7 +411,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 11.25F);
             label5.ForeColor = SystemColors.ActiveCaptionText;
-            label5.Location = new Point(779, 250);
+            label5.Location = new Point(1139, 257);
             label5.Name = "label5";
             label5.Size = new Size(43, 18);
             label5.TabIndex = 64;
@@ -416,7 +419,7 @@
             // 
             // txt_data_frota
             // 
-            txt_data_frota.Location = new Point(828, 239);
+            txt_data_frota.Location = new Point(1188, 246);
             txt_data_frota.Name = "txt_data_frota";
             txt_data_frota.Size = new Size(115, 29);
             txt_data_frota.TabIndex = 65;
@@ -430,10 +433,11 @@
             lv_gasolina.GridLines = true;
             lv_gasolina.Location = new Point(29, 289);
             lv_gasolina.Name = "lv_gasolina";
-            lv_gasolina.Size = new Size(1063, 384);
+            lv_gasolina.Size = new Size(1274, 543);
             lv_gasolina.TabIndex = 63;
             lv_gasolina.UseCompatibleStateImageBehavior = false;
             lv_gasolina.View = View.Details;
+            lv_gasolina.SelectedIndexChanged += lv_gasolina_SelectedIndexChanged;
             // 
             // codigo
             // 
@@ -462,7 +466,7 @@
             // 
             posto.Text = "Posto";
             posto.TextAlign = HorizontalAlignment.Center;
-            posto.Width = 150;
+            posto.Width = 300;
             // 
             // data
             // 
@@ -474,7 +478,7 @@
             // 
             cidade.Text = "Cidade";
             cidade.TextAlign = HorizontalAlignment.Center;
-            cidade.Width = 200;
+            cidade.Width = 250;
             // 
             // panel2
             // 
@@ -482,7 +486,7 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(116, 724);
+            panel2.Size = new Size(116, 926);
             panel2.TabIndex = 62;
             // 
             // Form10
@@ -490,7 +494,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(233, 240, 245);
-            ClientSize = new Size(1385, 724);
+            ClientSize = new Size(1508, 926);
             Controls.Add(panel2);
             Controls.Add(groupBox2);
             Icon = (Icon)resources.GetObject("$this.Icon");

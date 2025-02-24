@@ -14,9 +14,10 @@ namespace Ykire_System
         public string total_saidas { get; private set; }
         public string total_estoque  { get; private set; }
         public string obs { get; private set; } 
+        public string endereco { get; private set; }
         public Total() { }
 
-        public Total(string codigo, string produto, string total_entradas, string total_saidas, string total_estoque, string obs)
+        public Total(string codigo, string produto, string total_entradas, string total_saidas, string total_estoque, string obs, string endereco)
         {
             if (string.IsNullOrEmpty(codigo))
             {

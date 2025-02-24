@@ -30,8 +30,6 @@ namespace Ykire_System
                 throw new Exception("CGO é obrigatório!");
             }
 
-
-
             this.codigo = int.Parse(codigo);
             this.qt = int.Parse(qt);
             this.cgo = int.Parse(cgo);
